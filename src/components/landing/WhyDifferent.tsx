@@ -1,33 +1,49 @@
-import { Bot, Target, Eye } from "lucide-react";
+import { Clock, Target, Eye } from "lucide-react";
 
 const differentiators = [
   {
-    icon: Bot,
-    title: "Autopilot Networking",
-    description: "No more manual networking or pitch DMs—everything runs on autopilot.",
+    icon: Clock,
+    title: "10+ Hours Saved Weekly",
+    description: "Replaces manual networking with fully automated collaboration campaigns.",
+    stat: "10+",
+    statLabel: "Hours saved",
   },
   {
     icon: Target,
-    title: "Proven Playbooks",
-    description: "Built on tested \"partner plays\" proven to fill spa calendars, not just generate likes.",
+    title: "Battle-Tested Plays",
+    description: "Uses proven local partnership plays that generate real bookings, not just engagement.",
+    stat: "8+",
+    statLabel: "New bookings",
   },
   {
     icon: Eye,
     title: "Full Revenue Visibility",
-    description: "Track which collab delivers direct revenue and repeat the winners.",
+    description: "Gives you complete insight into what drives revenue—so every hour saved adds real growth.",
+    stat: "100%",
+    statLabel: "Transparency",
   },
 ];
 
 const WhyDifferent = () => {
   return (
-    <section className="bg-foreground py-20 lg:py-28">
-      <div className="section-container">
+    <section className="relative py-20 lg:py-28 overflow-hidden">
+      {/* Dark gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-foreground via-gray-900 to-foreground" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
+      <div className="absolute bottom-20 right-10 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
+
+      <div className="section-container relative">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-background sm:text-4xl">
-            Why This Is Different
+          <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
+            Why IvyLink
+          </span>
+          <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-background sm:text-4xl lg:text-5xl">
+            Why This Is <span className="text-gradient">Different</span>
           </h2>
-          <p className="mb-12 text-lg text-background/70">
-            Stop chasing vanity metrics. Start filling your calendar.
+          <p className="mb-16 text-lg text-background/70">
+            Stop trading time for growth. Start automating results.
           </p>
         </div>
 
@@ -35,16 +51,20 @@ const WhyDifferent = () => {
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className="text-center opacity-0 animate-fade-up"
+              className="text-center glass rounded-2xl p-8 opacity-0 animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary">
-                <item.icon className="h-8 w-8 text-primary-foreground" />
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl gradient-primary">
+                <item.icon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-background">
+              <div className="mb-4">
+                <span className="text-4xl font-display font-bold text-gradient">{item.stat}</span>
+                <span className="block text-sm text-background/60">{item.statLabel}</span>
+              </div>
+              <h3 className="mb-3 text-xl font-display font-bold text-background">
                 {item.title}
               </h3>
-              <p className="text-background/70">
+              <p className="text-background/70 leading-relaxed">
                 {item.description}
               </p>
             </div>
