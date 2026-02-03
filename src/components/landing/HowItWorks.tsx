@@ -58,60 +58,53 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 md:-translate-x-1/2 timeline-connector rounded-full" />
+        {/* Horizontal Timeline */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Horizontal line */}
+          <div className="hidden md:block absolute top-16 left-0 right-0 h-1 timeline-connector rounded-full" />
 
-          <div className="space-y-12 md:space-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="relative opacity-0 animate-fade-up"
-                style={{ animationDelay: `${index * 0.15}s` }}
+                className="relative opacity-0 animate-fade-up flex flex-col items-center"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`flex items-start gap-8 md:gap-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  {/* Step number circle */}
-                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 z-10">
-                    <div className="h-8 w-8 md:h-12 md:w-12 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-sm md:text-base shadow-lg">
-                      {step.number}
+                {/* Step number circle */}
+                <div className="relative z-10 mb-6">
+                  <div className="h-12 w-12 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-base shadow-lg">
+                    {step.number}
+                  </div>
+                </div>
+
+                {/* Content Card */}
+                <div className="rounded-2xl bg-card p-5 card-elevated text-center h-full flex flex-col">
+                  <div className="flex justify-center mb-3">
+                    <div className="h-10 w-10 rounded-xl bg-muted flex items-center justify-center">
+                      <step.icon className="h-5 w-5 text-primary" />
                     </div>
                   </div>
-
-                  {/* Content */}
-                  <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
-                    <div className="rounded-2xl bg-card p-6 lg:p-8 card-elevated">
-                      <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                        <div className="h-10 w-10 rounded-xl bg-muted flex items-center justify-center">
-                          <step.icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-display font-bold text-foreground">
-                          {step.title}
-                        </h3>
-                      </div>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {step.description}
-                      </p>
-                      <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                        {step.features.map((feature, i) => (
-                          <span key={i} className="inline-flex items-center gap-1.5 text-xs font-medium text-primary bg-primary/10 px-3 py-1.5 rounded-full">
-                            <CheckCircle className="h-3 w-3" />
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                  <h3 className="text-lg font-display font-bold text-foreground mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed flex-grow">
+                    {step.description}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-1.5">
+                    {step.features.map((feature, i) => (
+                      <span key={i} className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                        <CheckCircle className="h-3 w-3" />
+                        {feature}
+                      </span>
+                    ))}
                   </div>
-
-                  {/* Spacer for alternating layout */}
-                  <div className="hidden md:block md:w-5/12" />
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-20 text-center">
+        <div className="mt-16 text-center">
           <Button variant="hero" size="lg" className="group">
             Book a call
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
