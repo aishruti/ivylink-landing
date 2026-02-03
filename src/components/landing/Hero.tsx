@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle } from "lucide-react";
 import heroCollaboration from "@/assets/hero-collaboration.jpg";
+
 const Hero = () => {
-  return <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
+  return (
+    <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 mesh-gradient" />
       
@@ -22,20 +24,17 @@ const Hero = () => {
             </div>
 
             {/* H1 */}
-            <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up" style={{
-            animationDelay: '0.1s'
-          }}>Interconnect Your Business with the Local Traffic That Matters<span className="text-gradient"></span> Local Collabs That Fill Your Calendar
+            <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              <span className="text-primary">Interconnect</span> Your Business with the Local Traffic That Matters
             </h1>
 
             {/* Subhead */}
-            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{
-            animationDelay: '0.2s'
-          }}>For busy med spa owners tired of manual networking—turn days of work into minutes and watch bookings rise.</p>
+            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              For busy med spa owners tired of manual networking—turn days of work into minutes and watch bookings rise.
+            </p>
 
             {/* Credibility badges */}
-            <div className="mb-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up" style={{
-            animationDelay: '0.3s'
-          }}>
+            <div className="mb-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <div className="inline-flex items-center gap-2 rounded-xl bg-secondary px-4 py-2.5 text-secondary-foreground">
                 <CheckCircle className="h-5 w-5 text-primary" />
                 <span className="font-medium text-sm">8 new bookings in 21 days</span>
@@ -47,9 +46,7 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{
-            animationDelay: '0.4s'
-          }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.4s' }}>
               <Button variant="hero" size="xl" className="group">
                 Book a call
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -62,9 +59,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Dashboard Image */}
-          <div className="relative animate-fade-up lg:animate-scale-in" style={{
-          animationDelay: '0.3s'
-        }}>
+          <div className="relative animate-fade-up lg:animate-scale-in" style={{ animationDelay: '0.3s' }}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl card-elevated">
               {/* Gradient border effect */}
               <div className="absolute -inset-1 gradient-primary rounded-2xl blur-sm opacity-30" />
@@ -74,9 +69,7 @@ const Hero = () => {
             </div>
             
             {/* Floating stats card */}
-            <div className="absolute -bottom-4 -left-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{
-            animationDelay: '0.5s'
-          }}>
+            <div className="absolute -bottom-4 -left-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.5s' }}>
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
                   <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -91,9 +84,7 @@ const Hero = () => {
             </div>
 
             {/* Floating partners card */}
-            <div className="absolute -top-4 -right-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{
-            animationDelay: '0.6s'
-          }}>
+            <div className="absolute -top-4 -right-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.6s' }}>
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-lg gradient-purple flex items-center justify-center">
                   <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -109,6 +100,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
