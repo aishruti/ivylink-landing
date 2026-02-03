@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw } from "lucide-react";
+import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw, Settings } from "lucide-react";
 
 const pillars = [
   {
@@ -32,6 +32,12 @@ const pillars = [
     description: "Keeps your campaigns fresh with automated monthly updates.",
     gradient: "from-purple-500 to-primary",
   },
+  {
+    icon: Settings,
+    title: "Hands-Off Execution",
+    description: "We handle all the maintenance—campaign updates, partner outreach, and optimization run automatically.",
+    gradient: "from-orange-400 to-pink-500",
+  },
 ];
 
 const OutcomePillars = () => {
@@ -51,7 +57,7 @@ const OutcomePillars = () => {
             Everything You Need to <span className="text-gradient">Fill Your Calendar</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Five powerful features working together to turn local partnerships into consistent bookings.
+            Six powerful features working together to turn local partnerships into consistent bookings.
           </p>
         </div>
 
