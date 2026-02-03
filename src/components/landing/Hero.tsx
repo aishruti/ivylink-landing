@@ -24,7 +24,7 @@ const Hero = () => {
             {/* H1 */}
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up" style={{
             animationDelay: '0.1s'
-          }}>Interconnect Your Business with the Local Traffic That Matters=<span className="text-gradient">Interconnect</span> Local Collabs That Fill Your Calendar
+          }}>Interconnect Your Business with the Local Traffic That Matters<span className="text-gradient"></span> Local Collabs That Fill Your Calendar
             </h1>
 
             {/* Subhead */}
