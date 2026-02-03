@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard.png";
+import heroCollaboration from "@/assets/hero-collaboration.jpg";
 
 const Hero = () => {
   return (
@@ -65,9 +65,9 @@ const Hero = () => {
               <div className="absolute -inset-1 gradient-primary rounded-2xl blur-sm opacity-30" />
               <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-card">
                 <img 
-                  src={heroDashboard} 
-                  alt="IvyLink dashboard showing booking growth and local partnerships"
-                  className="w-full h-auto"
+                  src={heroCollaboration} 
+                  alt="Med spa owners shaking hands, forming local business partnerships"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
