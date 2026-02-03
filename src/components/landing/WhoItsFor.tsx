@@ -1,40 +1,48 @@
 import { Check } from "lucide-react";
 
-const criteria = [
-  "Single-location med spa owners",
-  "Already spending on social or lead tools but seeing slow growth",
-  "Tired of posting for likes that don't convert",
-  "Want consistent bookings without more manual outreach",
-  "Ready to collaborate locally with automated campaigns",
+const audiences = [
+  "Single-location med spa owners with inconsistent bookings",
+  "Already using social or lead tools but still juggling empty slots",
+  "Spending hours posting or DMing without dependable results",
+  "Want a done-for-you system that automates the entire process",
+  "Ready to grow through local collabs that run themselves",
 ];
 
 const WhoItsFor = () => {
   return (
-    <section className="py-20 lg:py-28">
-      <div className="section-container">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Is This For You?
+    <section className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-purple-500/5 blur-3xl" />
+      
+      <div className="section-container relative">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
+            Perfect For
+          </span>
+          <h2 className="mb-6 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+            Is This <span className="text-gradient">You?</span>
           </h2>
-          <p className="mb-12 text-center text-lg text-muted-foreground">
-            This platform is built specifically for med spa owners who are ready to grow smarter, not harder.
+          <p className="mb-12 text-lg text-muted-foreground">
+            IvyLink is built for med spa owners who want results without the endless hustle.
           </p>
+        </div>
 
-          <div className="rounded-2xl bg-card p-8 card-elevated">
-            <ul className="space-y-4">
-              {criteria.map((item, index) => (
-                <li 
-                  key={index} 
-                  className="flex items-start gap-4 opacity-0 animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <Check className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-lg text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="mx-auto max-w-2xl">
+          <div className="space-y-4">
+            {audiences.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 rounded-2xl bg-card p-5 card-elevated opacity-0 animate-fade-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-primary">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

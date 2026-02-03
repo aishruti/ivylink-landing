@@ -1,79 +1,117 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Link, Search, Rocket, BarChart, Repeat, CheckCircle } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "Connect & Analyze",
-    description: "In 7 minutes, connect your IG and calendar; AI identifies your empty slots.",
+    icon: Link,
+    title: "Connect Your Tools",
+    description: "Link your Instagram Business and booking system in under 5 minutes. No technical skills needed.",
+    features: ["Instagram Integration", "Calendar Sync", "One-click setup"],
   },
   {
     number: "02",
-    title: "Launch Your First Play",
-    description: "We run your first \"Service Swap\" with 10 nearby businesses automatically.",
+    icon: Search,
+    title: "AI Finds Your Open Slots",
+    description: "Our AI scans your calendar to identify exactly when you have appointment openings.",
+    features: ["Smart slot detection", "Pattern analysis", "Priority scheduling"],
   },
   {
     number: "03",
-    title: "Track & Grow",
-    description: "See bookings rise and scale best collabs for ongoing results.",
+    icon: Rocket,
+    title: "Auto-Launch Collabs",
+    description: "Instantly match with 10+ ideal local partners and deploy your first automated 'Service Swap.'",
+    features: ["Partner matching", "Automated outreach", "Campaign launch"],
+  },
+  {
+    number: "04",
+    icon: BarChart,
+    title: "Track Real Results",
+    description: "Watch bookings roll in while monitoring which partners and campaigns drive the highest ROI.",
+    features: ["Live analytics", "Revenue tracking", "Performance insights"],
+  },
+  {
+    number: "05",
+    icon: Repeat,
+    title: "Scale on Autopilot",
+    description: "The system repeats and optimizes your top-performing collaborations automatically each month.",
+    features: ["Auto-optimization", "Partner rotation", "Continuous growth"],
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 lg:py-28">
-      <div className="section-container">
+    <section id="how-it-works" className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+      
+      <div className="section-container relative">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
             How It Works
+          </span>
+          <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+            From Setup to <span className="text-gradient">Filled Calendar</span>
           </h2>
-          <p className="mb-12 text-lg text-muted-foreground">
-            Three simple steps to transform local partnerships into bookings.
+          <p className="mb-16 text-lg text-muted-foreground">
+            Five simple steps to transform your local partnerships into consistent bookings—all automated.
           </p>
         </div>
 
-        <div className="mx-auto max-w-4xl">
-          <div className="relative">
-            {/* Connection line */}
-            <div className="absolute left-8 top-0 hidden h-full w-0.5 bg-border lg:left-1/2 lg:-ml-px lg:block" />
+        {/* Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Vertical line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 md:-translate-x-1/2 timeline-connector rounded-full" />
 
-            <div className="space-y-12 lg:space-y-0">
-              {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className="relative lg:flex lg:items-center lg:gap-8 opacity-0 animate-fade-up"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  {/* Step number */}
-                  <div className={`flex items-center lg:w-1/2 ${index % 2 === 0 ? 'lg:justify-end' : 'lg:order-2'}`}>
-                    <div className="flex items-center gap-4 lg:gap-6">
-                      <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary text-2xl font-bold text-primary-foreground shadow-lg">
-                        {step.number}
-                      </div>
-                      <div className="lg:hidden">
-                        <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
-                        <p className="text-muted-foreground">{step.description}</p>
-                      </div>
+          <div className="space-y-12 md:space-y-16">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="relative opacity-0 animate-fade-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                <div className={`flex items-start gap-8 md:gap-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  {/* Step number circle */}
+                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 z-10">
+                    <div className="h-8 w-8 md:h-12 md:w-12 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-sm md:text-base shadow-lg">
+                      {step.number}
                     </div>
                   </div>
 
-                  {/* Content for desktop */}
-                  <div className={`hidden lg:block lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-8' : 'lg:pr-8 lg:text-right lg:order-1'}`}>
-                    <div className="rounded-2xl bg-card p-6 card-elevated">
-                      <h3 className="mb-2 text-xl font-semibold text-foreground">{step.title}</h3>
-                      <p className="text-muted-foreground">{step.description}</p>
+                  {/* Content */}
+                  <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
+                    <div className="rounded-2xl bg-card p-6 lg:p-8 card-elevated">
+                      <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                        <div className="h-10 w-10 rounded-xl bg-muted flex items-center justify-center">
+                          <step.icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-display font-bold text-foreground">
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        {step.description}
+                      </p>
+                      <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                        {step.features.map((feature, i) => (
+                          <span key={i} className="inline-flex items-center gap-1.5 text-xs font-medium text-primary bg-primary/10 px-3 py-1.5 rounded-full">
+                            <CheckCircle className="h-3 w-3" />
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
                   {/* Spacer for alternating layout */}
-                  <div className="hidden lg:block lg:h-32" />
+                  <div className="hidden md:block md:w-5/12" />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
           <Button variant="hero" size="lg" className="group">
             Book a call
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

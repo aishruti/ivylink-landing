@@ -8,59 +8,65 @@ import {
 const faqs = [
   {
     question: "How long does setup take?",
-    answer: "Setup takes about 7 minutes. Connect Instagram and your booking link, and the system handles the rest.",
+    answer: "About 7 minutes. Once your Instagram and booking tool are connected, automation runs itself.",
   },
   {
-    question: "Do I need technical skills?",
-    answer: "No. Every step is guided, and the automation manages outreach and posting for you.",
+    question: "Will automation sound impersonal to partners?",
+    answer: "No. Campaigns use proven local-friendly offers that feel genuine and drive response.",
   },
   {
     question: "Is my data secure?",
-    answer: "Yes. Your accounts are connected via official API integrations used by top social tools.",
+    answer: "Yes—our system connects through official APIs trusted by top social platforms.",
   },
   {
-    question: "When should I expect results?",
-    answer: "Most see first bookings within the 21-day launch window.",
+    question: "How soon will I see bookings?",
+    answer: "Most med spas see new appointments within the 21-day launch window.",
   },
   {
-    question: "What if I don't hit 8 bookings?",
-    answer: "You're covered by our performance guarantee—we continue working free until you do.",
+    question: "What if I don't reach 8 bookings?",
+    answer: "We'll continue working at no cost until you do—our results guarantee covers you.",
   },
   {
-    question: "Who supports me if I get stuck?",
-    answer: "Dedicated chat support and templates are available for every stage of your collab campaigns.",
+    question: "Can it work for smaller or newer spas?",
+    answer: "Absolutely. It's built for single-location spas that don't have time for manual networking.",
   },
   {
-    question: "Will this work if I'm a smaller spa?",
-    answer: "Yes. The engine is optimized for single-location spas with limited marketing time.",
+    question: "What support is available?",
+    answer: "You'll have direct chat access plus templates for every collaboration play.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <section className="py-20 lg:py-28">
-      <div className="section-container">
+    <section id="faq" className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+      
+      <div className="section-container relative">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Frequently Asked Questions
+            <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
+              FAQ
+            </span>
+            <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              Frequently Asked <span className="text-gradient">Questions</span>
             </h2>
             <p className="mb-12 text-lg text-muted-foreground">
-              Everything you need to know about getting started.
+              Everything you need to know about getting started with IvyLink.
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border-b border-border/50"
+                className="border border-border/50 rounded-xl px-6 data-[state=open]:bg-muted/30 transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-display font-semibold text-foreground hover:text-primary hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

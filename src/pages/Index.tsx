@@ -1,3 +1,4 @@
+import Navigation from "@/components/landing/Navigation";
 import Hero from "@/components/landing/Hero";
 import WhoItsFor from "@/components/landing/WhoItsFor";
 import OutcomePillars from "@/components/landing/OutcomePillars";
@@ -9,7 +10,8 @@ import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
+      <Navigation />
       <Hero />
       <WhoItsFor />
       <OutcomePillars />
