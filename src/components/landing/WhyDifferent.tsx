@@ -2,25 +2,19 @@ import { Clock, Target, Eye } from "lucide-react";
 
 const differentiators = [
   {
-    icon: Clock,
-    title: "10+ Hours Saved Weekly",
-    description: "Replaces manual networking with fully automated collaboration campaigns.",
-    stat: "10+",
-    statLabel: "Hours saved",
-  },
-  {
     icon: Target,
-    title: "Battle-Tested Plays",
-    description: "Uses proven local partnership plays that generate real bookings, not just engagement.",
-    stat: "8+",
-    statLabel: "New bookings",
+    title: "Not Another Ad Platform",
+    description: "Other tools help you find leads. We help you find partners who send you clients month after month.",
   },
   {
     icon: Eye,
-    title: "Full Revenue Visibility",
-    description: "Gives you complete insight into what drives revenue—so every hour saved adds real growth.",
-    stat: "100%",
-    statLabel: "Transparency",
+    title: "Local Collab Discovery",
+    description: "No one else is doing this. We map complementary businesses in your area and handle the outreach.",
+  },
+  {
+    icon: Clock,
+    title: "Built by Someone Who Gets It",
+    description: "Created by a founder who ran a med spa and knows the pain of empty chairs and wasted marketing spend.",
   },
 ];
 
@@ -56,10 +50,6 @@ const WhyDifferent = () => {
             >
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl gradient-primary">
                 <item.icon className="h-8 w-8 text-white" />
-              </div>
-              <div className="mb-4">
-                <span className="text-4xl font-display font-bold text-gradient">{item.stat}</span>
-                <span className="block text-sm text-background/60">{item.statLabel}</span>
               </div>
               <h3 className="mb-3 text-xl font-display font-bold text-background">
                 {item.title}

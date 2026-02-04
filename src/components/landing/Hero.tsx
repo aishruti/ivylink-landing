@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, CheckCircle } from "lucide-react";
-import heroCollaboration from "@/assets/hero-collaboration.jpg";
+import { ArrowRight } from "lucide-react";
+import HeroProductUI from "./HeroProductUI";
 
 const Hero = () => {
   return (
@@ -19,84 +19,31 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full gradient-primary px-4 py-2 text-sm font-medium text-white animate-fade-up">
-              <Play className="h-4 w-4" />
-              <span>Automated Collaboration Engine</span>
+              <span>Local Partnership Engine</span>
             </div>
 
             {/* H1 */}
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              <span className="text-gradient">Interconnect</span> Your Business with the Local Traffic That Matters
+              Stop Competing. <span className="text-gradient">Start Collaborating.</span>
             </h1>
 
             {/* Subhead */}
             <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              For busy med spa owners tired of manual networking—turn days of work into minutes and watch bookings rise.
+              The gym next door has clients who would pay for your services. IvyLink connects you with complementary local businesses and turns their traffic into your bookings.
             </p>
 
-            {/* Credibility badges */}
-            <div className="mb-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <div className="inline-flex items-center gap-2 rounded-xl bg-secondary px-4 py-2.5 text-secondary-foreground">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="font-medium text-sm">8 new bookings in 21 days</span>
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-xl bg-secondary px-4 py-2.5 text-secondary-foreground">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="font-medium text-sm">Or we work free until you do</span>
-              </div>
-            </div>
-
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <Button variant="hero" size="xl" className="group">
-                Book a call
+                See Who Is In My Area
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="xl" className="group">
-                Watch demo
-                <Play className="h-5 w-5" />
               </Button>
             </div>
           </div>
 
-          {/* Right Content - Dashboard Image */}
+          {/* Right Content - Product UI */}
           <div className="relative animate-fade-up lg:animate-scale-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl card-elevated">
-              {/* Gradient border effect */}
-              <div className="absolute -inset-1 gradient-primary rounded-2xl blur-sm opacity-30" />
-              <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-card">
-                <img src={heroCollaboration} alt="Med spa owners shaking hands, forming local business partnerships" className="w-full h-auto object-cover" />
-              </div>
-            </div>
-            
-            {/* Floating stats card */}
-            <div className="absolute -bottom-4 -left-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.5s' }}>
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
-                  <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">+127%</p>
-                  <p className="text-xs text-muted-foreground">Booking growth</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating partners card */}
-            <div className="absolute -top-4 -right-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.6s' }}>
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-lg gradient-purple flex items-center justify-center">
-                  <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">24</p>
-                  <p className="text-xs text-muted-foreground">Active partners</p>
-                </div>
-              </div>
-            </div>
+            <HeroProductUI />
           </div>
         </div>
       </div>

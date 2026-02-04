@@ -1,11 +1,11 @@
 import { Check } from "lucide-react";
 
 const audiences = [
-  "Single-location med spa owners with inconsistent bookings",
-  "Already using social or lead tools but still juggling empty slots",
-  "Spending hours posting or DMing without dependable results",
-  "Want a done-for-you system that automates the entire process",
-  "Ready to grow through local collabs that run themselves",
+  "You're paying for ads but most clients come once and disappear",
+  "The gym next door has clients who would love your services—but no way to reach them",
+  "You've tried networking but it feels awkward and rarely converts",
+  "Your calendar has empty slots while competitors seem fully booked",
+  "You want partnerships that bring clients, not just Instagram likes",
 ];
 
 const WhoItsFor = () => {

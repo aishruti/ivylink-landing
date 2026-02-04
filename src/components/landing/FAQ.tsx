@@ -7,32 +7,28 @@ import {
 
 const faqs = [
   {
-    question: "How long does setup take?",
-    answer: "About 7 minutes. Once your Instagram and booking tool are connected, automation runs itself.",
+    question: "Who is IvyLink for?",
+    answer: "Single-location med spas, injectors, and aesthetic practices who want consistent bookings from local partnerships—without the awkward networking.",
   },
   {
-    question: "Will automation sound impersonal to partners?",
-    answer: "No. Campaigns use proven local-friendly offers that feel genuine and drive response.",
+    question: "How does the partner matching work?",
+    answer: "We scan your area for complementary businesses (gyms, studios, salons) and identify the best collaboration fits based on audience overlap and partnership potential.",
   },
   {
     question: "Is my data secure?",
-    answer: "Yes—our system connects through official APIs trusted by top social platforms.",
+    answer: "Yes—we connect through official APIs and never share your client data with partners. Your information stays yours.",
   },
   {
-    question: "How soon will I see bookings?",
-    answer: "Most med spas see new appointments within the 21-day launch window.",
+    question: "What does it cost to get started?",
+    answer: "Book a call to learn about our pricing. We guarantee 8 new bookings in 21 days—or we keep working for free until you do.",
   },
   {
-    question: "What if I don't reach 8 bookings?",
-    answer: "We'll continue working at no cost until you do—our results guarantee covers you.",
+    question: "How is this different from ads or a CRM?",
+    answer: "Ads bring strangers who may never return. CRMs manage existing clients. IvyLink builds partnerships that send you warm referrals month after month.",
   },
   {
-    question: "Can it work for smaller or newer spas?",
-    answer: "Absolutely. It's built for single-location spas that don't have time for manual networking.",
-  },
-  {
-    question: "What support is available?",
-    answer: "You'll have direct chat access plus templates for every collaboration play.",
+    question: "How soon will I see results?",
+    answer: "Most med spas see new appointments within the first 21 days. Our system starts identifying partners immediately after setup.",
   },
 ];
 
