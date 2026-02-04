@@ -29,7 +29,7 @@ const Hero = () => {
 
             {/* Subhead */}
             <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              The gym next door has clients who would pay for your services. IvyLink connects you with complementary local businesses and turns their traffic into your bookings.
+              IvyLink connects you with complementary local partners—gyms, salons, chiropractors—and automatically swaps referrals so their foot traffic becomes your bookings, with more clients and no cold outreach.
             </p>
 
             {/* CTAs */}
