@@ -28,7 +28,7 @@ const ClosingCTA = () => {
                 </div>
                 <div className="rounded-xl bg-muted/50 p-5">
                   <Users className="mx-auto mb-3 h-8 w-8 text-primary" />
-                  <p className="font-display font-bold text-foreground">10+ Partners</p>
+                  <p className="font-display font-bold text-foreground">4+ Partners</p>
                   <p className="text-sm text-muted-foreground">Connected automatically</p>
                 </div>
                 <div className="rounded-xl bg-muted/50 p-5">

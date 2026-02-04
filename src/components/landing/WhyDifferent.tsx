@@ -13,8 +13,8 @@ const differentiators = [
   },
   {
     icon: Clock,
-    title: "Built by Someone Who Gets It",
-    description: "Created by a founder who ran a med spa and knows the pain of empty chairs and wasted marketing spend.",
+    title: "500+ on the Waitlist",
+    description: "Med spa owners are already lining up. Join the waitlist to get early access when we launch.",
   },
 ];
 
