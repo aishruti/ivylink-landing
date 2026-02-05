@@ -24,12 +24,12 @@ const Hero = () => {
 
             {/* H1 */}
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Stop Competing. <span className="text-gradient">Start Collaborating.</span>
+              Turn Nearby Businesses into a <span className="text-gradient">Steady Stream of Bookings</span>
             </h1>
 
             {/* Subhead */}
             <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              IvyLink connects you with complementary local partners—gyms, salons, chiropractors—and automatically swaps referrals so their foot traffic becomes your bookings, with more clients and no cold outreach.
+              IvyLink links you with nearby businesses that share your audience and swaps referrals on autopilot—so you grow without constant outreach.
             </p>
 
             {/* CTAs */}
