@@ -3,6 +3,7 @@ import Hero from "@/components/landing/Hero";
 import WhoItsFor from "@/components/landing/WhoItsFor";
 import OutcomePillars from "@/components/landing/OutcomePillars";
 import HowItWorks from "@/components/landing/HowItWorks";
+import AIDiscoveryEngine from "@/components/landing/AIDiscoveryEngine";
 import WhyDifferent from "@/components/landing/WhyDifferent";
 import FAQ from "@/components/landing/FAQ";
 import ClosingCTA from "@/components/landing/ClosingCTA";
@@ -16,6 +17,7 @@ const Index = () => {
       <WhoItsFor />
       <OutcomePillars />
       <HowItWorks />
+      <AIDiscoveryEngine />
       <WhyDifferent />
       <FAQ />
       <ClosingCTA />
