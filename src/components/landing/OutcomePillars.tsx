@@ -42,7 +42,7 @@ const pillars = [
 
 const OutcomePillars = () => {
   return (
-    <section id="features" className="py-20 lg:py-28 relative overflow-hidden">
+    <section id="features" className="py-16 lg:py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-muted/30" />
       <div className="absolute top-20 left-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />

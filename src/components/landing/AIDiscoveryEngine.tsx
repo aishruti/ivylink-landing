@@ -51,7 +51,7 @@ const timelineSteps = [
 
 const AIDiscoveryEngine = () => {
   return (
-    <section id="ai-discovery" className="py-20 lg:py-28 relative overflow-hidden bg-muted/30">
+    <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-20 left-0 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
@@ -240,7 +240,7 @@ const AIDiscoveryEngine = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <Button variant="hero" size="lg" className="group">
             Book a call
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
