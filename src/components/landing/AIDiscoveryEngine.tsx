@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Mail, CalendarCheck, Users, Share2, CheckCircle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import spaInterior from "@/assets/spa-interior-1.jpg";
+import spaLounge from "@/assets/spa-lounge-2.jpg";
+import studioInterior from "@/assets/studio-interior-1.jpg";
+import studioClass from "@/assets/studio-class-2.jpg";
 
 const timelineSteps = [
   {
@@ -89,22 +93,22 @@ const AIDiscoveryEngine = () => {
                     <div className="space-y-2">
                       <p className="text-xs font-medium text-muted-foreground text-center">Your Spa</p>
                       <div className="grid grid-cols-2 gap-1.5">
-                        <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
-                          <span className="text-2xl">✨</span>
+                        <div className="aspect-square rounded-lg overflow-hidden">
+                          <img src={spaInterior} alt="Luxury spa interior" className="w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-square rounded-lg bg-secondary flex items-center justify-center">
-                          <span className="text-2xl">💎</span>
+                        <div className="aspect-square rounded-lg overflow-hidden">
+                          <img src={spaLounge} alt="Spa lounge area" className="w-full h-full object-cover" />
                         </div>
                       </div>
                     </div>
                     <div className="space-y-2">
                       <p className="text-xs font-medium text-muted-foreground text-center">Their Studio</p>
                       <div className="grid grid-cols-2 gap-1.5">
-                        <div className="aspect-square rounded-lg bg-accent flex items-center justify-center">
-                          <span className="text-2xl">🧘</span>
+                        <div className="aspect-square rounded-lg overflow-hidden">
+                          <img src={studioInterior} alt="Pilates studio interior" className="w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-square rounded-lg bg-primary/10 flex items-center justify-center">
-                          <span className="text-2xl">🌿</span>
+                        <div className="aspect-square rounded-lg overflow-hidden">
+                          <img src={studioClass} alt="Pilates class in session" className="w-full h-full object-cover" />
                         </div>
                       </div>
                     </div>
