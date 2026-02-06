@@ -9,28 +9,43 @@ import studioClass from "@/assets/studio-class-2.jpg";
 const timelineSteps = [
   {
     icon: Target,
+    number: "01",
     title: "The Strategy",
     description: "AI selects the vertical play (Service Swap) based on your empty slots.",
+    visual: "🎯",
+    highlight: "Smart Selection",
   },
   {
     icon: Mail,
+    number: "02",
     title: "The Outreach",
     description: "Automated DM/Email sends an influential proposition to the partner.",
+    visual: "✉️",
+    highlight: "Zero Effort",
   },
   {
     icon: CalendarCheck,
+    number: "03",
     title: "The Slot-Fill",
     description: "Capture new bookings with a 70%+ show-up rate via automated reminders.",
+    visual: "📅",
+    highlight: "70%+ Show Rate",
   },
   {
     icon: Users,
+    number: "04",
     title: "The Dance",
     description: "You host the partner for a swap (we provide the 'What to Say' script).",
+    visual: "🤝",
+    highlight: "Scripted",
   },
   {
     icon: Share2,
+    number: "05",
     title: "The Amplify",
     description: "We auto-post the recorded collab to IG to capture long-term referral revenue.",
+    visual: "📱",
+    highlight: "Auto-Posted",
   },
 ];
 
@@ -153,7 +168,7 @@ const AIDiscoveryEngine = () => {
             <div className="absolute -z-10 -bottom-4 -right-4 h-full w-full rounded-2xl bg-primary/10 blur-sm" />
           </div>
 
-          {/* Right: Execution Timeline */}
+          {/* Right: Execution Timeline - Visual Storytelling */}
           <div className="space-y-6">
             <div className="mb-8">
               <h3 className="text-2xl font-display font-bold text-foreground mb-2">
@@ -164,36 +179,62 @@ const AIDiscoveryEngine = () => {
               </p>
             </div>
 
-            <div className="relative">
-              {/* Vertical line */}
-              <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/20 hidden sm:block" />
-
-              <div className="space-y-6">
-                {timelineSteps.map((step, index) => (
-                  <div
-                    key={index}
-                    className="relative flex gap-4 opacity-0 animate-fade-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {/* Icon */}
-                    <div className="relative z-10 flex-shrink-0">
-                      <div className="h-12 w-12 rounded-xl gradient-primary flex items-center justify-center shadow-lg">
-                        <step.icon className="h-5 w-5 text-white" />
+            {/* Visual Journey Cards */}
+            <div className="relative space-y-4">
+              {timelineSteps.map((step, index) => (
+                <div
+                  key={index}
+                  className="group relative opacity-0 animate-fade-up"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  {/* Connector line to next step */}
+                  {index < timelineSteps.length - 1 && (
+                    <div className="absolute left-8 top-full h-4 w-0.5 bg-gradient-to-b from-primary/50 to-primary/20 z-0" />
+                  )}
+                  
+                  {/* Card */}
+                  <div className="relative flex items-start gap-4 p-4 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5">
+                    {/* Step Number & Icon */}
+                    <div className="relative flex-shrink-0">
+                      <div className="h-16 w-16 rounded-2xl gradient-primary flex flex-col items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <span className="text-2xl mb-0.5">{step.visual}</span>
+                        <span className="text-[10px] font-bold text-white/80">{step.number}</span>
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="flex-1 pb-2">
-                      <h4 className="text-lg font-display font-bold text-foreground mb-1">
-                        {step.title}
-                      </h4>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h4 className="text-base font-display font-bold text-foreground">
+                          {step.title}
+                        </h4>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                          {step.highlight}
+                        </span>
+                      </div>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {step.description}
                       </p>
                     </div>
+
+                    {/* Arrow indicator on hover */}
+                    <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity self-center">
+                      <ArrowRight className="h-4 w-4 text-primary" />
+                    </div>
                   </div>
-                ))}
+                </div>
+              ))}
+            </div>
+
+            {/* Result indicator */}
+            <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/20 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span className="font-bold text-foreground">Result</span>
               </div>
+              <p className="text-sm text-muted-foreground">
+                8+ new bookings in your first 21 days—guaranteed.
+              </p>
             </div>
           </div>
         </div>
