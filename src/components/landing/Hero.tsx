@@ -17,23 +17,18 @@ const Hero = () => {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full gradient-primary px-4 py-2 text-sm font-medium text-white animate-fade-up">
-              <span>Local Partnership Engine</span>
-            </div>
-
             {/* H1 */}
-            <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Turn Nearby Businesses into a <span className="text-gradient">Steady Stream of Bookings</span>
+            <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up">
+              Sync Your Med Spa with Local Partners for <span className="text-gradient">Guaranteed Referrals</span>
             </h1>
 
             {/* Subhead */}
-            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              IvyLink links you with nearby businesses that share your audience and swaps referrals on autopilot—so you grow without constant outreach.
+            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              IvyLink's AI automates med spa referral swaps with local partners—turning their foot traffic into your bookings on total autopilot.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <Button variant="hero" size="xl" className="group">
                 See Who Is In My Area
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

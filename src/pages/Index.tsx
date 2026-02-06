@@ -1,9 +1,9 @@
 import Navigation from "@/components/landing/Navigation";
 import Hero from "@/components/landing/Hero";
 import WhoItsFor from "@/components/landing/WhoItsFor";
+import AIDiscoveryEngine from "@/components/landing/AIDiscoveryEngine";
 import OutcomePillars from "@/components/landing/OutcomePillars";
 import HowItWorks from "@/components/landing/HowItWorks";
-import AIDiscoveryEngine from "@/components/landing/AIDiscoveryEngine";
 import WhyDifferent from "@/components/landing/WhyDifferent";
 import FAQ from "@/components/landing/FAQ";
 import ClosingCTA from "@/components/landing/ClosingCTA";
@@ -15,9 +15,9 @@ const Index = () => {
       <Navigation />
       <Hero />
       <WhoItsFor />
+      <AIDiscoveryEngine />
       <OutcomePillars />
       <HowItWorks />
-      <AIDiscoveryEngine />
       <WhyDifferent />
       <FAQ />
       <ClosingCTA />

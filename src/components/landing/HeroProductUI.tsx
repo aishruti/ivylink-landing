@@ -27,7 +27,7 @@ const HeroProductUI = () => {
 
           {/* Partner Cards */}
           <div className="space-y-3">
-            {/* Partner 1 - Connected */}
+            {/* Partner 1 - Connected with stats */}
             <div className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
               <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
                 <Users className="h-6 w-6 text-white" />
@@ -40,39 +40,45 @@ const HeroProductUI = () => {
                 <span className="text-sm text-muted-foreground">Fitness Studio • 0.3 mi</span>
               </div>
               <div className="text-right">
-                <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">Connected</span>
+                <div className="text-sm font-bold text-foreground">23 bookings</div>
+                <div className="text-xs font-semibold text-primary">$4,850</div>
               </div>
             </div>
 
-            {/* Partner 2 - High Match */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-muted/30 border border-border/50">
-              <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center">
-                <Star className="h-6 w-6 text-primary" />
+            {/* Partner 2 - Connected with stats */}
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
+                <Star className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-foreground">Luxe Hair Salon</span>
-                  <span className="text-xs text-muted-foreground">98% match</span>
+                  <Check className="h-4 w-4 text-primary" />
                 </div>
                 <span className="text-sm text-muted-foreground">Salon • 0.5 mi</span>
               </div>
-              <button className="text-xs font-medium text-primary hover:text-primary/80 flex items-center gap-1">
-                Connect <ArrowRight className="h-3 w-3" />
-              </button>
+              <div className="text-right">
+                <div className="text-sm font-bold text-foreground">18 bookings</div>
+                <div className="text-xs font-semibold text-primary">$3,200</div>
+              </div>
             </div>
 
-            {/* Partner 3 */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-muted/30 border border-border/50">
-              <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center">
-                <Calendar className="h-6 w-6 text-primary" />
+            {/* Partner 3 - Connected with stats */}
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
+                <Calendar className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
-                <span className="font-semibold text-foreground">Equinox Gym</span>
-                <span className="text-sm text-muted-foreground block">Gym • 0.8 mi</span>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-foreground">Equinox Gym</span>
+                  <Check className="h-4 w-4 text-primary" />
+                </div>
+                <span className="text-sm text-muted-foreground">Gym • 0.8 mi</span>
               </div>
-              <button className="text-xs font-medium text-primary hover:text-primary/80 flex items-center gap-1">
-                Connect <ArrowRight className="h-3 w-3" />
-              </button>
+              <div className="text-right">
+                <div className="text-sm font-bold text-foreground">12 bookings</div>
+                <div className="text-xs font-semibold text-primary">$2,400</div>
+              </div>
             </div>
           </div>
         </div>
