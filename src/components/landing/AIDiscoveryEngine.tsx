@@ -5,53 +5,44 @@ import spaInterior from "@/assets/spa-interior-1.jpg";
 import spaLounge from "@/assets/spa-lounge-2.jpg";
 import studioInterior from "@/assets/studio-interior-1.jpg";
 import studioClass from "@/assets/studio-class-2.jpg";
-
-const timelineSteps = [
-  {
-    icon: Target,
-    number: "01",
-    title: "The Strategy",
-    description: "AI selects the vertical play (Service Swap) based on your empty slots.",
-    visual: "🎯",
-    highlight: "Smart Selection",
-  },
-  {
-    icon: Mail,
-    number: "02",
-    title: "The Outreach",
-    description: "Automated DM/Email sends an influential proposition to the partner.",
-    visual: "✉️",
-    highlight: "Zero Effort",
-  },
-  {
-    icon: CalendarCheck,
-    number: "03",
-    title: "The Slot-Fill",
-    description: "Capture new bookings with a 70%+ show-up rate via automated reminders.",
-    visual: "📅",
-    highlight: "70%+ Show Rate",
-  },
-  {
-    icon: Users,
-    number: "04",
-    title: "The Dance",
-    description: "You host the partner for a swap (we provide the 'What to Say' script).",
-    visual: "🤝",
-    highlight: "Scripted",
-  },
-  {
-    icon: Share2,
-    number: "05",
-    title: "The Amplify",
-    description: "We auto-post the recorded collab to IG to capture long-term referral revenue.",
-    visual: "📱",
-    highlight: "Auto-Posted",
-  },
-];
-
+const timelineSteps = [{
+  icon: Target,
+  number: "01",
+  title: "The Strategy",
+  description: "AI selects the vertical play (Service Swap) based on your empty slots.",
+  visual: "🎯",
+  highlight: "Smart Selection"
+}, {
+  icon: Mail,
+  number: "02",
+  title: "The Outreach",
+  description: "Automated DM/Email sends an influential proposition to the partner.",
+  visual: "✉️",
+  highlight: "Zero Effort"
+}, {
+  icon: CalendarCheck,
+  number: "03",
+  title: "The Slot-Fill",
+  description: "Capture new bookings with a 70%+ show-up rate via automated reminders.",
+  visual: "📅",
+  highlight: "70%+ Show Rate"
+}, {
+  icon: Users,
+  number: "04",
+  title: "The Dance",
+  description: "You host the partner for a swap (we provide the 'What to Say' script).",
+  visual: "🤝",
+  highlight: "Scripted"
+}, {
+  icon: Share2,
+  number: "05",
+  title: "The Amplify",
+  description: "We auto-post the recorded collab to IG to capture long-term referral revenue.",
+  visual: "📱",
+  highlight: "Auto-Posted"
+}];
 const AIDiscoveryEngine = () => {
-  return (
-    <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
+  return <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-20 left-0 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
@@ -65,9 +56,7 @@ const AIDiscoveryEngine = () => {
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             How IvyLink Turns Neighbors into <span className="text-gradient">New Bookings</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Our AI finds your perfect match in a 2-mile radius, then runs the "Service Swap" play to fill your slots on total autopilot.
-          </p>
+          <p className="text-lg text-muted-foreground">Our AI finds your perfect match in a 2 mile radius, then runs the "Service Swap" play to fill your slots on total autopilot.</p>
         </div>
 
         {/* Two Column Layout */}
@@ -181,16 +170,11 @@ const AIDiscoveryEngine = () => {
 
             {/* Visual Journey Cards */}
             <div className="relative space-y-4">
-              {timelineSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className="group relative opacity-0 animate-fade-up"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
+              {timelineSteps.map((step, index) => <div key={index} className="group relative opacity-0 animate-fade-up" style={{
+              animationDelay: `${index * 0.15}s`
+            }}>
                   {/* Connector line to next step */}
-                  {index < timelineSteps.length - 1 && (
-                    <div className="absolute left-8 top-full h-4 w-0.5 bg-gradient-to-b from-primary/50 to-primary/20 z-0" />
-                  )}
+                  {index < timelineSteps.length - 1 && <div className="absolute left-8 top-full h-4 w-0.5 bg-gradient-to-b from-primary/50 to-primary/20 z-0" />}
                   
                   {/* Card */}
                   <div className="relative flex items-start gap-4 p-4 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5">
@@ -222,8 +206,7 @@ const AIDiscoveryEngine = () => {
                       <ArrowRight className="h-4 w-4 text-primary" />
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Result indicator */}
@@ -247,8 +230,6 @@ const AIDiscoveryEngine = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AIDiscoveryEngine;
