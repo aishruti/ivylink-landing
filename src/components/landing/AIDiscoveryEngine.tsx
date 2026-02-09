@@ -161,7 +161,7 @@ const AIDiscoveryEngine = () => {
           <div className="space-y-6">
             <div className="mb-8">
               <h3 className="text-2xl font-display font-bold text-foreground mb-2">
-                The Execution Playbook
+                How It Works
               </h3>
               <p className="text-muted-foreground">
                 From match to booked appointment, completely hands-off.
