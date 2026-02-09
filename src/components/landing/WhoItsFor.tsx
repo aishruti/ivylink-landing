@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const audiences = [
   "You're paying for ads but most clients come once and disappear",
-  "The gym next door has clients who would love your services—but no way to reach them",
+  "The gym next door has clients who would love your services, but no way to reach them",
   "You've tried networking but it feels awkward and rarely converts",
   "Your calendar has empty slots while competitors seem fully booked",
   "You want partnerships that bring clients, not just Instagram likes",

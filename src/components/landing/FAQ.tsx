@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Who is IvyLink for?",
-    answer: "Single-location med spas, injectors, and aesthetic practices who want consistent bookings from local partnerships—without the awkward networking.",
+    answer: "Single-location med spas, injectors, and aesthetic practices who want consistent bookings from local partnerships without the awkward networking.",
   },
   {
     question: "How does the partner matching work?",
@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     question: "Is my data secure?",
-    answer: "Yes—we connect through official APIs and never share your client data with partners. Your information stays yours.",
+    answer: "Yes, we connect through official APIs and never share your client data with partners. Your information stays yours.",
   },
   {
     question: "What does it cost to get started?",
-    answer: "Book a call to learn about our pricing. We guarantee 8 new bookings in 21 days—or we keep working for free until you do.",
+    answer: "Book a call to learn about our pricing. We guarantee 8 new bookings in 21 days or we keep working for free until you do.",
   },
   {
     question: "How is this different from ads or a CRM?",
