@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import HeroProductUI from "./HeroProductUI";
-
 const Hero = () => {
-  return (
-    <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
+  return <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 mesh-gradient" />
       
@@ -23,12 +21,14 @@ const Hero = () => {
             </h1>
 
             {/* Subhead */}
-            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              IvyLink's AI automates med spa referral swaps with local partners—turning their foot traffic into your bookings on total autopilot.
-            </p>
+            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{
+            animationDelay: '0.1s'
+          }}>IvyLink's AI automates med spa referral swaps with local partners to turn their foot traffic into your bookings on total autopilot.</p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{
+            animationDelay: '0.2s'
+          }}>
               <Button variant="hero" size="xl" className="group">
                 See Who Is In My Area
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -37,13 +37,13 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Product UI */}
-          <div className="relative animate-fade-up lg:animate-scale-in" style={{ animationDelay: '0.3s' }}>
+          <div className="relative animate-fade-up lg:animate-scale-in" style={{
+          animationDelay: '0.3s'
+        }}>
             <HeroProductUI />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
