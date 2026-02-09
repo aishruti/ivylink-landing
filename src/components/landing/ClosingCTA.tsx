@@ -44,7 +44,7 @@ const ClosingCTA = () => {
               </div>
 
               <p className="mb-10 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                In your first week, you'll connect with local partners and launch your first automated "Service Swap"—no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
+                In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
               <Button variant="hero" size="xl" className="group">

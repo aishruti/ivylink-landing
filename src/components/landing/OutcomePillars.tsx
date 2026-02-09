@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: Share2,
     title: "Done-For-You Posting",
-    description: "Handles every post and DM for you—no late-night scheduling needed.",
+    description: "Handles every post and DM for you. No late-night scheduling needed.",
     gradient: "from-primary to-orange-400",
   },
   {
@@ -35,7 +35,7 @@ const pillars = [
   {
     icon: Settings,
     title: "Hands-Off Execution",
-    description: "We handle all the maintenance—campaign updates, partner outreach, and optimization run automatically.",
+    description: "We handle all the maintenance. Campaign updates, partner outreach, and optimization run automatically.",
     gradient: "from-orange-400 to-pink-500",
   },
 ];

@@ -66,7 +66,7 @@ const AIDiscoveryEngine = () => {
             How IvyLink Turns Neighbors into <span className="text-gradient">New Bookings</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our AI finds your perfect match in a 2-mile radius, then runs the "Service Swap" play to fill your slots—on total autopilot.
+            Our AI finds your perfect match in a 2-mile radius, then runs the "Service Swap" play to fill your slots on total autopilot.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ const AIDiscoveryEngine = () => {
                 The Execution Playbook
               </h3>
               <p className="text-muted-foreground">
-                From match to booked appointment—completely hands-off.
+                From match to booked appointment, completely hands-off.
               </p>
             </div>
 
@@ -233,7 +233,7 @@ const AIDiscoveryEngine = () => {
                 <span className="font-bold text-foreground">Result</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                8+ new bookings in your first 21 days—guaranteed.
+                8+ new bookings in your first 21 days, guaranteed.
               </p>
             </div>
           </div>
