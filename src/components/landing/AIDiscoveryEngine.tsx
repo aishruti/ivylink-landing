@@ -149,7 +149,7 @@ const AIDiscoveryEngine = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button variant="hero" className="w-full group">
+                <Button variant="hero" className="w-full group" onClick={openCalendly}>
                   Review & Send Invite
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
