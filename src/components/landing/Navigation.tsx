@@ -12,7 +12,7 @@ const navLinks = [
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isOpen, openCalendly, closeCalendly } = useCalendly();
+  const { isOpen, openCalendly, closeCalendly } = useCalendly("navigation");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">

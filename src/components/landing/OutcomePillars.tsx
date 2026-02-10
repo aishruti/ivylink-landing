@@ -43,7 +43,7 @@ const pillars = [
 ];
 
 const OutcomePillars = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly();
+  const { isOpen, openCalendly, closeCalendly } = useCalendly("features");
   return (
     <section id="features" className="py-16 lg:py-20 relative overflow-hidden">
       {/* Background */}

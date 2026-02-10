@@ -4,7 +4,7 @@ import HeroProductUI from "./HeroProductUI";
 import { PopupModal } from "react-calendly";
 import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 const Hero = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly();
+  const { isOpen, openCalendly, closeCalendly } = useCalendly("hero");
   return <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 mesh-gradient" />

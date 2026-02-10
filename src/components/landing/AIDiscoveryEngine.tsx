@@ -44,7 +44,7 @@ const timelineSteps = [{
   highlight: "Auto-Posted"
 }];
 const AIDiscoveryEngine = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly();
+  const { isOpen, openCalendly, closeCalendly } = useCalendly("ai_discovery");
   return <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
