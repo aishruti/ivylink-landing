@@ -4,7 +4,7 @@ import { PopupModal } from "react-calendly";
 import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 
 const ClosingCTA = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly();
+  const { isOpen, openCalendly, closeCalendly } = useCalendly("closing_cta");
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background */}

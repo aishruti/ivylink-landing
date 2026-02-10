@@ -42,7 +42,7 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly();
+  const { isOpen, openCalendly, closeCalendly } = useCalendly("how_it_works");
   return (
     <section id="how-it-works" className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background decorations */}
