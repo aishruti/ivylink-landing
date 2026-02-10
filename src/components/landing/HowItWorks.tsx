@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Link, Search, Rocket, BarChart, Repeat, CheckCircle } from "lucide-react";
+import { PopupModal } from "react-calendly";
+import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 
 const steps = [
   {
@@ -40,6 +42,7 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  const { isOpen, openCalendly, closeCalendly } = useCalendly();
   return (
     <section id="how-it-works" className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background decorations */}
@@ -105,10 +108,16 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group">
+          <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
             Book a call
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
+          <PopupModal
+            url={CALENDLY_URL}
+            onModalClose={closeCalendly}
+            open={isOpen}
+            rootElement={document.getElementById("root") as HTMLElement}
+          />
         </div>
       </div>
     </section>

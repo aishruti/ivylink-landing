@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { PopupModal } from "react-calendly";
+import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -10,6 +12,7 @@ const navLinks = [
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isOpen, openCalendly, closeCalendly } = useCalendly();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
@@ -40,7 +43,7 @@ const Navigation = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default">
+            <Button variant="hero" size="default" onClick={openCalendly}>
               Book a call
             </Button>
           </div>
@@ -69,13 +72,19 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2">
+              <Button variant="hero" size="lg" className="mt-2" onClick={openCalendly}>
                 Book a call
               </Button>
             </div>
           </div>
         )}
       </div>
+      <PopupModal
+        url={CALENDLY_URL}
+        onModalClose={closeCalendly}
+        open={isOpen}
+        rootElement={document.getElementById("root") as HTMLElement}
+      />
     </nav>
   );
 };
