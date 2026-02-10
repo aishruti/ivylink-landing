@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import HeroProductUI from "./HeroProductUI";
+import { PopupModal } from "react-calendly";
+import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 const Hero = () => {
+  const { isOpen, openCalendly, closeCalendly } = useCalendly();
   return <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 mesh-gradient" />
@@ -29,10 +32,16 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{
             animationDelay: '0.2s'
           }}>
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group" onClick={openCalendly}>
                 See Who Is In My Area
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
+              <PopupModal
+                url={CALENDLY_URL}
+                onModalClose={closeCalendly}
+                open={isOpen}
+                rootElement={document.getElementById("root") as HTMLElement}
+              />
             </div>
           </div>
 
