@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Mail, CalendarCheck, Users, Share2, CheckCircle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { PopupModal } from "react-calendly";
+import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 import spaInterior from "@/assets/spa-interior-1.jpg";
 import spaLounge from "@/assets/spa-lounge-2.jpg";
 import studioInterior from "@/assets/studio-interior-1.jpg";
@@ -42,6 +44,7 @@ const timelineSteps = [{
   highlight: "Auto-Posted"
 }];
 const AIDiscoveryEngine = () => {
+  const { isOpen, openCalendly, closeCalendly } = useCalendly();
   return <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
@@ -224,10 +227,16 @@ const AIDiscoveryEngine = () => {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <Button variant="hero" size="lg" className="group">
+          <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
             Book a call
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
+          <PopupModal
+            url={CALENDLY_URL}
+            onModalClose={closeCalendly}
+            open={isOpen}
+            rootElement={document.getElementById("root") as HTMLElement}
+          />
         </div>
       </div>
     </section>;

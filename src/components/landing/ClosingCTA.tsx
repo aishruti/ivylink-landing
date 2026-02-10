@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Users, TrendingUp, Zap } from "lucide-react";
+import { PopupModal } from "react-calendly";
+import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
 
 const ClosingCTA = () => {
+  const { isOpen, openCalendly, closeCalendly } = useCalendly();
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background */}
@@ -47,10 +50,16 @@ const ClosingCTA = () => {
                 In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group" onClick={openCalendly}>
                 Book a call
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
+              <PopupModal
+                url={CALENDLY_URL}
+                onModalClose={closeCalendly}
+                open={isOpen}
+                rootElement={document.getElementById("root") as HTMLElement}
+              />
             </div>
           </div>
         </div>
