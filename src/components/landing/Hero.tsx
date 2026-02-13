@@ -33,7 +33,7 @@ const Hero = () => {
             animationDelay: '0.2s'
           }}>
               <Button variant="hero" size="xl" className="group" onClick={openCalendly}>
-                Want to Cut Costs Like This? Let's Talk
+                See Who's In My Area
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <PopupModal
