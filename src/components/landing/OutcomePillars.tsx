@@ -90,7 +90,7 @@ const OutcomePillars = () => {
 
         <div className="mt-16 text-center">
           <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
-            Want to Cut Costs Like This in Your Workflow? Let's Talk
+            Add 5 Guaranteed Bookings, Let's Talk
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
           <PopupModal
