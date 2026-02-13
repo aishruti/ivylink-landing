@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "What does it cost to get started?",
-    answer: "Book a call to learn about our pricing. We guarantee 8 new bookings in 21 days or we keep working for free until you do.",
+    answer: "Book a call to learn about our pricing. We guarantee 5 new bookings in 21 days or we keep working for free until you do.",
   },
   {
     question: "How is this different from ads or a CRM?",

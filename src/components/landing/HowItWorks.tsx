@@ -109,7 +109,7 @@ const HowItWorks = () => {
 
         <div className="mt-16 text-center">
           <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
-            Book a call
+            We're Talking to 10 Power Users — Want In?
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
           <PopupModal
