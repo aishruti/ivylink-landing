@@ -7,7 +7,7 @@ const HeroProductUI = () => {
       <div className="relative rounded-2xl overflow-hidden shadow-2xl card-elevated">
         {/* Gradient border effect */}
         <div className="absolute -inset-1 gradient-primary rounded-2xl blur-sm opacity-30" />
-        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-card p-6">
+        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-white p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
@@ -91,8 +91,8 @@ const HeroProductUI = () => {
             <Calendar className="h-5 w-5 text-white" />
           </div>
           <div>
-            <p className="text-2xl font-bold text-foreground">+8</p>
-            <p className="text-xs text-muted-foreground">Bookings this week</p>
+            <p className="text-2xl font-bold text-foreground">+5</p>
+            <p className="text-xs text-muted-foreground">Guaranteed bookings</p>
           </div>
         </div>
       </div>

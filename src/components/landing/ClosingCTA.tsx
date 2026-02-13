@@ -41,8 +41,8 @@ const ClosingCTA = () => {
                 </div>
                 <div className="rounded-xl bg-muted/50 p-5">
                   <TrendingUp className="mx-auto mb-3 h-8 w-8 text-primary" />
-                  <p className="font-display font-bold text-foreground">8+ Bookings</p>
-                  <p className="text-sm text-muted-foreground">Within 21 days</p>
+                  <p className="font-display font-bold text-foreground">5 Guaranteed</p>
+                  <p className="text-sm text-muted-foreground">Bookings in 21 days</p>
                 </div>
               </div>
 
@@ -51,7 +51,7 @@ const ClosingCTA = () => {
               </p>
 
               <Button variant="hero" size="xl" className="group" onClick={openCalendly}>
-                Book a call
+                Early Access Opportunity: Reserve a Call With the Creator
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <PopupModal

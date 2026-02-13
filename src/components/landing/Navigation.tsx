@@ -44,7 +44,7 @@ const Navigation = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Button variant="hero" size="default" onClick={openCalendly}>
-              Book a call
+              Book a Discovery Call
             </Button>
           </div>
 
@@ -73,7 +73,7 @@ const Navigation = () => {
                 </a>
               ))}
               <Button variant="hero" size="lg" className="mt-2" onClick={openCalendly}>
-                Book a call
+                Book a Discovery Call
               </Button>
             </div>
           </div>
