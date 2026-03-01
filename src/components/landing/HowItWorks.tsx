@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Link, Search, Rocket, BarChart, Repeat, CheckCircle } from "lucide-react";
-import { PopupModal } from "react-calendly";
-import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
+import WaitlistDialog from "./WaitlistDialog";
+import { useWaitlist } from "@/hooks/use-waitlist";
 
 const steps = [
   {
@@ -42,7 +42,7 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly("how_it_works");
+  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("how_it_works");
   return (
     <section id="how-it-works" className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background decorations */}
@@ -108,16 +108,11 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
+          <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
             We're Talking to 10 Power Users — Want In?
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
-          <PopupModal
-            url={CALENDLY_URL}
-            onModalClose={closeCalendly}
-            open={isOpen}
-            rootElement={document.getElementById("root") as HTMLElement}
-          />
+          <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
       </div>
     </section>
