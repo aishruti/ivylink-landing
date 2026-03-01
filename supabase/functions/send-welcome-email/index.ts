@@ -33,7 +33,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "IvyLink <noreply@ivylink.ai>",
+        from: "IvyLink <onboarding@resend.dev>",
         to: [email],
         subject: "Welcome to IvyLink! 🎉",
         html: `
