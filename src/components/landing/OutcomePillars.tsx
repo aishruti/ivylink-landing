@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw, Settings } from "lucide-react";
-import { PopupModal } from "react-calendly";
-import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
+import WaitlistDialog from "./WaitlistDialog";
+import { useWaitlist } from "@/hooks/use-waitlist";
 
 const pillars = [
   {
@@ -43,7 +43,7 @@ const pillars = [
 ];
 
 const OutcomePillars = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly("features");
+  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("features");
   return (
     <section id="features" className="py-16 lg:py-20 relative overflow-hidden">
       {/* Background */}
@@ -89,16 +89,11 @@ const OutcomePillars = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
+          <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
             Add 5 Guaranteed Bookings, Let's Talk
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
-          <PopupModal
-            url={CALENDLY_URL}
-            onModalClose={closeCalendly}
-            open={isOpen}
-            rootElement={document.getElementById("root") as HTMLElement}
-          />
+          <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
       </div>
     </section>

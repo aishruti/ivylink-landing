@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Mail, CalendarCheck, Users, Share2, CheckCircle, Globe, CloudSun, DollarSign } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import { PopupModal } from "react-calendly";
-import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
+import WaitlistDialog from "./WaitlistDialog";
+import { useWaitlist } from "@/hooks/use-waitlist";
 import spaInterior from "@/assets/spa-interior-1.jpg";
 import spaLounge from "@/assets/spa-lounge-2.jpg";
 import studioInterior from "@/assets/studio-interior-1.jpg";
@@ -58,7 +58,7 @@ const timelineSteps = [
 ];
 
 const AIDiscoveryEngine = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly("ai_discovery");
+  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("ai_discovery");
   return (
     <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}
@@ -194,8 +194,8 @@ const AIDiscoveryEngine = () => {
                 </p>
               </div>
 
-              <Button variant="hero" className="w-full group" onClick={openCalendly}>
-                Test Drive the Results — Book a Discovery Call
+              <Button variant="hero" className="w-full group" onClick={openWaitlist}>
+                Test Drive the Results — Join the Waitlist
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
@@ -268,16 +268,11 @@ const AIDiscoveryEngine = () => {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <Button variant="hero" size="lg" className="group" onClick={openCalendly}>
+          <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
             We're Talking to 10 Power Users, Want In?
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
-          <PopupModal
-            url={CALENDLY_URL}
-            onModalClose={closeCalendly}
-            open={isOpen}
-            rootElement={document.getElementById("root") as HTMLElement}
-          />
+          <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
       </div>
     </section>

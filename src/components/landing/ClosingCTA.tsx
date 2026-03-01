@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Users, TrendingUp, Zap } from "lucide-react";
-import { PopupModal } from "react-calendly";
-import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
+import WaitlistDialog from "./WaitlistDialog";
+import { useWaitlist } from "@/hooks/use-waitlist";
 
 const ClosingCTA = () => {
-  const { isOpen, openCalendly, closeCalendly } = useCalendly("closing_cta");
+  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("closing_cta");
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background */}
@@ -16,9 +16,7 @@ const ClosingCTA = () => {
         <div className="mx-auto max-w-4xl">
           <div className="rounded-3xl gradient-border bg-card p-8 lg:p-12 card-elevated">
             <div className="text-center">
-              <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
-                Get Started
-              </span>
+              <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">Get Started</span>
               <h2 className="mb-6 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Your First Week with <span className="text-gradient">IvyLink</span>
               </h2>
@@ -50,16 +48,11 @@ const ClosingCTA = () => {
                 In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
-              <Button variant="hero" size="xl" className="group" onClick={openCalendly}>
+              <Button variant="hero" size="xl" className="group" onClick={openWaitlist}>
                 Early Access Opportunity: Reserve a Call With the Creator
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <PopupModal
-                url={CALENDLY_URL}
-                onModalClose={closeCalendly}
-                open={isOpen}
-                rootElement={document.getElementById("root") as HTMLElement}
-              />
+              <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
             </div>
           </div>
         </div>

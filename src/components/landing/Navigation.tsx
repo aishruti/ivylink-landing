@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { PopupModal } from "react-calendly";
-import { useCalendly, CALENDLY_URL } from "@/hooks/use-calendly";
+import WaitlistDialog from "./WaitlistDialog";
+import { useWaitlist } from "@/hooks/use-waitlist";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -12,7 +12,7 @@ const navLinks = [
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isOpen, openCalendly, closeCalendly } = useCalendly("navigation");
+  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("navigation");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
@@ -31,11 +31,7 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <a key={link.label} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 {link.label}
               </a>
             ))}
@@ -43,17 +39,13 @@ const Navigation = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" onClick={openCalendly}>
-              Book a Discovery Call
+            <Button variant="hero" size="default" onClick={openWaitlist}>
+              Join the Waitlist
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className="md:hidden p-2 text-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -63,28 +55,18 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-up">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <a key={link.label} href={link.href} className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2" onClick={openCalendly}>
-                Book a Discovery Call
+              <Button variant="hero" size="lg" className="mt-2" onClick={openWaitlist}>
+                Join the Waitlist
               </Button>
             </div>
           </div>
         )}
       </div>
-      <PopupModal
-        url={CALENDLY_URL}
-        onModalClose={closeCalendly}
-        open={isOpen}
-        rootElement={document.getElementById("root") as HTMLElement}
-      />
+      <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
     </nav>
   );
 };
