@@ -31,6 +31,11 @@ const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
       if (error) throw error;
 
+      // Send welcome email (fire-and-forget, don't block the UI)
+      supabase.functions.invoke("send-welcome-email", {
+        body: { name: name.trim(), email: email.trim() },
+      }).catch((err) => console.error("Welcome email failed:", err));
+
       setSubmitted(true);
       toast({
         title: "You're on the list! 🎉",
