@@ -48,8 +48,8 @@ const ClosingCTA = () => {
                 In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
-              <Button variant="hero" size="xl" className="group max-w-full" onClick={openWaitlist}>
-                <span className="truncate sm:whitespace-normal">Early Access Opportunity: Reserve a Call With the Creator</span>
+              <Button variant="hero" size="xl" className="group w-full sm:w-auto" onClick={openWaitlist}>
+                <span>Early Access: Reserve a Call With the Creator</span>
                 <ArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
               <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
