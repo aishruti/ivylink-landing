@@ -50,7 +50,7 @@ const ClosingCTA = () => {
 
               <Button variant="hero" size="xl" className="group w-full sm:w-auto" onClick={openWaitlist}>
                 <span>Early Access: Reserve a Call With the Creator</span>
-                <ArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
               <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
             </div>

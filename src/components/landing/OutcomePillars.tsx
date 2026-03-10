@@ -91,7 +91,7 @@ const OutcomePillars = () => {
         <div className="mt-16 text-center">
           <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
             Add 5 Guaranteed Bookings, Let's Talk
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
           <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
