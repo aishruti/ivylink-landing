@@ -79,11 +79,11 @@ const AIDiscoveryEngine = () => {
           </p>
 
           {/* AI Engine Bubbles */}
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-4">
             {aiBubbles.map((bubble, i) => (
               <div
                 key={i}
-                className="flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border/60 shadow-md opacity-0 animate-fade-up"
+                className="flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border/60 shadow-md opacity-0 animate-fade-up w-full sm:w-auto"
                 style={{ animationDelay: `${i * 0.12}s` }}
               >
                 <div className="h-10 w-10 rounded-full gradient-primary flex items-center justify-center flex-shrink-0">
@@ -194,7 +194,7 @@ const AIDiscoveryEngine = () => {
                 </p>
               </div>
 
-              <Button variant="hero" className="w-full group" onClick={openWaitlist}>
+              <Button variant="hero" size="lg" className="w-full group" onClick={openWaitlist}>
                 <span>Test Drive the Results — Join the Waitlist</span>
                 <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -237,7 +237,7 @@ const AIDiscoveryEngine = () => {
                       <h4 className="text-base font-display font-bold text-foreground">
                         {step.title}
                       </h4>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                         {step.highlight}
                       </span>
                     </div>
