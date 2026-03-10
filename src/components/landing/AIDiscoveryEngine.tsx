@@ -237,7 +237,7 @@ const AIDiscoveryEngine = () => {
                       <h4 className="text-base font-display font-bold text-foreground">
                         {step.title}
                       </h4>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                         {step.highlight}
                       </span>
                     </div>
