@@ -7,7 +7,7 @@ const HeroProductUI = () => {
       <div className="relative rounded-2xl overflow-hidden shadow-2xl card-elevated">
         {/* Gradient border effect */}
         <div className="absolute -inset-1 gradient-primary rounded-2xl blur-sm opacity-30" />
-        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-white p-6">
+        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-white p-4 sm:p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
@@ -19,64 +19,64 @@ const HeroProductUI = () => {
           </div>
 
           {/* Search/Location Bar */}
-          <div className="flex items-center gap-3 mb-6 p-3 rounded-xl bg-muted/50 border border-border/50">
-            <MapPin className="h-5 w-5 text-primary" />
-            <span className="text-sm text-foreground font-medium">Beverly Hills, CA</span>
-            <span className="text-xs text-muted-foreground ml-auto">12 potential partners found</span>
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 p-3 rounded-xl bg-muted/50 border border-border/50">
+            <MapPin className="h-5 w-5 text-primary shrink-0" />
+            <span className="text-sm text-foreground font-medium whitespace-nowrap">Beverly Hills, CA</span>
+            <span className="text-xs text-muted-foreground ml-auto text-right">12 partners found</span>
           </div>
 
           {/* Partner Cards */}
           <div className="space-y-3">
             {/* Partner 1 - Connected with stats */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
-              <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
-                <Users className="h-6 w-6 text-white" />
+            <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
+                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-foreground">SoulCycle Beverly Hills</span>
-                  <Check className="h-4 w-4 text-primary" />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">SoulCycle Beverly Hills</span>
+                  <Check className="h-4 w-4 text-primary shrink-0" />
                 </div>
-                <span className="text-sm text-muted-foreground">Fitness Studio • 0.3 mi</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Fitness Studio • 0.3 mi</span>
               </div>
-              <div className="text-right">
-                <div className="text-sm font-bold text-foreground">23 bookings</div>
+              <div className="text-right shrink-0">
+                <div className="text-xs sm:text-sm font-bold text-foreground">23 bookings</div>
                 <div className="text-xs font-semibold text-primary">$4,850</div>
               </div>
             </div>
 
-            {/* Partner 2 - Connected with stats */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
-              <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
-                <Star className="h-6 w-6 text-white" />
+            {/* Partner 2 */}
+            <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
+                <Star className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-foreground">Luxe Hair Salon</span>
-                  <Check className="h-4 w-4 text-primary" />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">Luxe Hair Salon</span>
+                  <Check className="h-4 w-4 text-primary shrink-0" />
                 </div>
-                <span className="text-sm text-muted-foreground">Salon • 0.5 mi</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Salon • 0.5 mi</span>
               </div>
-              <div className="text-right">
-                <div className="text-sm font-bold text-foreground">18 bookings</div>
+              <div className="text-right shrink-0">
+                <div className="text-xs sm:text-sm font-bold text-foreground">18 bookings</div>
                 <div className="text-xs font-semibold text-primary">$3,200</div>
               </div>
             </div>
 
-            {/* Partner 3 - Connected with stats */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
-              <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
-                <Calendar className="h-6 w-6 text-white" />
+            {/* Partner 3 */}
+            <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
+                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-foreground">Equinox Gym</span>
-                  <Check className="h-4 w-4 text-primary" />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">Equinox Gym</span>
+                  <Check className="h-4 w-4 text-primary shrink-0" />
                 </div>
-                <span className="text-sm text-muted-foreground">Gym • 0.8 mi</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Gym • 0.8 mi</span>
               </div>
-              <div className="text-right">
-                <div className="text-sm font-bold text-foreground">12 bookings</div>
+              <div className="text-right shrink-0">
+                <div className="text-xs sm:text-sm font-bold text-foreground">12 bookings</div>
                 <div className="text-xs font-semibold text-primary">$2,400</div>
               </div>
             </div>

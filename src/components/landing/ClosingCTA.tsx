@@ -21,7 +21,7 @@ const ClosingCTA = () => {
                 Your First Week with <span className="text-gradient">IvyLink</span>
               </h2>
               
-              <div className="mb-8 grid gap-4 sm:grid-cols-4">
+              <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <div className="rounded-xl bg-muted/50 p-5">
                   <Zap className="mx-auto mb-3 h-8 w-8 text-primary" />
                   <p className="font-display font-bold text-foreground">7 Minutes</p>
@@ -48,9 +48,9 @@ const ClosingCTA = () => {
                 In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
-              <Button variant="hero" size="xl" className="group" onClick={openWaitlist}>
-                Early Access Opportunity: Reserve a Call With the Creator
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Button variant="hero" size="xl" className="group max-w-full" onClick={openWaitlist}>
+                <span className="truncate sm:whitespace-normal">Early Access Opportunity: Reserve a Call With the Creator</span>
+                <ArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
               <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
             </div>

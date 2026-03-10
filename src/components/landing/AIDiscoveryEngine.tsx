@@ -195,8 +195,8 @@ const AIDiscoveryEngine = () => {
               </div>
 
               <Button variant="hero" className="w-full group" onClick={openWaitlist}>
-                Test Drive the Results — Join the Waitlist
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span>Test Drive the Results — Join the Waitlist</span>
+                <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
@@ -268,9 +268,9 @@ const AIDiscoveryEngine = () => {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
-            We're Talking to 10 Power Users, Want In?
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          <Button variant="hero" size="lg" className="group max-w-full" onClick={openWaitlist}>
+            <span>We're Talking to 10 Power Users, Want In?</span>
+            <ArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
           </Button>
           <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
