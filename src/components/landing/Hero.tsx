@@ -31,7 +31,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <Button variant="hero" size="xl" className="group" onClick={openWaitlist}>
                 See Who's In My Area
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
             </div>
