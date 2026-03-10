@@ -79,11 +79,11 @@ const AIDiscoveryEngine = () => {
           </p>
 
           {/* AI Engine Bubbles */}
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-4">
             {aiBubbles.map((bubble, i) => (
               <div
                 key={i}
-                className="flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border/60 shadow-md opacity-0 animate-fade-up"
+                className="flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border/60 shadow-md opacity-0 animate-fade-up w-full sm:w-auto"
                 style={{ animationDelay: `${i * 0.12}s` }}
               >
                 <div className="h-10 w-10 rounded-full gradient-primary flex items-center justify-center flex-shrink-0">
