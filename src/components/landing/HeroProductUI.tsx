@@ -19,10 +19,10 @@ const HeroProductUI = () => {
           </div>
 
           {/* Search/Location Bar */}
-          <div className="flex items-center gap-3 mb-6 p-3 rounded-xl bg-muted/50 border border-border/50">
-            <MapPin className="h-5 w-5 text-primary" />
-            <span className="text-sm text-foreground font-medium">Beverly Hills, CA</span>
-            <span className="text-xs text-muted-foreground ml-auto">12 potential partners found</span>
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 p-3 rounded-xl bg-muted/50 border border-border/50">
+            <MapPin className="h-5 w-5 text-primary shrink-0" />
+            <span className="text-sm text-foreground font-medium whitespace-nowrap">Beverly Hills, CA</span>
+            <span className="text-xs text-muted-foreground ml-auto text-right">12 partners found</span>
           </div>
 
           {/* Partner Cards */}
