@@ -108,9 +108,9 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
-            We're Talking to 10 Power Users — Want In?
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          <Button variant="hero" size="lg" className="group max-w-full" onClick={openWaitlist}>
+            <span>We're Talking to 10 Power Users — Want In?</span>
+            <ArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
           </Button>
           <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>

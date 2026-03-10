@@ -7,7 +7,7 @@ const HeroProductUI = () => {
       <div className="relative rounded-2xl overflow-hidden shadow-2xl card-elevated">
         {/* Gradient border effect */}
         <div className="absolute -inset-1 gradient-primary rounded-2xl blur-sm opacity-30" />
-        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-white p-6">
+        <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-white p-4 sm:p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">

@@ -195,8 +195,8 @@ const AIDiscoveryEngine = () => {
               </div>
 
               <Button variant="hero" className="w-full group" onClick={openWaitlist}>
-                Test Drive the Results — Join the Waitlist
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span>Test Drive the Results — Join the Waitlist</span>
+                <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>

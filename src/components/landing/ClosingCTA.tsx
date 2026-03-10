@@ -21,7 +21,7 @@ const ClosingCTA = () => {
                 Your First Week with <span className="text-gradient">IvyLink</span>
               </h2>
               
-              <div className="mb-8 grid gap-4 sm:grid-cols-4">
+              <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <div className="rounded-xl bg-muted/50 p-5">
                   <Zap className="mx-auto mb-3 h-8 w-8 text-primary" />
                   <p className="font-display font-bold text-foreground">7 Minutes</p>
