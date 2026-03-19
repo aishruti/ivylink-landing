@@ -65,7 +65,7 @@ serve(async (req) => {
             </div>
 
             <h2 style="font-size: 22px; color: #1a1a2e; margin-bottom: 16px;">
-              Hey ${name}, you're on the list! 🚀
+              Hey ${safeName}, you're on the list! 🚀
             </h2>
 
             <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
