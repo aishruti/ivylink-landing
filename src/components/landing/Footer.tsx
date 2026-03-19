@@ -1,4 +1,5 @@
 import { Instagram, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import ivylinkLogo from "@/assets/ivylink-logo.jpg";
 
 const footerLinks = {
   product: [
