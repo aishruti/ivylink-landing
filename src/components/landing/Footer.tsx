@@ -1,4 +1,5 @@
 import { Instagram, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import ivylinkLogo from "@/assets/ivylink-logo.jpg";
 
 const footerLinks = {
   product: [
@@ -34,11 +35,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-6">
-              <div className="h-10 w-10 rounded-xl gradient-primary flex items-center justify-center">
-                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
-              </div>
+              <img src={ivylinkLogo} alt="IvyLink logo" className="h-10 w-10 rounded-xl object-cover" />
               <span className="text-2xl font-display font-bold">IvyLink</span>
             </a>
             <p className="text-background/60 mb-6 leading-relaxed">
