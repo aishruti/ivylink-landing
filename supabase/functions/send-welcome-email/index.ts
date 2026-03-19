@@ -19,12 +19,31 @@ serve(async (req) => {
 
     const { name, email } = await req.json();
 
-    if (!name || !email) {
+    if (!name || !email || typeof name !== "string" || typeof email !== "string") {
       return new Response(
         JSON.stringify({ error: "Name and email are required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    // Server-side length validation
+    const trimmedName = name.trim().slice(0, 100);
+    const trimmedEmail = email.trim().slice(0, 255);
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmedEmail)) {
+      return new Response(
+        JSON.stringify({ error: "Invalid email format" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // HTML-escape to prevent injection
+    const escapeHtml = (str: string) =>
+      str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+
+    const safeName = escapeHtml(trimmedName);
 
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -34,7 +53,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "IvyLink <onboarding@resend.dev>",
-        to: [email],
+        to: [trimmedEmail],
         subject: "Welcome to IvyLink! 🎉",
         html: `
           <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px 30px;">
@@ -46,7 +65,7 @@ serve(async (req) => {
             </div>
 
             <h2 style="font-size: 22px; color: #1a1a2e; margin-bottom: 16px;">
-              Hey ${name}, you're on the list! 🚀
+              Hey ${safeName}, you're on the list! 🚀
             </h2>
 
             <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
