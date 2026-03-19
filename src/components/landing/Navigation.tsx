@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import WaitlistDialog from "./WaitlistDialog";
 import { useWaitlist } from "@/hooks/use-waitlist";
-import ivylinkLogo from "@/assets/ivylink-logo.jpg";
+import ivylinkLogo from "@/assets/ivylink-logo.svg";
 
 const navLinks = [
   { label: "Features", href: "#features" },
