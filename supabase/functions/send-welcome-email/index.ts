@@ -53,7 +53,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "IvyLink <onboarding@resend.dev>",
-        to: [email],
+        to: [trimmedEmail],
         subject: "Welcome to IvyLink! 🎉",
         html: `
           <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px 30px;">
