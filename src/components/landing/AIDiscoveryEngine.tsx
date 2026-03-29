@@ -58,7 +58,7 @@ const timelineSteps = [
 ];
 
 const AIDiscoveryEngine = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("ai_discovery");
+  
   return (
     <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}

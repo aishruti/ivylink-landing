@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Users, TrendingUp, Zap } from "lucide-react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
-
 const ClosingCTA = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("closing_cta");
+  
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background */}

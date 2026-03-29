@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw, Settings } from "lucide-react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
-
 const pillars = [
   {
     icon: MapPin,
@@ -43,7 +40,7 @@ const pillars = [
 ];
 
 const OutcomePillars = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("features");
+  
   return (
     <section id="features" className="py-16 lg:py-20 relative overflow-hidden">
       {/* Background */}

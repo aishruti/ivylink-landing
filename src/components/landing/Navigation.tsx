@@ -13,8 +13,6 @@ const navLinks = [
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("navigation");
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="section-container">
@@ -63,7 +61,7 @@ const Navigation = () => {
           </div>
         )}
       </div>
-      <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
+      
     </nav>
   );
 };

@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Link, Search, Rocket, BarChart, Repeat, CheckCircle } from "lucide-react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
-
 const steps = [
   {
     number: "01",
@@ -42,7 +39,7 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("how_it_works");
+  
   return (
     <section id="how-it-works" className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background decorations */}

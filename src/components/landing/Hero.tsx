@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import HeroProductUI from "./HeroProductUI";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
-
 const Hero = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("hero");
+  
   return (
     <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
       {/* Mesh gradient background */}
