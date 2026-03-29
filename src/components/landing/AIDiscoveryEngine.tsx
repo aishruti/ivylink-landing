@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Mail, CalendarCheck, Users, Share2, CheckCircle, Globe, CloudSun, DollarSign } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
 import spaInterior from "@/assets/spa-interior-1.jpg";
 import spaLounge from "@/assets/spa-lounge-2.jpg";
 import studioInterior from "@/assets/studio-interior-1.jpg";
@@ -58,7 +56,6 @@ const timelineSteps = [
 ];
 
 const AIDiscoveryEngine = () => {
-  
   return (
     <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
       {/* Background decorations */}
@@ -194,9 +191,11 @@ const AIDiscoveryEngine = () => {
                 </p>
               </div>
 
-              <Button variant="hero" size="lg" className="w-full group" onClick={openWaitlist}>
-                <span>Test Drive the Results — Join the Waitlist</span>
-                <ArrowRight className="hidden sm:inline h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+              <Button variant="hero" size="lg" className="w-full group" asChild>
+                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
+                  <span>Try IvyLink Now</span>
+                  <ArrowRight className="hidden sm:inline h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
             </div>
           </div>
@@ -268,11 +267,12 @@ const AIDiscoveryEngine = () => {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <Button variant="hero" size="lg" className="group max-w-full" onClick={openWaitlist}>
-            <span>We're Talking to 10 Power Users, Want In?</span>
-            <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+          <Button variant="hero" size="lg" className="group max-w-full" asChild>
+            <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
+              <span>Get Started with IvyLink</span>
+              <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
-          <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
       </div>
     </section>

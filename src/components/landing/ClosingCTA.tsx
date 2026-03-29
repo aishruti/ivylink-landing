@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Users, TrendingUp, Zap } from "lucide-react";
+
 const ClosingCTA = () => {
-  
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background */}
@@ -45,11 +45,12 @@ const ClosingCTA = () => {
                 In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
-              <Button variant="hero" size="xl" className="group w-full sm:w-auto" onClick={openWaitlist}>
-                <span>Early Access: Reserve a Call With the Creator</span>
-                <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+              <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
+                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
+                  <span>Get Started with IvyLink</span>
+                  <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
-              <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
             </div>
           </div>
         </div>

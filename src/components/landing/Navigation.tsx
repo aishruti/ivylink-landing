@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
 import ivylinkLogo from "@/assets/ivylink-logo.svg";
 
 const navLinks = [
@@ -34,8 +32,8 @@ const Navigation = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" onClick={openWaitlist}>
-              Join the Waitlist
+            <Button variant="hero" size="default" asChild>
+              <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Go to App</a>
             </Button>
           </div>
 
@@ -54,14 +52,13 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2" onClick={openWaitlist}>
-                Join the Waitlist
+              <Button variant="hero" size="lg" className="mt-2" asChild>
+                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Go to App</a>
               </Button>
             </div>
           </div>
         )}
       </div>
-      
     </nav>
   );
 };
