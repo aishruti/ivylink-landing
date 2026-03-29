@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
 import ivylinkLogo from "@/assets/ivylink-logo.svg";
 
 const navLinks = [
@@ -13,8 +11,6 @@ const navLinks = [
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("navigation");
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="section-container">
@@ -36,8 +32,8 @@ const Navigation = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" onClick={openWaitlist}>
-              Join the Waitlist
+            <Button variant="hero" size="default" asChild>
+              <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Go to App</a>
             </Button>
           </div>
 
@@ -56,14 +52,13 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2" onClick={openWaitlist}>
-                Join the Waitlist
+              <Button variant="hero" size="lg" className="mt-2" asChild>
+                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Go to App</a>
               </Button>
             </div>
           </div>
         )}
       </div>
-      <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
     </nav>
   );
 };

@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Link, Search, Rocket, BarChart, Repeat, CheckCircle } from "lucide-react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
 
 const steps = [
   {
@@ -42,7 +40,6 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("how_it_works");
   return (
     <section id="how-it-works" className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background decorations */}
@@ -108,11 +105,12 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group max-w-full" onClick={openWaitlist}>
-            <span>We're Talking to 10 Power Users — Want In?</span>
-            <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+          <Button variant="hero" size="lg" className="group max-w-full" asChild>
+            <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
+              <span>Get Started Now</span>
+              <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
-          <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
       </div>
     </section>

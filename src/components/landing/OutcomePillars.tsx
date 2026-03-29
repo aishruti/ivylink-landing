@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw, Settings } from "lucide-react";
-import WaitlistDialog from "./WaitlistDialog";
-import { useWaitlist } from "@/hooks/use-waitlist";
 
 const pillars = [
   {
@@ -43,7 +41,6 @@ const pillars = [
 ];
 
 const OutcomePillars = () => {
-  const { isOpen, openWaitlist, closeWaitlist } = useWaitlist("features");
   return (
     <section id="features" className="py-16 lg:py-20 relative overflow-hidden">
       {/* Background */}
@@ -89,11 +86,12 @@ const OutcomePillars = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group" onClick={openWaitlist}>
-            Add 5 Guaranteed Bookings, Let's Talk
-            <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
+          <Button variant="hero" size="lg" className="group" asChild>
+            <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
+              Get Started Now
+              <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
-          <WaitlistDialog open={isOpen} onOpenChange={(open) => !open && closeWaitlist()} />
         </div>
       </div>
     </section>
