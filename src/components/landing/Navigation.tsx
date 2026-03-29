@@ -33,7 +33,7 @@ const Navigation = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Button variant="hero" size="default" asChild>
-              <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Go to App</a>
+              <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">See My Matches</a>
             </Button>
           </div>
 
@@ -53,7 +53,7 @@ const Navigation = () => {
                 </a>
               ))}
               <Button variant="hero" size="lg" className="mt-2" asChild>
-                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Go to App</a>
+                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">See My Matches</a>
               </Button>
             </div>
           </div>
