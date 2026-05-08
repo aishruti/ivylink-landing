@@ -18,7 +18,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up">
-              Sync Your Med Spa with Local Partners for <span className="text-gradient">Guaranteed Referrals</span>
+              Sync Your Med spa with Local Partners for <span className="text-gradient">Guaranteed Referrals</span>
             </h1>
 
             <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
