@@ -1,14 +1,13 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Users, TrendingUp, Zap } from "lucide-react";
+import { Cta } from "@/components/ui/cta";
 
 const ClosingCTA = () => {
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 mesh-gradient" />
       <div className="absolute top-10 left-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-10 right-10 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
-      
+
       <div className="section-container relative">
         <div className="mx-auto max-w-4xl">
           <div className="rounded-3xl gradient-border bg-card p-8 lg:p-12 card-elevated">
@@ -17,7 +16,7 @@ const ClosingCTA = () => {
               <h2 className="mb-6 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Your First Week with <span className="text-gradient">IvyLink</span>
               </h2>
-              
+
               <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <div className="rounded-xl bg-muted/50 p-5">
                   <Zap className="mx-auto mb-3 h-8 w-8 text-primary" />
@@ -45,12 +44,10 @@ const ClosingCTA = () => {
                 In your first week, you'll connect with local partners and launch your first automated "Service Swap" with no cold outreach, no manual posting. By day 21, your spa operates on autopilot, turning hours of manual work into a system that keeps your schedule filled.
               </p>
 
-              <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
-                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-                  <span>Get Started with IvyLink</span>
-                  <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
+              <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group w-full sm:w-auto">
+                <span>Get Started with IvyLink</span>
+                <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+              </Cta>
             </div>
           </div>
         </div>

@@ -1,39 +1,29 @@
-import { lazy, Suspense } from "react";
 import Navigation from "@/components/landing/Navigation";
 import Hero from "@/components/landing/Hero";
+import { LazyMount } from "@/components/LazyMount";
 
 /*
- * PERF: Above-the-fold (Navigation + Hero) is rendered synchronously so the
- * LCP element paints in the initial chunk. Everything below the fold is
- * lazy-loaded — this splits ~150KB+ of icon imports, accordion radix code,
- * and section trees out of the initial JS bundle.
+ * PERF: Below-the-fold sections are now mounted via IntersectionObserver
+ * (LazyMount), not Suspense. They don't even hit the network until the user
+ * scrolls within 400px of them. This is the fix for the 196 KiB "Unused
+ * JavaScript" PSI flag — chunks PSI never observes are never downloaded.
  *
- * The Suspense fallback is `null` (not a spinner) because each lazy section
- * loads in well under a second on a real connection and an empty placeholder
- * avoids any visible loading flash.
+ * The minHeight values are rough estimates of each section's rendered height
+ * on mobile, used purely to reserve vertical space so the placeholder doesn't
+ * cause CLS when the real component swaps in.
  */
-const WhoItsFor = lazy(() => import("@/components/landing/WhoItsFor"));
-const AIDiscoveryEngine = lazy(() => import("@/components/landing/AIDiscoveryEngine"));
-const OutcomePillars = lazy(() => import("@/components/landing/OutcomePillars"));
-const WhyDifferent = lazy(() => import("@/components/landing/WhyDifferent"));
-const FAQ = lazy(() => import("@/components/landing/FAQ"));
-const ClosingCTA = lazy(() => import("@/components/landing/ClosingCTA"));
-const Footer = lazy(() => import("@/components/landing/Footer"));
-
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <Suspense fallback={null}>
-        <WhoItsFor />
-        <AIDiscoveryEngine />
-        <OutcomePillars />
-        <WhyDifferent />
-        <FAQ />
-        <ClosingCTA />
-        <Footer />
-      </Suspense>
+      <LazyMount load={() => import("@/components/landing/WhoItsFor")} minHeight={800} />
+      <LazyMount load={() => import("@/components/landing/AIDiscoveryEngine")} minHeight={2400} />
+      <LazyMount load={() => import("@/components/landing/OutcomePillars")} minHeight={1400} />
+      <LazyMount load={() => import("@/components/landing/WhyDifferent")} minHeight={900} />
+      <LazyMount load={() => import("@/components/landing/FAQ")} minHeight={900} />
+      <LazyMount load={() => import("@/components/landing/ClosingCTA")} minHeight={700} />
+      <LazyMount load={() => import("@/components/landing/Footer")} minHeight={500} />
     </div>
   );
 };

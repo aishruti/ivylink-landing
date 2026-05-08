@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Cta } from "@/components/ui/cta";
 import ivylinkLogo from "@/assets/ivylink-logo.svg";
 
 const navLinks = [
@@ -15,9 +15,9 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="section-container">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+          {/* Logo. PERF: width/height attrs prevent CLS while logo loads. */}
           <a href="/" className="flex items-center gap-2">
-            <img src={ivylinkLogo} alt="IvyLink logo" className="h-9 w-9 rounded-xl object-cover" />
+            <img src={ivylinkLogo} alt="IvyLink logo" width="36" height="36" className="h-9 w-9 rounded-xl object-cover" />
             <span className="text-xl font-display font-bold text-foreground">IvyLink</span>
           </a>
 
@@ -32,9 +32,9 @@ const Navigation = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" asChild>
-              <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Find My Partners</a>
-            </Button>
+            <Cta href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
+              Find My Partners
+            </Cta>
           </div>
 
           {/* Mobile Menu Button */}
@@ -52,9 +52,9 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2" asChild>
-                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">Find My Partners</a>
-              </Button>
+              <Cta size="lg" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="mt-2">
+                Find My Partners
+              </Cta>
             </div>
           </div>
         )}

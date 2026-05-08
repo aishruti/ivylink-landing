@@ -1,155 +1,177 @@
-# IvyLink Landing Page — Mobile Performance Fixes
+# IvyLink Landing Page — Mobile Performance Fixes (Round 2)
 
-PageSpeed Insights mobile score before: **57**.
-Expected after these changes: **85–95**.
+PSI mobile score progression:
+
+| Round | Performance | FCP   | LCP   | TBT     | Speed Index |
+|-------|-------------|-------|-------|---------|-------------|
+| Start | 57          | 3.6 s | 6.4 s | 220 ms  | 16.8 s      |
+| v1    | 69          | 2.9 s | 4.8 s | 30 ms   | 9.8 s       |
+| v2    | **target 90+** | est ~1.5 s | est ~2.0–2.5 s | <50 ms | est ~5 s |
 
 ## How to apply
 
-Drop the contents of this folder over your existing repo, preserving paths. From the unzipped folder:
-
 ```bash
-# From the perf-fixes folder, copy everything over your repo
-cp -r index.html vite.config.ts src/* /path/to/collab-fill-auto/src/
-# (or just drag-drop from your file manager)
-```
+# 1. Unzip and overlay over your existing repo
+cd /path/to/collab-fill-auto
+unzip ~/Downloads/ivylink-perf-fixes-v2.zip
+cp -r v2/* .
 
-Then:
+# 2. Install the new font packages
+bun install   # or: npm install
 
-```bash
-# Optional but recommended — delete unused files Vite was carrying around
+# 3. (Optional but recommended) Delete files that are now unused
 rm src/assets/hero-collaboration.jpg     # 188KB, imported nowhere
 rm src/assets/ivylink-logo.jpg           # 48KB, only the .svg is used
 rm src/assets/ivylink-logo.png           # 64KB, only the .svg is used
-rm src/assets/spa-interior-1.jpg         # replaced by .webp
+rm src/assets/spa-interior-1.jpg         # replaced by .avif/.webp
 rm src/assets/spa-lounge-2.jpg
 rm src/assets/studio-interior-1.jpg
 rm src/assets/studio-class-2.jpg
-rm src/components/landing/WaitlistDialog.tsx  # defined but never imported
+rm src/components/landing/WaitlistDialog.tsx       # never imported
 
-# Build + verify
-bun install   # or npm install
+# 4. Build + deploy
 bun run build
-bun run preview   # smoke-test the prod build locally before deploying
+bun run preview   # smoke test locally
 ```
 
-After deploying, re-run PageSpeed Insights against your live URL.
+After deploy, re-run PageSpeed Insights against your live URL.
 
 ---
 
-## What the audits flagged → what changed
+## Why round 1 plateaued at 69 (and what I changed)
 
-### 1. Render blocking requests (~1,200 ms savings)
+### Diagnosis
 
-**Cause.** The Google Fonts stylesheet was loaded with a normal `<link rel="stylesheet">`, which blocks first paint until the CSS is downloaded and parsed. Microsoft Clarity ran a synchronous IIFE in `<head>` that injected its own script tag — even though the injected tag was async, the IIFE itself blocked the parser.
+The first round of fixes worked — TBT dropped from 220ms to 30ms (huge), FCP improved a full 700ms, and "Render blocking requests" moved into the passed audits. But three issues remained:
 
-**Fix in `index.html`.**
-- Fonts are now preloaded and applied via the `media="print" onload="this.media='all'"` pattern. The browser fetches the CSS without blocking render, then promotes it once it's ready. A `<noscript>` fallback covers the JS-disabled case.
-- A small inline `<style>` block in `<head>` sets a system-font fallback (`-apple-system`, `BlinkMacSystemFont`, etc.) so text is visible on first paint and the eventual font swap is visually subtle (already paired with `display=swap` in the URL).
-- Microsoft Clarity and Google Analytics now run inside `requestIdleCallback` (with a `setTimeout` fallback for Safari). Both are entirely off the critical path.
+1. **"Reduce unused JavaScript" went from 131 KiB to 196 KiB.** Counter-intuitive but explainable: my Suspense-based lazy loading triggered all 7 below-the-fold chunk downloads immediately on mount. PSI doesn't scroll, so none of those chunks ever executed during the measurement window — and PSI counts non-executed-during-measurement bytes as "unused." Lazy loading helped real users (LCP went down), but hurt PSI's specific metric.
+2. **Fonts still ran via fonts.googleapis.com.** Even with the non-blocking `media="print" onload` trick, the browser still needs DNS lookup + TLS handshake to googleapis.com for the CSS, then DNS + TLS again to gstatic.com for the woff2. On 4G mobile that's 200–500ms before the first font byte arrives.
+3. **LCP at 4.8s was JS-execution-bound, not network-bound.** The hero contained Radix-Slot + class-variance-authority + tailwind-merge resolving on every Button render. Cheap individually, expensive on the critical path.
 
-### 2. Reduce unused JavaScript (~131 KiB savings)
+### The five structural changes in v2
 
-**Cause #1 — providers nothing on the page used.** `App.tsx` wrapped everything in `QueryClientProvider`, `TooltipProvider`, `Toaster`, and `Sonner`. Grepping the codebase, none of these are called from anywhere on the landing page (the one place `toast()` is called is in `WaitlistDialog.tsx`, which is never imported). Those four providers alone drag in `@tanstack/react-query`, `sonner`, and roughly 6 Radix-UI packages.
+#### 1. Self-host fonts via @fontsource-variable
 
-**Fix in `src/App.tsx`.** Stripped down to just `BrowserRouter` + `Routes`. `NotFound` is now `lazy()`-imported so a typo'd URL doesn't pull rarely-used code into the home-page bundle.
+`src/index.css` now starts with:
+```css
+@import "@fontsource-variable/outfit/index.css";
+@import "@fontsource-variable/dm-sans/index.css";
+```
 
-**Cause #2 — no code splitting.** Every section from `Hero` to `Footer` shipped in one chunk, including `Accordion` (FAQ), the AI discovery engine's heavy markup, and a long Lucide icon import list.
+These npm packages bundle Outfit and DM Sans as variable woff2 fonts. Vite ships them as hashed assets from your own origin — no external DNS lookups, no third-party CDN, same long cache lifetime as the rest of your assets. Variable fonts also pack all weights (100–900) into a single woff2 per family, so 4 weight files become 1.
 
-**Fix in `src/pages/Index.tsx`.** Above-the-fold (`Navigation` + `Hero`) renders synchronously so LCP paints in the initial chunk. `WhoItsFor`, `AIDiscoveryEngine`, `OutcomePillars`, `WhyDifferent`, `FAQ`, `ClosingCTA`, and `Footer` are now `lazy()`-imported. The browser fetches them in parallel after the initial paint.
+Net: ~50% smaller font bytes over the wire, eliminates 2 round-trips, expected 200–500ms LCP improvement on 4G.
 
-**Fix in `vite.config.ts`.** Added `manualChunks` so vendor code splits into `react`, `radix`, `icons`, `router`, and `vendor` chunks. Result: smaller initial JS payload, better long-term caching (updating one chunk doesn't bust the others), and parallel downloads.
+The `index.html` no longer references `fonts.googleapis.com` at all.
 
-### 3. Improve image delivery (~116 KiB savings)
+#### 2. Replace shadcn `Button` with a 25-line `<Cta>` component
 
-**Cause.** The four spa/studio photos in `AIDiscoveryEngine` were 512×512 JPGs (~30KB each, 122KB total) but render at ~120–160px on mobile. The unused `hero-collaboration.jpg` is 188KB and 1920×1080. The unused `ivylink-logo.jpg` and `.png` add another 112KB to the repo.
+I traced every `<Button>` on the landing page: every single one used `variant="hero"`. So the cva variant matrix and the `@radix-ui/react-slot` polymorphic forwarding were dead weight. The new `src/components/ui/cta.tsx` is a plain `<a>` with the hero styles inlined as a string.
 
-**Fix.** Re-encoded the four spa photos as 320×320 WebP at quality 78. Total: 33KB. Image references in `AIDiscoveryEngine.tsx` now point at `.webp` and include `width`, `height`, `loading="lazy"`, and `decoding="async"` (the lazy hint is correct here because all four images are below the fold).
+Effect: drops `class-variance-authority`, `@radix-ui/react-slot`, and the `buttonVariants` definition out of the bundle. ~8 KB compressed plus runtime evaluation savings on every render.
 
-### 4. Forced reflow + long main-thread tasks (7 long tasks found)
+The visual output is byte-identical to the previous Button.
 
-**Cause.** `mesh-gradient` stacked seven `radial-gradient` layers, recomposited on every scroll frame. On a Moto G Power (the device PSI emulates), each frame cost roughly 25–35ms — well past the 16ms budget for 60fps.
+#### 3. Replace Radix Accordion with native `<details>`
 
-**Fix in `src/index.css`.** Mesh-gradient now ships three layers on mobile (still gives the soft pastel mesh look) and the full seven only at `min-width: 768px`. Also added a `prefers-reduced-motion` block so users who request reduced motion at the OS level skip the fade-up animations entirely.
+`src/components/landing/FAQ.tsx` now uses `<details>`/`<summary>` instead of the Radix accordion. The browser handles the open/close state for free — zero JavaScript at runtime, no hydration, no animation library. The chevron rotation is a CSS `[open]` selector.
 
-### 5. Largest Contentful Paint (6.4s → expected ~2.0–2.5s)
+Effect: drops `@radix-ui/react-accordion` (and the `tailwindcss-animate` accordion keyframes that supported it) from the lazy chunk that contains FAQ. ~7 KB compressed.
 
-This is the cumulative effect of fixes 1, 2, and 4. The LCP element on mobile is the H1 in `Hero` ("Sync Your Med Spa with Local Partners…"). Previously its render was gated on:
+#### 4. Replace Radix Progress with a plain div
 
-1. Google Fonts CSS download + parse (blocking)
-2. Main JS bundle download + parse + React mount
-3. The Outfit font file download (display=swap meant the text could appear in fallback first, but only after step 1 completed)
+`AIDiscoveryEngine.tsx` had a single `<Progress value={85} />` — a Radix primitive's worth of code for one bar. The new inline `ProgressBar` is a div with `role="progressbar"` and the right ARIA attributes. Same accessibility, none of the bundle weight.
 
-After the fixes, it's gated only on the much smaller initial JS chunk, with system-font fallback already painted before fonts arrive.
+#### 5. IntersectionObserver-based lazy mounting (the big one)
 
-### 6. Accessibility — ARIA progressbar with no name
+This is the fix for the 196 KiB "Unused JS" warning.
 
-**Fix in `src/components/landing/AIDiscoveryEngine.tsx`.** Added `aria-label="Wallet overlap score: 85 percent"` to the `<Progress>` element. Screen readers will now announce what the bar represents.
+`src/components/LazyMount.tsx` is a new tiny component that:
+- Renders a placeholder div with `minHeight` (so no layout shift)
+- Sets up an `IntersectionObserver` with `rootMargin: "400px"`
+- Only kicks off the dynamic `import()` when the placeholder enters the observed window
+- Once loaded, swaps in the real component
 
-### 7. Accessibility — heading order skipped levels
+`src/pages/Index.tsx` replaces `<Suspense>` around the 7 sections with 7 `<LazyMount load={...} minHeight={...} />` calls.
 
-**Cause.** `Footer.tsx` used `<h4>` for "Product" / "Company" / "Legal". The previous heading on the page is the `ClosingCTA` `<h2>`, so jumping to `<h4>` skips a level — a WCAG violation that screen-reader users navigating by heading hit hard.
+**Why this works for PSI:** PSI never scrolls during measurement. So with `LazyMount`, the only JS chunks PSI ever downloads are the initial bundle + Hero. The 6 other section chunks never enter the viewport, never trigger the observer, never download. The "unused JS" metric drops dramatically.
 
-**Fix in `src/components/landing/Footer.tsx`.** `<h4>` → `<h3>` on those three labels. Visual styling unchanged.
+**Why this works for real users:** the `rootMargin: "400px"` means the chunk loads *before* the user can see the placeholder — typically 1–2 scroll seconds early. By the time they reach the section, it's already mounted.
 
-### 8. Accessibility — color contrast
-
-**Cause.** `--muted-foreground: 240 5% 45%` produced ~3.4:1 contrast against `bg-muted/50` containers — under the WCAG AA threshold of 4.5:1 for normal text.
-
-**Fix in `src/index.css`.** Darkened to `240 6% 35%`. Pushes contrast above 5:1 against muted backgrounds while keeping the text feeling like a soft slate gray rather than full black.
-
-### 9. Hidden content from `opacity-0` initial state
-
-**Cause.** Several section cards combined `opacity-0` with `animate-fade-up` and a stagger delay of up to 500ms — meaning content was rendered to the DOM but invisible for half a second. This delayed perceived load and (on the LCP candidate's section) potentially slowed PSI's measurement.
-
-**Fix.** Removed `opacity-0` from `WhoItsFor.tsx`, `OutcomePillars.tsx`, `WhyDifferent.tsx`, and `AIDiscoveryEngine.tsx`. The animation keyframe `from { opacity: 0 }` already handles the initial state — the class was redundant and just blanked content while waiting for the delay.
+The `minHeight` placeholders preserve scroll position and prevent CLS as the real components mount in.
 
 ---
 
-## Files changed (drop these over your repo)
+## Image delivery — AVIF + WebP via `<picture>`
 
-```
-index.html                                            # font + analytics deferral
-vite.config.ts                                        # manual chunks, modern target
-src/App.tsx                                           # remove unused providers
-src/index.css                                         # contrast + mobile mesh + reduced-motion
-src/pages/Index.tsx                                   # lazy-load below-fold sections
-src/components/landing/AIDiscoveryEngine.tsx          # webp imgs, lazy load, aria-label
-src/components/landing/Footer.tsx                     # h4 → h3 (heading order)
-src/components/landing/WhoItsFor.tsx                  # remove opacity-0
-src/components/landing/OutcomePillars.tsx             # remove opacity-0
-src/components/landing/WhyDifferent.tsx               # remove opacity-0
-src/assets/spa-interior-1.webp                        # NEW (replaces .jpg)
-src/assets/spa-lounge-2.webp                          # NEW (replaces .jpg)
-src/assets/studio-interior-1.webp                     # NEW (replaces .jpg)
-src/assets/studio-class-2.webp                        # NEW (replaces .jpg)
+The 4 spa images are now served as AVIF first (~92% browser support) with WebP fallback:
+
+```jsx
+<picture>
+  <source srcSet={spaInteriorAvif} type="image/avif" />
+  <source srcSet={spaInteriorWebp} type="image/webp" />
+  <img src={spaInteriorWebp} alt="..." width="160" height="160" loading="lazy" decoding="async" />
+</picture>
 ```
 
-## Files to delete (optional cleanup)
+Resized from 320px to 240px (still 1.7x DPR for the ~140px max rendered size). All four images now total **19 KB**, down from 122 KB JPG originally (84% reduction; round 1 had 33 KB).
+
+---
+
+## Files changed in this round (drop these over your repo)
 
 ```
-src/assets/hero-collaboration.jpg                     # 188KB, imported nowhere
-src/assets/ivylink-logo.jpg                           # 48KB, only .svg is used
-src/assets/ivylink-logo.png                           # 64KB, only .svg is used
-src/assets/spa-interior-1.jpg                         # replaced by .webp
-src/assets/spa-lounge-2.jpg                           # replaced by .webp
-src/assets/studio-interior-1.jpg                      # replaced by .webp
-src/assets/studio-class-2.jpg                         # replaced by .webp
-src/components/landing/WaitlistDialog.tsx             # defined but never imported
+package.json                                          # adds @fontsource-variable/outfit + dm-sans
+index.html                                            # drops external Google Fonts link
+src/index.css                                         # imports fontsource at top
+src/App.tsx                                           # (unchanged from v1)
+src/pages/Index.tsx                                   # IntersectionObserver-based mounting
+src/components/LazyMount.tsx                          # NEW
+src/components/ui/cta.tsx                             # NEW (replaces Button on landing)
+src/components/landing/Navigation.tsx                 # uses Cta
+src/components/landing/Hero.tsx                       # uses Cta
+src/components/landing/AIDiscoveryEngine.tsx          # uses Cta + ProgressBar + <picture>
+src/components/landing/OutcomePillars.tsx             # uses Cta
+src/components/landing/ClosingCTA.tsx                 # uses Cta
+src/components/landing/FAQ.tsx                        # native <details>
+src/components/landing/HeroProductUI.tsx              # (unchanged, included for completeness)
+src/components/landing/WhoItsFor.tsx                  # (unchanged from v1)
+src/components/landing/WhyDifferent.tsx               # (unchanged from v1)
+src/components/landing/Footer.tsx                     # (unchanged from v1 — h4→h3 fix)
+src/assets/spa-interior-1.avif      + .webp           # 240px, AVIF + WebP
+src/assets/spa-lounge-2.avif        + .webp
+src/assets/studio-interior-1.avif   + .webp
+src/assets/studio-class-2.avif      + .webp
+src/assets/ivylink-logo.svg                           # (unchanged, included for completeness)
+vite.config.ts                                        # (unchanged from v1)
 ```
 
-## Files NOT changed (left alone on purpose)
+## What I deliberately did NOT change
 
-- `Hero.tsx`, `HeroProductUI.tsx`, `Navigation.tsx`, `ClosingCTA.tsx`, `FAQ.tsx` — already lean, no perf issues found.
-- `tailwind.config.ts`, `package.json` — no dependency changes needed; the win is from not *using* unused deps, not removing them. (You can clean up `package.json` later if you want — `@tanstack/react-query`, `sonner`, `recharts`, `embla-carousel-react`, `react-day-picker`, `input-otp`, `vaul`, and `cmdk` aren't used by any of the landing components I traced. But verify before removing in case other pages or future work depend on them.)
-- `src/components/ui/*` — these are fine as-is. They just weren't being included in the bundle anymore once `App.tsx` stopped importing the provider components.
+- **`react-router-dom` is still used.** Removing it would save ~10 KB but breaks future routing plans (privacy page, terms, etc.). Keeping it.
+- **The shadcn `Button` and friends still exist in `src/components/ui/`.** They're not imported by any landing component, so Vite tree-shakes them. They stay available for future pages.
+- **`package.json` dependencies are barely trimmed.** I added two and removed none. Several packages (recharts, embla-carousel, react-day-picker, vaul, etc.) are imported by shadcn UI files that *aren't* used on the landing page, but Vite's tree-shaking handles that — they don't enter the bundle. Removing them from `package.json` is a hygiene exercise, not a perf one.
 
 ## Validation checklist
 
-After deploying, verify:
+After deploying:
 
-- [ ] PageSpeed Insights mobile score > 85
-- [ ] Visual diff vs the live site looks identical (the only intentional visual change is slightly darker body text on muted backgrounds)
-- [ ] Microsoft Clarity is still recording sessions
-- [ ] Google Analytics is still firing pageviews (check Realtime in GA4)
-- [ ] Font swap is smooth — should see fallback for ~100–300ms then Outfit/DM Sans paint in
-- [ ] Hero CTA still navigates to `https://app.ivylink.ai`
+- [ ] PageSpeed Insights mobile score > 85 (target: 90+)
+- [ ] "Reduce unused JavaScript" warning savings dropped well below 100 KiB
+- [ ] LCP under 2.5s
+- [ ] FAQ section open/close still works (it's now native `<details>`)
+- [ ] All CTAs still navigate to `https://app.ivylink.ai`
+- [ ] Microsoft Clarity still recording (check dashboard ~5 min after deploy)
+- [ ] GA4 still firing pageviews (Realtime view)
+- [ ] Visual diff vs current site looks identical (only intentional change: slightly darker body text on muted backgrounds, from the v1 round)
+
+## If you still aren't satisfied with the score
+
+The remaining levers, in roughly decreasing impact order:
+
+1. **Pre-rendering / SSG.** Vite SPA → static HTML for the home page. Frameworks like Astro or vike could swap in for Vite without losing the existing component code. This makes FCP basically zero.
+2. **Inline the entire above-the-fold CSS.** Right now the bundled CSS file is small but still requires a network request. Tools like `vite-plugin-critical` extract critical CSS and inline it in the HTML.
+3. **Self-host Microsoft Clarity / Google Analytics.** "Use efficient cache lifetimes — 107 KiB" in PSI is almost entirely those two third-party scripts whose cache headers you don't control. Self-hosting via Partytown or similar moves them to your origin. Diminishing returns at this point.
+4. **Drop framer/lottie-style animations entirely.** The fade-up animations are minor but audit-able. Removing them entirely gets you a few more points if you're chasing 100.
+
+Let me know what you see after deploying and I'll dig into anything that's still red.

@@ -1,13 +1,24 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Mail, CalendarCheck, Users, Share2, CheckCircle, Globe, CloudSun, DollarSign } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
-// PERF: WebP versions are 70-80% smaller than the original 512x512 JPGs
-// (saves ~80KB total). Resized to 320px to match 2x DPR for the ~160px
-// rendered size on mobile.
-import spaInterior from "@/assets/spa-interior-1.webp";
-import spaLounge from "@/assets/spa-lounge-2.webp";
-import studioInterior from "@/assets/studio-interior-1.webp";
-import studioClass from "@/assets/studio-class-2.webp";
+import { Cta } from "@/components/ui/cta";
+
+/*
+ * PERF: Image strategy.
+ * - Using <picture> with AVIF first (~92% browser support) and WebP fallback
+ *   trims another ~8KB total off the image weight on top of the previous
+ *   WebP-only version.
+ * - Vite tree-shakes unused asset imports, so importing both formats is fine —
+ *   only what gets <source>'d into the DOM is fetched.
+ * - All images get explicit width/height + loading="lazy" + decoding="async".
+ *   They're all below the fold, so lazy is correct and cheap.
+ */
+import spaInteriorAvif from "@/assets/spa-interior-1.avif";
+import spaInteriorWebp from "@/assets/spa-interior-1.webp";
+import spaLoungeAvif from "@/assets/spa-lounge-2.avif";
+import spaLoungeWebp from "@/assets/spa-lounge-2.webp";
+import studioInteriorAvif from "@/assets/studio-interior-1.avif";
+import studioInteriorWebp from "@/assets/studio-interior-1.webp";
+import studioClassAvif from "@/assets/studio-class-2.avif";
+import studioClassWebp from "@/assets/studio-class-2.webp";
 
 const aiBubbles = [
   { icon: CloudSun, label: "Seasonality", description: "Demand patterns by time of year" },
@@ -16,52 +27,34 @@ const aiBubbles = [
 ];
 
 const timelineSteps = [
-  {
-    icon: Target,
-    number: "01",
-    title: "The Strategy",
-    description: "AI selects the vertical play (Service Swap) based on your empty slots.",
-    visual: "🎯",
-    highlight: "Smart Selection",
-  },
-  {
-    icon: Mail,
-    number: "02",
-    title: "The Outreach",
-    description: "Automated DM/Email sends an influential proposition to the partner.",
-    visual: "✉️",
-    highlight: "Zero Effort",
-  },
-  {
-    icon: CalendarCheck,
-    number: "03",
-    title: "The Slot-Fill",
-    description: "Capture new bookings with a 70%+ show-up rate via automated reminders.",
-    visual: "📅",
-    highlight: "70%+ Show Rate",
-  },
-  {
-    icon: Users,
-    number: "04",
-    title: "The Dance",
-    description: "You host the partner for a swap (we provide the 'What to Say' script).",
-    visual: "🤝",
-    highlight: "Scripted",
-  },
-  {
-    icon: Share2,
-    number: "05",
-    title: "The Amplify",
-    description: "We auto-post the recorded collab to IG to capture long-term referral revenue.",
-    visual: "📱",
-    highlight: "Auto-Posted",
-  },
+  { icon: Target,        number: "01", title: "The Strategy",  description: "AI selects the vertical play (Service Swap) based on your empty slots.",        visual: "🎯", highlight: "Smart Selection" },
+  { icon: Mail,          number: "02", title: "The Outreach",  description: "Automated DM/Email sends an influential proposition to the partner.",         visual: "✉️", highlight: "Zero Effort" },
+  { icon: CalendarCheck, number: "03", title: "The Slot-Fill", description: "Capture new bookings with a 70%+ show-up rate via automated reminders.",      visual: "📅", highlight: "70%+ Show Rate" },
+  { icon: Users,         number: "04", title: "The Dance",     description: "You host the partner for a swap (we provide the 'What to Say' script).",      visual: "🤝", highlight: "Scripted" },
+  { icon: Share2,        number: "05", title: "The Amplify",   description: "We auto-post the recorded collab to IG to capture long-term referral revenue.", visual: "📱", highlight: "Auto-Posted" },
 ];
+
+/**
+ * PERF: Tiny replacement for the Radix Progress component. Drops
+ * `@radix-ui/react-progress` from the bundle. Pure CSS animation, full
+ * accessibility via native ARIA attributes.
+ */
+const ProgressBar = ({ value, label }: { value: number; label: string }) => (
+  <div
+    role="progressbar"
+    aria-valuenow={value}
+    aria-valuemin={0}
+    aria-valuemax={100}
+    aria-label={label}
+    className="relative h-2.5 w-full overflow-hidden rounded-full bg-muted"
+  >
+    <div className="h-full bg-primary transition-all" style={{ width: `${value}%` }} />
+  </div>
+);
 
 const AIDiscoveryEngine = () => {
   return (
     <section id="ai-discovery" className="py-16 lg:py-20 relative overflow-hidden bg-muted/30">
-      {/* Background decorations */}
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-20 left-0 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
 
@@ -142,10 +135,18 @@ const AIDiscoveryEngine = () => {
                   <p className="text-xs font-medium text-muted-foreground text-center">Your Spa</p>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={spaInterior} alt="Luxury spa interior" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      <picture>
+                        <source srcSet={spaInteriorAvif} type="image/avif" />
+                        <source srcSet={spaInteriorWebp} type="image/webp" />
+                        <img src={spaInteriorWebp} alt="Luxury spa interior" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      </picture>
                     </div>
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={spaLounge} alt="Spa lounge area" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      <picture>
+                        <source srcSet={spaLoungeAvif} type="image/avif" />
+                        <source srcSet={spaLoungeWebp} type="image/webp" />
+                        <img src={spaLoungeWebp} alt="Spa lounge area" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      </picture>
                     </div>
                   </div>
                 </div>
@@ -153,10 +154,18 @@ const AIDiscoveryEngine = () => {
                   <p className="text-xs font-medium text-muted-foreground text-center">Their Studio</p>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={studioInterior} alt="Pilates studio interior" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      <picture>
+                        <source srcSet={studioInteriorAvif} type="image/avif" />
+                        <source srcSet={studioInteriorWebp} type="image/webp" />
+                        <img src={studioInteriorWebp} alt="Pilates studio interior" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      </picture>
                     </div>
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={studioClass} alt="Pilates class in session" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      <picture>
+                        <source srcSet={studioClassAvif} type="image/avif" />
+                        <source srcSet={studioClassWebp} type="image/webp" />
+                        <img src={studioClassWebp} alt="Pilates class in session" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                      </picture>
                     </div>
                   </div>
                 </div>
@@ -176,10 +185,7 @@ const AIDiscoveryEngine = () => {
                 <span className="text-sm text-muted-foreground">Overlap Score</span>
                 <span className="text-xs font-semibold text-primary">ROI Potential: High</span>
               </div>
-              {/* A11Y: aria-label so screen readers announce this progress bar.
-                  Fixes the PSI accessibility audit "ARIA progressbar elements
-                  do not have accessible names". */}
-              <Progress value={85} aria-label="Wallet overlap score: 85 percent" className="h-2.5 bg-muted" />
+              <ProgressBar value={85} label="Wallet overlap score: 85 percent" />
               <p className="text-xs text-muted-foreground mt-2">
                 Clients who spend $150+ on Pilates are 4x more likely to book your $600+ Filler packages.
               </p>
@@ -197,12 +203,10 @@ const AIDiscoveryEngine = () => {
                 </p>
               </div>
 
-              <Button variant="hero" size="lg" className="w-full group" asChild>
-                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-                  <span>Try IvyLink Now</span>
-                  <ArrowRight className="hidden sm:inline h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
+              <Cta size="lg" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="w-full group">
+                <span>Try IvyLink Now</span>
+                <ArrowRight className="hidden sm:inline h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+              </Cta>
             </div>
           </div>
         </div>
@@ -210,19 +214,15 @@ const AIDiscoveryEngine = () => {
         {/* How It Works Timeline */}
         <div className="mx-auto max-w-2xl mt-16">
           <div className="mb-8 text-center">
-            <h3 className="text-2xl font-display font-bold text-foreground mb-2">
-              How It Works
-            </h3>
-            <p className="text-muted-foreground">
-              From match to booked appointment, completely hands-off.
-            </p>
+            <h3 className="text-2xl font-display font-bold text-foreground mb-2">How It Works</h3>
+            <p className="text-muted-foreground">From match to booked appointment, completely hands-off.</p>
           </div>
 
           <div className="relative space-y-4">
             {timelineSteps.map((step, index) => (
               <div
                 key={index}
-                className="group relative opacity-0 animate-fade-up"
+                className="group relative animate-fade-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {index < timelineSteps.length - 1 && (
@@ -239,16 +239,12 @@ const AIDiscoveryEngine = () => {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <h4 className="text-base font-display font-bold text-foreground">
-                        {step.title}
-                      </h4>
+                      <h4 className="text-base font-display font-bold text-foreground">{step.title}</h4>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                         {step.highlight}
                       </span>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
 
                   <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity self-center">
@@ -259,26 +255,21 @@ const AIDiscoveryEngine = () => {
             ))}
           </div>
 
-          {/* Result indicator */}
           <div className="mt-8 p-4 rounded-xl bg-primary/5 border border-primary/20 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <CheckCircle className="h-5 w-5 text-primary" />
               <span className="font-bold text-foreground">Result</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              5 guaranteed bookings in your first 21 days.
-            </p>
+            <p className="text-sm text-muted-foreground">5 guaranteed bookings in your first 21 days.</p>
           </div>
         </div>
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <Button variant="hero" size="lg" className="group max-w-full" asChild>
-            <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-              <span>Get Started with IvyLink</span>
-              <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
+          <Cta size="lg" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group max-w-full">
+            <span>Get Started with IvyLink</span>
+            <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+          </Cta>
         </div>
       </div>
     </section>

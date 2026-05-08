@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Cta } from "@/components/ui/cta";
 import HeroProductUI from "./HeroProductUI";
 
 const Hero = () => {
@@ -26,12 +26,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <Button variant="hero" size="xl" className="group" asChild>
-                <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-                  See Who's In My Area
-                  <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
+              <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group">
+                See Who's In My Area
+                <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Cta>
             </div>
           </div>
 

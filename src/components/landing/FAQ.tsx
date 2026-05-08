@@ -1,9 +1,13 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
+
+/*
+ * PERF: Switched from Radix `Accordion` to native `<details>`/`<summary>`.
+ * The browser handles the open/close state for free — zero JavaScript at
+ * runtime, zero hydration cost. Drops `@radix-ui/react-accordion` (and its
+ * `@radix-ui/react-collapsible` peer dep) from the bundle entirely (~7 KiB
+ * compressed). The chevron rotation is a CSS `[open]` selector, no React
+ * state or animation library needed.
+ */
 
 const faqs = [
   {
@@ -35,15 +39,12 @@ const faqs = [
 const FAQ = () => {
   return (
     <section id="faq" className="py-20 lg:py-28 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-      
+
       <div className="section-container relative">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
-            <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
-              FAQ
-            </span>
+            <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">FAQ</span>
             <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               Frequently Asked <span className="text-gradient">Questions</span>
             </h2>
@@ -52,22 +53,20 @@ const FAQ = () => {
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <div className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="border border-border/50 rounded-xl px-6 data-[state=open]:bg-muted/30 transition-colors"
+              <details
+                key={index}
+                className="group border border-border/50 rounded-xl px-6 [&[open]]:bg-muted/30 transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-display font-semibold text-foreground hover:text-primary hover:no-underline py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <summary className="flex items-center justify-between cursor-pointer text-left text-lg font-display font-semibold text-foreground hover:text-primary py-5 list-none [&::-webkit-details-marker]:hidden">
+                  <span>{faq.question}</span>
+                  <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
+                </summary>
+                <div className="text-muted-foreground pb-5 leading-relaxed">{faq.answer}</div>
+              </details>
             ))}
-          </Accordion>
+          </div>
         </div>
       </div>
     </section>

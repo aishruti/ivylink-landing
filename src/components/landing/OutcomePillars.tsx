@@ -1,49 +1,18 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw, Settings } from "lucide-react";
+import { Cta } from "@/components/ui/cta";
 
 const pillars = [
-  {
-    icon: MapPin,
-    title: "Smart Partner Discovery",
-    description: "Finds and prioritizes nearby businesses most likely to send you bookings automatically.",
-    gradient: "from-primary to-pink-500",
-  },
-  {
-    icon: Zap,
-    title: "Proven Collab Plays",
-    description: "Launches ready-to-go campaigns that attract local clients without manual messaging.",
-    gradient: "from-purple-500 to-pink-500",
-  },
-  {
-    icon: Share2,
-    title: "Done-For-You Posting",
-    description: "Handles every post and DM for you. No late-night scheduling needed.",
-    gradient: "from-primary to-orange-400",
-  },
-  {
-    icon: BarChart3,
-    title: "Revenue Scoreboard",
-    description: "Shows exactly which plays and partners produce new bookings.",
-    gradient: "from-pink-500 to-purple-500",
-  },
-  {
-    icon: RefreshCw,
-    title: "Partner Rotation",
-    description: "Keeps your campaigns fresh with automated monthly updates.",
-    gradient: "from-purple-500 to-primary",
-  },
-  {
-    icon: Settings,
-    title: "Hands-Off Execution",
-    description: "We handle all the maintenance. Campaign updates, partner outreach, and optimization run automatically.",
-    gradient: "from-orange-400 to-pink-500",
-  },
+  { icon: MapPin,    title: "Smart Partner Discovery", description: "Finds and prioritizes nearby businesses most likely to send you bookings automatically.", gradient: "from-primary to-pink-500" },
+  { icon: Zap,       title: "Proven Collab Plays",     description: "Launches ready-to-go campaigns that attract local clients without manual messaging.",      gradient: "from-purple-500 to-pink-500" },
+  { icon: Share2,    title: "Done-For-You Posting",    description: "Handles every post and DM for you. No late-night scheduling needed.",                      gradient: "from-primary to-orange-400" },
+  { icon: BarChart3, title: "Revenue Scoreboard",      description: "Shows exactly which plays and partners produce new bookings.",                              gradient: "from-pink-500 to-purple-500" },
+  { icon: RefreshCw, title: "Partner Rotation",        description: "Keeps your campaigns fresh with automated monthly updates.",                                gradient: "from-purple-500 to-primary" },
+  { icon: Settings,  title: "Hands-Off Execution",     description: "We handle all the maintenance. Campaign updates, partner outreach, and optimization run automatically.", gradient: "from-orange-400 to-pink-500" },
 ];
 
 const OutcomePillars = () => {
   return (
     <section id="features" className="py-16 lg:py-20 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-muted/30" />
       <div className="absolute top-20 left-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-20 right-20 h-80 w-80 rounded-full bg-purple-500/5 blur-3xl" />
@@ -68,30 +37,23 @@ const OutcomePillars = () => {
               className="group relative rounded-2xl bg-card p-8 card-elevated animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient border on hover */}
               <div className={`absolute -inset-px rounded-2xl bg-gradient-to-r ${pillar.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               <div className="relative rounded-2xl bg-card p-0">
                 <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${pillar.gradient}`}>
                   <pillar.icon className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="mb-3 text-xl font-display font-bold text-foreground">
-                  {pillar.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {pillar.description}
-                </p>
+                <h3 className="mb-3 text-xl font-display font-bold text-foreground">{pillar.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="hero" size="lg" className="group" asChild>
-            <a href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-              Get Started Now
-              <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
+          <Cta size="lg" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group">
+            Get Started Now
+            <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Cta>
         </div>
       </div>
     </section>
