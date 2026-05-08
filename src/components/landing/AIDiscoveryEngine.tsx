@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Mail, CalendarCheck, Users, Share2, CheckCircle, Globe, CloudSun, DollarSign } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import spaInterior from "@/assets/spa-interior-1.jpg";
-import spaLounge from "@/assets/spa-lounge-2.jpg";
-import studioInterior from "@/assets/studio-interior-1.jpg";
-import studioClass from "@/assets/studio-class-2.jpg";
+// PERF: WebP versions are 70-80% smaller than the original 512x512 JPGs
+// (saves ~80KB total). Resized to 320px to match 2x DPR for the ~160px
+// rendered size on mobile.
+import spaInterior from "@/assets/spa-interior-1.webp";
+import spaLounge from "@/assets/spa-lounge-2.webp";
+import studioInterior from "@/assets/studio-interior-1.webp";
+import studioClass from "@/assets/studio-class-2.webp";
 
 const aiBubbles = [
   { icon: CloudSun, label: "Seasonality", description: "Demand patterns by time of year" },
@@ -80,7 +83,7 @@ const AIDiscoveryEngine = () => {
             {aiBubbles.map((bubble, i) => (
               <div
                 key={i}
-                className="flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border/60 shadow-md opacity-0 animate-fade-up w-full sm:w-auto"
+                className="flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border/60 shadow-md animate-fade-up w-full sm:w-auto"
                 style={{ animationDelay: `${i * 0.12}s` }}
               >
                 <div className="h-10 w-10 rounded-full gradient-primary flex items-center justify-center flex-shrink-0">
@@ -139,10 +142,10 @@ const AIDiscoveryEngine = () => {
                   <p className="text-xs font-medium text-muted-foreground text-center">Your Spa</p>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={spaInterior} alt="Luxury spa interior" className="w-full h-full object-cover" />
+                      <img src={spaInterior} alt="Luxury spa interior" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={spaLounge} alt="Spa lounge area" className="w-full h-full object-cover" />
+                      <img src={spaLounge} alt="Spa lounge area" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -150,10 +153,10 @@ const AIDiscoveryEngine = () => {
                   <p className="text-xs font-medium text-muted-foreground text-center">Their Studio</p>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={studioInterior} alt="Pilates studio interior" className="w-full h-full object-cover" />
+                      <img src={studioInterior} alt="Pilates studio interior" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                     <div className="aspect-square rounded-lg overflow-hidden bg-white shadow-sm border border-border/40">
-                      <img src={studioClass} alt="Pilates class in session" className="w-full h-full object-cover" />
+                      <img src={studioClass} alt="Pilates class in session" width="160" height="160" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -173,7 +176,10 @@ const AIDiscoveryEngine = () => {
                 <span className="text-sm text-muted-foreground">Overlap Score</span>
                 <span className="text-xs font-semibold text-primary">ROI Potential: High</span>
               </div>
-              <Progress value={85} className="h-2.5 bg-muted" />
+              {/* A11Y: aria-label so screen readers announce this progress bar.
+                  Fixes the PSI accessibility audit "ARIA progressbar elements
+                  do not have accessible names". */}
+              <Progress value={85} aria-label="Wallet overlap score: 85 percent" className="h-2.5 bg-muted" />
               <p className="text-xs text-muted-foreground mt-2">
                 Clients who spend $150+ on Pilates are 4x more likely to book your $600+ Filler packages.
               </p>

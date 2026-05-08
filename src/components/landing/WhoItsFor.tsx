@@ -32,7 +32,7 @@ const WhoItsFor = () => {
             {audiences.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 rounded-2xl bg-card p-5 card-elevated opacity-0 animate-fade-up"
+                className="flex items-start gap-4 rounded-2xl bg-card p-5 card-elevated animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-primary">

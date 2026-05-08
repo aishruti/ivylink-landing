@@ -60,7 +60,9 @@ const Footer = () => {
           {/* Links Columns */}
           <div className="lg:col-span-3 grid gap-8 sm:grid-cols-3">
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Product</h4>
+              {/* A11Y: h3 (was h4) — the previous heading on the page is the
+                  ClosingCTA h2, so we can't skip a level. Visual size unchanged. */}
+              <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Product</h3>
               <ul className="space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.label}>
@@ -72,7 +74,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Company</h4>
+              <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Company</h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.label}>
@@ -84,7 +86,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Legal</h4>
+              <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Legal</h3>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>

@@ -65,7 +65,7 @@ const OutcomePillars = () => {
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl bg-card p-8 card-elevated opacity-0 animate-fade-up"
+              className="group relative rounded-2xl bg-card p-8 card-elevated animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Gradient border on hover */}

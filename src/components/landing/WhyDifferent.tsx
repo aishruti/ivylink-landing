@@ -42,7 +42,7 @@ const WhyDifferent = () => {
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className="text-center bg-card border border-border/50 rounded-2xl p-8 opacity-0 animate-fade-up shadow-lg"
+              className="text-center bg-card border border-border/50 rounded-2xl p-8 animate-fade-up shadow-lg"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl gradient-primary">
