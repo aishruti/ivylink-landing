@@ -6,7 +6,9 @@
     <title>IvyLink - Automate Med Spa Collabs That Fill Your Calendar</title>
     <meta name="description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
     <meta name="author" content="IvyLink" />
-    
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#7c3aed" />
+
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
@@ -22,7 +24,12 @@
       "url": "https://ivylink.ai",
       "logo": "https://ivylink.ai/favicon.png",
       "description": "IvyLink's AI automates med spa referral swaps with local partners to turn their foot traffic into your bookings on autopilot.",
-      "sameAs": ["https://app.ivylink.ai"]
+      "sameAs": ["https://app.ivylink.ai"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@ivylink.com",
+        "contactType": "customer support"
+      }
     }
     </script>
 
@@ -58,27 +65,91 @@
       "url": "https://ivylink.ai"
     }
     </script>
-    
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is IvyLink for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Single-location med spas, injectors, and aesthetic practices who want consistent bookings from local partnerships without the awkward networking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the partner matching work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We scan your area for complementary businesses (gyms, studios, salons) and identify the best collaboration fits based on audience overlap and partnership potential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we connect through official APIs and never share your client data with partners. Your information stays yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost to get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a call to learn about our pricing. We guarantee 5 new bookings in 21 days or we keep working for free until you do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from ads or a CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ads bring strangers who may never return. CRMs manage existing clients. IvyLink builds partnerships that send you warm referrals month after month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How soon will I see results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most med spas see new appointments within the first 21 days. Our system starts identifying partners immediately after setup."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ivylink.ai/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="IvyLink" />
     <meta property="og:title" content="IvyLink - Automate Med Spa Collabs That Fill Your Calendar" />
     <meta property="og:description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@IvyLink" />
+    <meta name="twitter:creator" content="@IvyLink" />
     <meta name="twitter:title" content="IvyLink - Automate Med Spa Collabs That Fill Your Calendar" />
     <meta name="twitter:description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <link rel="icon" type="image/png" href="/favicon.png" />
-    
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
@@ -87,7 +158,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "vezjpp70ak");
     </script>
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M90KE9LFQ"></script>
     <script>
