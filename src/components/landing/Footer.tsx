@@ -39,7 +39,7 @@ const Footer = () => {
               <span className="text-2xl font-display font-bold">IvyLink</span>
             </a>
             <p className="text-background/60 mb-6 leading-relaxed">
-              Automate local collaborations and fill your med spa calendar without the manual hustle.
+              The local marketing platform for wellness businesses. Partner with nearby gyms, salons, and med spas to share customers and fill your calendar without ad spend.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-background/60">
@@ -60,7 +60,7 @@ const Footer = () => {
           {/* Links Columns */}
           <div className="lg:col-span-3 grid gap-8 sm:grid-cols-3">
             <div>
-              {/* A11Y: h3 (was h4) — the previous heading on the page is the
+              {/* A11Y: h3 (was h4). The previous heading on the page is the
                   ClosingCTA h2, so we can't skip a level. Visual size unchanged. */}
               <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Product</h3>
               <ul className="space-y-3">

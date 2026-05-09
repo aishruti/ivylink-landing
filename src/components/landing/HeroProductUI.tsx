@@ -1,4 +1,10 @@
-import { MapPin, Users, Calendar, ArrowRight, Check, Star } from "lucide-react";
+import { MapPin, Users, Calendar, Check, Star } from "lucide-react";
+
+/*
+ * Hero product visual. Revenue-focused mockup with floating booking + partner
+ * stat cards. Keeps the hero anchored on the outcome (bookings, revenue) rather
+ * than the discovery surface, which lives in the How It Works section instead.
+ */
 
 const HeroProductUI = () => {
   return (
@@ -15,26 +21,25 @@ const HeroProductUI = () => {
               <div className="h-3 w-3 rounded-full bg-yellow-400" />
               <div className="h-3 w-3 rounded-full bg-green-400" />
             </div>
-            <span className="text-xs text-muted-foreground font-medium">Partner Discovery</span>
+            <span className="text-xs text-muted-foreground font-medium">Your Partner Network</span>
           </div>
 
           {/* Search/Location Bar */}
           <div className="flex items-center gap-2 sm:gap-3 mb-6 p-3 rounded-xl bg-muted/50 border border-border/50">
             <MapPin className="h-5 w-5 text-primary shrink-0" />
-            <span className="text-sm text-foreground font-medium whitespace-nowrap">Beverly Hills, CA</span>
-            <span className="text-xs text-muted-foreground ml-auto text-right">12 partners found</span>
+            <span className="text-sm text-foreground font-medium whitespace-nowrap">Hoboken, NJ</span>
+            <span className="text-xs text-muted-foreground ml-auto text-right">3 active partners</span>
           </div>
 
           {/* Partner Cards */}
           <div className="space-y-3">
-            {/* Partner 1 - Connected with stats */}
             <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
               <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
                 <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">SoulCycle Beverly Hills</span>
+                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">Sculpt Fitness Studio</span>
                   <Check className="h-4 w-4 text-primary shrink-0" />
                 </div>
                 <span className="text-xs sm:text-sm text-muted-foreground">Fitness Studio • 0.3 mi</span>
@@ -45,14 +50,13 @@ const HeroProductUI = () => {
               </div>
             </div>
 
-            {/* Partner 2 */}
             <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
               <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
                 <Star className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">Luxe Hair Salon</span>
+                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">The Glow Bar</span>
                   <Check className="h-4 w-4 text-primary shrink-0" />
                 </div>
                 <span className="text-xs sm:text-sm text-muted-foreground">Salon • 0.5 mi</span>
@@ -63,17 +67,16 @@ const HeroProductUI = () => {
               </div>
             </div>
 
-            {/* Partner 3 */}
             <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
               <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
                 <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">Equinox Gym</span>
+                  <span className="font-semibold text-foreground text-sm sm:text-base truncate">Lumina Med Spa</span>
                   <Check className="h-4 w-4 text-primary shrink-0" />
                 </div>
-                <span className="text-xs sm:text-sm text-muted-foreground">Gym • 0.8 mi</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Med Spa • 0.8 mi</span>
               </div>
               <div className="text-right shrink-0">
                 <div className="text-xs sm:text-sm font-bold text-foreground">12 bookings</div>
@@ -84,15 +87,15 @@ const HeroProductUI = () => {
         </div>
       </div>
 
-      {/* Floating stats card */}
+      {/* Floating revenue card */}
       <div className="absolute -bottom-4 -left-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.5s' }}>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
             <Calendar className="h-5 w-5 text-white" />
           </div>
           <div>
-            <p className="text-2xl font-bold text-foreground">+5</p>
-            <p className="text-xs text-muted-foreground">Guaranteed bookings</p>
+            <p className="text-2xl font-bold text-foreground">53</p>
+            <p className="text-xs text-muted-foreground">Bookings this month</p>
           </div>
         </div>
       </div>
@@ -104,8 +107,8 @@ const HeroProductUI = () => {
             <Users className="h-5 w-5 text-white" />
           </div>
           <div>
-            <p className="text-2xl font-bold text-foreground">12</p>
-            <p className="text-xs text-muted-foreground">Partners nearby</p>
+            <p className="text-2xl font-bold text-foreground">$10.4K</p>
+            <p className="text-xs text-muted-foreground">Partner revenue</p>
           </div>
         </div>
       </div>

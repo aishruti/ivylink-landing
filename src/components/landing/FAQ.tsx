@@ -1,38 +1,46 @@
 import { ChevronDown } from "lucide-react";
 
 /*
- * PERF: Switched from Radix `Accordion` to native `<details>`/`<summary>`.
- * The browser handles the open/close state for free — zero JavaScript at
- * runtime, zero hydration cost. Drops `@radix-ui/react-accordion` (and its
- * `@radix-ui/react-collapsible` peer dep) from the bundle entirely (~7 KiB
- * compressed). The chevron rotation is a CSS `[open]` selector, no React
- * state or animation library needed.
+ * PERF: Native <details>/<summary>. Zero JS, zero hydration cost.
+ *
+ * FAQ rewritten to:
+ * - drop med-spa-only language
+ * - target long-tail SEO terms (referral programs, ad spend, partnerships)
+ * - handle real objections (cost, results timeline, what kinds of businesses)
  */
 
 const faqs = [
   {
     question: "Who is IvyLink for?",
-    answer: "Single-location med spas, injectors, and aesthetic practices who want consistent bookings from local partnerships without the awkward networking.",
+    answer: "Owners of local wellness businesses, including med spas, salons, gyms, yoga studios, pilates studios, nail bars, wellness centers, massage practices, and aesthetic clinics. If your business has a local clientele and complementary partners nearby, IvyLink works for you.",
+  },
+  {
+    question: "How is this different from a referral program?",
+    answer: "Referral programs reward your existing customers for sending friends. IvyLink builds partnerships with other local businesses, so their entire customer base actively gets pointed toward yours. No customer-side effort required, and the volume is dramatically higher.",
+  },
+  {
+    question: "Do I need to spend money on ads?",
+    answer: "No. IvyLink is built specifically for wellness businesses that want growth without a paid ads budget. The only thing you 'spend' is the discount on your partnership offer, and only when a partner's customer actually shows up and books.",
+  },
+  {
+    question: "How much does it cost?",
+    answer: "IvyLink is free to sign up and explore. You can match with partners and create your first play at no cost. Reach out if you'd like to discuss our plans for active partnerships.",
+  },
+  {
+    question: "How does the QR code tracking work?",
+    answer: "Every active partnership gets two unique QR codes, one for each business's offer. When a customer scans and books, the system records who referred them, what they booked, and what it was worth. You see full attribution in your dashboard, in real time.",
   },
   {
     question: "How does the partner matching work?",
-    answer: "We scan your area for complementary businesses (gyms, studios, salons) and identify the best collaboration fits based on audience overlap and partnership potential.",
+    answer: "IvyLink scans your area for complementary businesses and ranks them by audience overlap, location, and partnership potential. You see every potential partner within a 5-mile radius, sorted by best match. We never share your client data with partners. Your information stays yours.",
   },
   {
-    question: "Is my data secure?",
-    answer: "Yes, we connect through official APIs and never share your client data with partners. Your information stays yours.",
+    question: "How long does it take to see results?",
+    answer: "Most businesses send their first partnership play within 10 minutes of signing up. Bookings typically follow in the first 1 to 3 weeks, depending on how quickly partners activate their offers.",
   },
   {
-    question: "What does it cost to get started?",
-    answer: "Book a call to learn about our pricing. We guarantee 5 new bookings in 21 days or we keep working for free until you do.",
-  },
-  {
-    question: "How is this different from ads or a CRM?",
-    answer: "Ads bring strangers who may never return. CRMs manage existing clients. IvyLink builds partnerships that send you warm referrals month after month.",
-  },
-  {
-    question: "How soon will I see results?",
-    answer: "Most med spas see new appointments within the first 21 days. Our system starts identifying partners immediately after setup.",
+    question: "What if the partner I want isn't on IvyLink yet?",
+    answer: "You can still send them a partnership invitation through IvyLink. We handle the outreach, generate the play, and walk them through joining. No awkward cold DMs from you.",
   },
 ];
 

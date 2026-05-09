@@ -18,22 +18,30 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up">
-              Sync Your Med Spa with Local Partners for <span className="text-gradient">Guaranteed Referrals</span>
+              The <span className="text-gradient">local marketing platform</span> built for wellness businesses.
             </h1>
 
-            <p className="mb-6 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              IvyLink's AI automates med spa referral swaps with local partners to turn their foot traffic into your bookings on total autopilot.
+            <p className="mb-8 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              Partner with nearby gyms, salons, and med spas to share customers, fill empty slots, and grow revenue without spending on ads.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group">
-                See Who's In My Area
+                Get Started Free
                 <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Cta>
             </div>
+            <p className="mt-3 text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: '0.25s' }}>
+              Free to sign up. No credit card required.
+            </p>
+
+            {/* Trust band. Kills med-spa-only perception immediately. */}
+            <p className="mt-8 text-sm font-medium text-muted-foreground animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              Built for med spas, salons, gyms, yoga studios, nail bars, and other wellness businesses.
+            </p>
           </div>
 
-          {/* Right Content - Product UI */}
+          {/* Right Content - Product UI (real screenshot) */}
           <div className="relative animate-fade-up lg:animate-scale-in" style={{ animationDelay: '0.3s' }}>
             <HeroProductUI />
           </div>

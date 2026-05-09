@@ -1,8 +1,8 @@
 /*
  * PERF: Self-host fonts via @fontsource-variable. Eliminates the round-trip
  * to fonts.googleapis.com (resolve CSS) AND fonts.gstatic.com (fetch woff2).
- * Vite bundles these as hashed assets served from your own origin — same
- * cache lifetime as your other assets, no third-party DNS/TLS overhead.
+ * Vite bundles these as hashed assets served from your own origin (same
+ * cache lifetime as your other assets, no third-party DNS/TLS overhead).
  *
  * Variable fonts ship a single woff2 per family that covers all weights from
  * 100–900 (and optical size for DM Sans). One file replaces the 4 weight files

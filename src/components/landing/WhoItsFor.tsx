@@ -2,10 +2,10 @@ import { Check } from "lucide-react";
 
 const audiences = [
   "You're paying for ads but most clients come once and disappear",
-  "The gym next door has clients who would love your services, but no way to reach them",
+  "The gym, salon, or spa next door has clients who'd love your services, but no easy way to reach them",
   "You've tried networking but it feels awkward and rarely converts",
   "Your calendar has empty slots while competitors seem fully booked",
-  "You want partnerships that bring clients, not just Instagram likes",
+  "You want partnerships that bring in real bookings, not just Instagram likes",
 ];
 
 const WhoItsFor = () => {
@@ -13,7 +13,7 @@ const WhoItsFor = () => {
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-purple-500/5 blur-3xl" />
-      
+
       <div className="section-container relative">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
@@ -23,7 +23,7 @@ const WhoItsFor = () => {
             Is This <span className="text-gradient">You?</span>
           </h2>
           <p className="mb-12 text-lg text-muted-foreground">
-            IvyLink is built for med spa owners who want results without the endless hustle.
+            IvyLink is a small business marketing platform built for owners of med spas, salons, gyms, studios, and other local wellness businesses who want results without endless hustle.
           </p>
         </div>
 

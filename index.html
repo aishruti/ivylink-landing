@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IvyLink - Automate Med Spa Collabs That Fill Your Calendar</title>
-    <meta name="description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
+    <title>IvyLink: Local Marketing Platform for Wellness Businesses</title>
+    <meta name="description" content="The local marketing platform that helps med spas, salons, gyms, and wellness businesses partner up, share customers, and fill empty slots without spending on ads." />
     <meta name="author" content="IvyLink" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#7c3aed" />
@@ -15,24 +15,24 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://ivylink.ai/" />
 
-    <!-- Favicons (?v=2 cache-bust forces Google + browsers to re-fetch the IvyLink chain-link icon
-         instead of any previously cached Lovable default) -->
+    <!-- Favicons. ?v=2 cache-bust forces Google + browsers to re-fetch the IvyLink chain-link icon
+         instead of any previously cached Lovable default. -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
     <link rel="shortcut icon" href="/favicon.ico?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=2" />
 
     <!--
-      PERF: Fonts are now self-hosted via @fontsource-variable, imported
+      PERF: Fonts are self-hosted via @fontsource-variable, imported
       directly from src/index.css. The browser fetches them as bundled
-      assets from the same origin — no DNS lookup or TLS handshake to
-      fonts.googleapis.com / fonts.gstatic.com. Removing those external
-      dependencies eliminates 2 round-trips that were costing ~300–500ms
+      assets from the same origin (no DNS lookup or TLS handshake to
+      fonts.googleapis.com / fonts.gstatic.com). Removing those external
+      dependencies eliminates 2 round-trips that were costing ~300 to 500ms
       of LCP on 4G.
     -->
 
     <!--
-      PERF: Critical inline CSS — keeps the LCP text painted with a system
+      PERF: Critical inline CSS. Keeps the LCP text painted with a system
       fallback even before the bundled CSS arrives.
     -->
     <style>
@@ -49,7 +49,7 @@
       "name": "IvyLink",
       "url": "https://ivylink.ai",
       "logo": "https://ivylink.ai/favicon.png?v=2",
-      "description": "IvyLink's AI automates med spa referral swaps with local partners to turn their foot traffic into your bookings on autopilot.",
+      "description": "IvyLink is the local marketing platform built for wellness businesses. Partner with nearby gyms, salons, and med spas to share customers, fill empty slots, and grow revenue without spending on ads.",
       "sameAs": ["https://app.ivylink.ai"],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -68,16 +68,11 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://ivylink.ai",
-      "description": "Automated local-collab engine for med spas. Find partners, launch service swaps, and track real bookings.",
+      "description": "Local marketing platform for wellness businesses. Match with nearby partners, run AI-designed joint promotions with mutual offers, and track every booking back to its source via QR codes.",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "127"
       }
     }
     </script>
@@ -92,18 +87,20 @@
     }
     </script>
 
-    <!-- Structured Data: FAQPage -->
+    <!-- Structured Data: FAQPage. Keep in sync with FAQ.tsx component. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Who is IvyLink for?", "acceptedAnswer": { "@type": "Answer", "text": "Single-location med spas, injectors, and aesthetic practices who want consistent bookings from local partnerships without the awkward networking." } },
-        { "@type": "Question", "name": "How does the partner matching work?", "acceptedAnswer": { "@type": "Answer", "text": "We scan your area for complementary businesses (gyms, studios, salons) and identify the best collaboration fits based on audience overlap and partnership potential." } },
-        { "@type": "Question", "name": "Is my data secure?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we connect through official APIs and never share your client data with partners. Your information stays yours." } },
-        { "@type": "Question", "name": "What does it cost to get started?", "acceptedAnswer": { "@type": "Answer", "text": "Book a call to learn about our pricing. We guarantee 5 new bookings in 21 days or we keep working for free until you do." } },
-        { "@type": "Question", "name": "How is this different from ads or a CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Ads bring strangers who may never return. CRMs manage existing clients. IvyLink builds partnerships that send you warm referrals month after month." } },
-        { "@type": "Question", "name": "How soon will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Most med spas see new appointments within the first 21 days. Our system starts identifying partners immediately after setup." } }
+        { "@type": "Question", "name": "Who is IvyLink for?", "acceptedAnswer": { "@type": "Answer", "text": "Owners of local wellness businesses, including med spas, salons, gyms, yoga studios, pilates studios, nail bars, wellness centers, massage practices, and aesthetic clinics. If your business has a local clientele and complementary partners nearby, IvyLink works for you." } },
+        { "@type": "Question", "name": "How is this different from a referral program?", "acceptedAnswer": { "@type": "Answer", "text": "Referral programs reward your existing customers for sending friends. IvyLink builds partnerships with other local businesses, so their entire customer base actively gets pointed toward yours. No customer-side effort required, and the volume is dramatically higher." } },
+        { "@type": "Question", "name": "Do I need to spend money on ads?", "acceptedAnswer": { "@type": "Answer", "text": "No. IvyLink is built specifically for wellness businesses that want growth without a paid ads budget. The only thing you 'spend' is the discount on your partnership offer, and only when a partner's customer actually shows up and books." } },
+        { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "IvyLink is free to sign up and explore. You can match with partners and create your first play at no cost. Reach out if you'd like to discuss our plans for active partnerships." } },
+        { "@type": "Question", "name": "How does the QR code tracking work?", "acceptedAnswer": { "@type": "Answer", "text": "Every active partnership gets two unique QR codes, one for each business's offer. When a customer scans and books, the system records who referred them, what they booked, and what it was worth. You see full attribution in your dashboard, in real time." } },
+        { "@type": "Question", "name": "How does the partner matching work?", "acceptedAnswer": { "@type": "Answer", "text": "IvyLink scans your area for complementary businesses and ranks them by audience overlap, location, and partnership potential. You see every potential partner within a 5-mile radius, sorted by best match. We never share your client data with partners. Your information stays yours." } },
+        { "@type": "Question", "name": "How long does it take to see results?", "acceptedAnswer": { "@type": "Answer", "text": "Most businesses send their first partnership play within 10 minutes of signing up. Bookings typically follow in the first 1 to 3 weeks, depending on how quickly partners activate their offers." } },
+        { "@type": "Question", "name": "What if the partner I want isn't on IvyLink yet?", "acceptedAnswer": { "@type": "Answer", "text": "You can still send them a partnership invitation through IvyLink. We handle the outreach, generate the play, and walk them through joining. No awkward cold DMs from you." } }
       ]
     }
     </script>
@@ -113,8 +110,8 @@
     <meta property="og:url" content="https://ivylink.ai/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="IvyLink" />
-    <meta property="og:title" content="IvyLink - Automate Med Spa Collabs That Fill Your Calendar" />
-    <meta property="og:description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
+    <meta property="og:title" content="IvyLink: Local Marketing Platform for Wellness Businesses" />
+    <meta property="og:description" content="The local marketing platform that helps med spas, salons, gyms, and wellness businesses partner up, share customers, and fill empty slots without spending on ads." />
     <meta property="og:image" content="https://ivylink.ai/favicon.png?v=2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -123,8 +120,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@IvyLink" />
     <meta name="twitter:creator" content="@IvyLink" />
-    <meta name="twitter:title" content="IvyLink - Automate Med Spa Collabs That Fill Your Calendar" />
-    <meta name="twitter:description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
+    <meta name="twitter:title" content="IvyLink: Local Marketing Platform for Wellness Businesses" />
+    <meta name="twitter:description" content="The local marketing platform that helps med spas, salons, gyms, and wellness businesses partner up, share customers, and fill empty slots without spending on ads." />
     <meta name="twitter:image" content="https://ivylink.ai/favicon.png?v=2" />
   </head>
   <body>

@@ -4,8 +4,8 @@ import { Cta } from "@/components/ui/cta";
 import ivylinkLogo from "@/assets/ivylink-logo.svg";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Why It Works", href: "#features" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -33,7 +33,7 @@ const Navigation = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Cta href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-              Find My Partners
+              Get Started Free
             </Cta>
           </div>
 
@@ -53,7 +53,7 @@ const Navigation = () => {
                 </a>
               ))}
               <Cta size="lg" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="mt-2">
-                Find My Partners
+                Get Started Free
               </Cta>
             </div>
           </div>

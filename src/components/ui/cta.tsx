@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
  * PERF: Drop-in replacement for the shadcn `Button` component on the landing
  * page. Every button on the page used `variant="hero"`, so we don't need
  * class-variance-authority's variant matrix or @radix-ui/react-slot's polymorphic
- * forwarding. This component renders a styled <a> directly — bundle delta is
+ * forwarding. This component renders a styled <a> directly. Bundle delta is
  * roughly -8KB (cva + slot + base button styles) and there's nothing for the
  * runtime to evaluate at mount time, which trims a few ms off LCP.
  *
