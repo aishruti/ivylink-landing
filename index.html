@@ -15,11 +15,12 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://ivylink.ai/" />
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+    <!-- Favicons (?v=2 cache-bust forces Google + browsers to re-fetch the IvyLink chain-link icon
+         instead of any previously cached Lovable default) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=2" />
 
     <!--
       PERF: Fonts are now self-hosted via @fontsource-variable, imported
@@ -47,7 +48,7 @@
       "@type": "Organization",
       "name": "IvyLink",
       "url": "https://ivylink.ai",
-      "logo": "https://ivylink.ai/favicon.png",
+      "logo": "https://ivylink.ai/favicon.png?v=2",
       "description": "IvyLink's AI automates med spa referral swaps with local partners to turn their foot traffic into your bookings on autopilot.",
       "sameAs": ["https://app.ivylink.ai"],
       "contactPoint": {
@@ -114,7 +115,7 @@
     <meta property="og:site_name" content="IvyLink" />
     <meta property="og:title" content="IvyLink - Automate Med Spa Collabs That Fill Your Calendar" />
     <meta property="og:description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
-    <meta property="og:image" content="https://ivylink.ai/favicon.png" />
+    <meta property="og:image" content="https://ivylink.ai/favicon.png?v=2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -124,7 +125,7 @@
     <meta name="twitter:creator" content="@IvyLink" />
     <meta name="twitter:title" content="IvyLink - Automate Med Spa Collabs That Fill Your Calendar" />
     <meta name="twitter:description" content="Turn 10+ hours of outreach into minutes. Automated local-collab engine that fills empty spa slots fast and tracks real bookings." />
-    <meta name="twitter:image" content="https://ivylink.ai/favicon.png" />
+    <meta name="twitter:image" content="https://ivylink.ai/favicon.png?v=2" />
   </head>
   <body>
     <div id="root"></div>
