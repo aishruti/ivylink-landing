@@ -40,7 +40,7 @@ const OutcomeBand = () => {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Most local advertising leaves you guessing. IvyLink doesn't. Every
-            partnership generates unique QR codes — when a customer redeems an
+            partnership generates unique QR codes. When a customer redeems an
             offer you see the booking, the partner who referred them, and the
             revenue in real time.
           </p>

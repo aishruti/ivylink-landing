@@ -57,7 +57,7 @@ const steps: Step[] = [
     number: "04",
     title: "Partnership goes live with QR codes for both sides",
     description:
-      "The moment both businesses agree, IvyLink generates two unique QR codes — one for your offer, one for theirs. Print them, share them, post them. Each scan ties straight back to the partnership it came from.",
+      "The moment both businesses agree, IvyLink generates two unique QR codes: one for your offer, one for theirs. Print them, share them, post them. Each scan ties straight back to the partnership it came from.",
     img: qrBundleImg,
     alt: "IvyLink active partnership with two QR codes, one for each business and their respective offers",
     accent: "from-orange-400 to-primary",
@@ -66,7 +66,7 @@ const steps: Step[] = [
     number: "05",
     title: "Track every redemption, booking, and dollar",
     description:
-      "Customers scan the QR code at the partner location to redeem their offer. You see scans, conversions, and revenue update in real time — for every active partnership, all in one dashboard.",
+      "Customers scan the QR code at the partner location to redeem their offer. You see scans, conversions, and revenue update in real time, for every active partnership, all in one dashboard.",
     img: partnerNetworkImg,
     alt: "IvyLink Partner Network dashboard showing scans, conversions, and revenue per partnership",
     accent: "from-purple-500 to-primary",

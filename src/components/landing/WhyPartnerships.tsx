@@ -26,7 +26,7 @@ const comparisons: Comparison[] = [
     gradient: "from-orange-400 to-pink-500",
     vs: "vs. Local Advertising",
     badLabel: "Yelp / Meta Ads / Nextdoor",
-    badStat: "$2–15 per click",
+    badStat: "$2-15 per click",
     badText:
       "Charges per click whether anyone books or not. You're paying to reach strangers who may never return.",
     goodStat: "$0 upfront cost",
@@ -40,7 +40,7 @@ const comparisons: Comparison[] = [
     badLabel: "Referral management apps",
     badStat: "<2% share rate",
     badText:
-      "Relies on your customers remembering to share a link. Most never do — and the ones who do bring one friend, one time.",
+      "Relies on your customers remembering to share a link. Most never do, and the ones who do bring one friend, one time.",
     goodStat: "Entire client bases shared",
     goodText:
       "Builds partnerships with local businesses so their whole customer base actively gets pointed toward yours, week after week.",
@@ -55,7 +55,7 @@ const comparisons: Comparison[] = [
       "Finding partners, drafting offers, messaging owners, and tracking redemptions eats your schedule. Most owners quit by week two.",
     goodStat: "Set up once, runs forever",
     goodText:
-      "Finds the partners, drafts the offer, generates QR codes, and tracks every booking automatically — completely hands-off.",
+      "Finds the partners, drafts the offer, generates QR codes, and tracks every booking automatically, completely hands-off.",
   },
 ];
 

@@ -54,7 +54,7 @@ const HowItWorks = () => {
             From Setup to <span className="text-gradient">Filled Calendar</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Five simple steps to transform your local partnerships into consistent bookings—all automated.
+            Five simple steps to transform your local partnerships into consistent bookings, all automated.
           </p>
         </div>
 
