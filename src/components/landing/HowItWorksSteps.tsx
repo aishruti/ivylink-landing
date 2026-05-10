@@ -129,13 +129,15 @@ const HowItWorksSteps = () => {
                     />
                     <div className="relative rounded-2xl overflow-hidden border border-border/60 bg-white shadow-2xl">
                       {/* Natural dimensions — no fixed height, no cropping, no whitespace */}
-                      <img
-                        src={step.img}
-                        alt={step.alt}
-                        loading="lazy"
-                        decoding="async"
-                        className="block w-full h-auto"
-                      />
+                      <div className="p-[5px]">
+                        <img
+                          src={step.img}
+                          alt={step.alt}
+                          loading="lazy"
+                          decoding="async"
+                          className="block w-full h-auto rounded-xl"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
