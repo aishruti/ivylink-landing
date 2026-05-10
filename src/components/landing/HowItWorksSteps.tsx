@@ -21,6 +21,7 @@ type Step = {
   img: string;
   alt: string;
   accent: string;
+  padding?: boolean;
 };
 
 const steps: Step[] = [
@@ -32,6 +33,7 @@ const steps: Step[] = [
     img: discoverImg,
     alt: "IvyLink Discover Partners screen with AI match scores for nearby wellness businesses",
     accent: "from-primary to-pink-500",
+    padding: true,
   },
   {
     number: "02",
@@ -129,13 +131,13 @@ const HowItWorksSteps = () => {
                     />
                     <div className="relative rounded-2xl overflow-hidden border border-border/60 bg-white shadow-2xl">
                       {/* Natural dimensions — no fixed height, no cropping, no whitespace */}
-                      <div className="p-[5px]">
+                      <div className={step.padding ? "p-[5px]" : ""}>
                         <img
                           src={step.img}
                           alt={step.alt}
                           loading="lazy"
                           decoding="async"
-                          className="block w-full h-auto rounded-xl"
+                          className={`block w-full h-auto${step.padding ? " rounded-xl" : ""}`}
                         />
                       </div>
                     </div>
