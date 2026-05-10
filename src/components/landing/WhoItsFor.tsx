@@ -22,7 +22,7 @@ const WhoItsFor = () => {
           <h2 className="mb-6 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Is This <span className="text-gradient">You?</span>
           </h2>
-          <p className="mb-12 text-lg text-muted-foreground">
+          <p className="mb-12 text-lg text-muted-foreground leading-relaxed">
             IvyLink is a small business marketing platform built for owners of med spas, salons, gyms, studios, and other local wellness businesses who want results without endless hustle.
           </p>
         </div>
@@ -38,7 +38,7 @@ const WhoItsFor = () => {
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-primary">
                   <Check className="h-4 w-4 text-white" />
                 </div>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="text-base text-foreground leading-relaxed">
                   {item}
                 </p>
               </div>

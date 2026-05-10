@@ -36,9 +36,21 @@ const Hero = () => {
             </p>
 
             {/* Trust band. Kills med-spa-only perception immediately. */}
-            <p className="mt-8 text-sm font-medium text-muted-foreground animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              Built for med spas, salons, gyms, yoga studios, nail bars, and other wellness businesses.
-            </p>
+            <div className="mt-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3">
+                Built for
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                {["Med Spas", "Salons", "Gyms", "Yoga Studios", "Nail Bars", "Wellness Studios"].map((type) => (
+                  <span
+                    key={type}
+                    className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary/15 transition-colors"
+                  >
+                    {type}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right Content - Product UI (real screenshot) */}

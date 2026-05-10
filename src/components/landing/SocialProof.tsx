@@ -21,7 +21,7 @@ const SocialProof = () => {
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Word of mouth marketing, made <span className="text-gradient">systematic</span>.
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Word of mouth marketing has always been the most reliable channel. IvyLink makes it trackable and repeatable, with real businesses in active rollout across the country.
           </p>
         </div>

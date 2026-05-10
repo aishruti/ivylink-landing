@@ -33,7 +33,7 @@ const WhyDifferent = () => {
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Why This Is <span className="text-gradient">Different</span>
           </h2>
-          <p className="mb-16 text-lg text-muted-foreground">
+          <p className="mb-16 text-lg text-muted-foreground leading-relaxed">
             Stop trading time for growth. Start automating results.
           </p>
         </div>
@@ -51,7 +51,7 @@ const WhyDifferent = () => {
               <h3 className="mb-3 text-xl font-display font-bold text-foreground">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </div>

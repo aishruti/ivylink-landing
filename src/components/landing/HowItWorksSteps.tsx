@@ -1,81 +1,75 @@
 import { ArrowRight } from "lucide-react";
 import { Cta } from "@/components/ui/cta";
 
-import discoverWebp from "@/assets/screenshot-discover.webp";
-import discoverPng from "@/assets/screenshot-discover.png";
-import suggestedPlayWebp from "@/assets/screenshot-suggested-play.webp";
-import suggestedPlayPng from "@/assets/screenshot-suggested-play.png";
-import networkRequestsWebp from "@/assets/screenshot-network-requests.webp";
-import networkRequestsPng from "@/assets/screenshot-network-requests.png";
-import qrBundleWebp from "@/assets/screenshot-qr-bundle.webp";
-import qrBundlePng from "@/assets/screenshot-qr-bundle.png";
-import partnerNetworkWebp from "@/assets/screenshot-partner-network.webp";
-import partnerNetworkPng from "@/assets/screenshot-partner-network.png";
+import discoverImg from "@/assets/discovery_feed.png";
+import suggestedPlayImg from "@/assets/propose_play.png";
+import networkRequestsImg from "@/assets/accept_play.png";
+import qrBundleImg from "@/assets/qr_code.png";
+import partnerNetworkImg from "@/assets/revenue_dash.png";
 
 /*
  * How It Works. 5 concrete steps with real product screenshots.
  *
- * Each step is shown with the actual screen the user will see. Real screenshots
- * are a basic trust signal; placeholder UI tells visitors "this product might
- * not be real."
- *
- * Order:
- *   1. Discover. AI-matched partners near you.
- *   2. Suggested Play. AI generates the joint promotion.
- *   3. Network Requests. Partner accepts, modifies, or counters.
- *   4. QR Bundle. Active partnership with QR codes for both sides.
- *   5. Partner Network. Track redemptions and revenue per partner.
+ * All screenshot containers use the same aspect-ratio + object-cover so
+ * images of varying native dimensions appear at a uniform size. object-top
+ * keeps the most meaningful UI (header + top content) visible even when
+ * the image is taller than the crop window.
  */
 
 type Step = {
   number: string;
   title: string;
   description: string;
-  imgWebp: string;
-  imgPng: string;
+  img: string;
   alt: string;
+  accent: string;
 };
 
 const steps: Step[] = [
   {
     number: "01",
     title: "Discover complementary businesses near you",
-    description: "Sign up and instantly see every potential partner within a 5-mile radius: gyms, salons, med spas, studios, and more. IvyLink ranks them by how well their customer base matches yours.",
-    imgWebp: discoverWebp,
-    imgPng: discoverPng,
+    description:
+      "Sign up and instantly see every potential partner within a 5-mile radius: gyms, salons, med spas, studios, and more. IvyLink ranks them by how well their customer base matches yours.",
+    img: discoverImg,
     alt: "IvyLink Discover Partners screen with AI match scores for nearby wellness businesses",
+    accent: "from-primary to-pink-500",
   },
   {
     number: "02",
     title: "Send a partnership play with one click",
-    description: "IvyLink's AI generates the offer, the discount structure, and the messaging. Pick the play you like, edit if you want, and send it to a partner. No cold outreach, no awkward DMs.",
-    imgWebp: suggestedPlayWebp,
-    imgPng: suggestedPlayPng,
+    description:
+      "IvyLink's AI generates the offer, the discount structure, and the messaging. Pick the play you like, edit if you want, and send it to a partner. No cold outreach, no awkward DMs.",
+    img: suggestedPlayImg,
     alt: "IvyLink Suggested Play screen showing AI-generated mutual offers between two wellness businesses",
+    accent: "from-purple-500 to-pink-500",
   },
   {
     number: "03",
     title: "They accept, modify, or counter",
-    description: "Your partner sees a clean proposal in their Network Requests inbox: who you are, what you're offering, and what they get in return. They can accept it, tweak the offer, or send their own version back. You both stay in control.",
-    imgWebp: networkRequestsWebp,
-    imgPng: networkRequestsPng,
-    alt: "IvyLink Network Requests screen showing an incoming partnership invite with both sides' offers and accept and decline buttons",
+    description:
+      "Your partner sees a clean proposal in their Network Requests inbox: who you are, what you're offering, and what they get in return. They can accept, tweak the offer, or send their own version back.",
+    img: networkRequestsImg,
+    alt: "IvyLink Network Requests screen showing an incoming partnership invite with accept and decline buttons",
+    accent: "from-pink-500 to-orange-400",
   },
   {
     number: "04",
     title: "Partnership goes live with QR codes for both sides",
-    description: "The moment both businesses agree, IvyLink generates two unique QR codes: one for your offer, one for theirs. Print them, share them, post them. Each scan ties straight back to the partnership it came from.",
-    imgWebp: qrBundleWebp,
-    imgPng: qrBundlePng,
+    description:
+      "The moment both businesses agree, IvyLink generates two unique QR codes — one for your offer, one for theirs. Print them, share them, post them. Each scan ties straight back to the partnership it came from.",
+    img: qrBundleImg,
     alt: "IvyLink active partnership with two QR codes, one for each business and their respective offers",
+    accent: "from-orange-400 to-primary",
   },
   {
     number: "05",
     title: "Track every redemption, booking, and dollar",
-    description: "Customers scan the QR code at the partner location to redeem their offer. You see scans, conversions, and revenue update in real time, for every active partnership, all in one dashboard.",
-    imgWebp: partnerNetworkWebp,
-    imgPng: partnerNetworkPng,
+    description:
+      "Customers scan the QR code at the partner location to redeem their offer. You see scans, conversions, and revenue update in real time — for every active partnership, all in one dashboard.",
+    img: partnerNetworkImg,
     alt: "IvyLink Partner Network dashboard showing scans, conversions, and revenue per partnership",
+    accent: "from-purple-500 to-primary",
   },
 ];
 
@@ -94,55 +88,58 @@ const HowItWorksSteps = () => {
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             From sign-up to first booking in <span className="text-gradient">5 steps</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             No cold outreach. No spreadsheets. No marketing budget required.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="space-y-16 lg:space-y-24">
+        <div className="space-y-20 lg:space-y-28">
           {steps.map((step, idx) => {
-            const imageOnLeft = idx % 2 === 1; // alternate sides for rhythm
+            const imageOnLeft = idx % 2 === 1;
             return (
               <div
                 key={step.number}
-                className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center"
+                className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center"
               >
                 {/* Text content */}
                 <div className={imageOnLeft ? "lg:order-2" : "lg:order-1"}>
-                  <div className="inline-flex items-center gap-3 mb-4">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl gradient-primary text-white font-bold">
+                  <div className="inline-flex items-center gap-3 mb-5">
+                    <span
+                      className={`inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${step.accent} text-white font-bold text-lg shadow-md`}
+                    >
                       {step.number}
                     </span>
                     <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                      Step {idx + 1}
+                      Step {idx + 1} of 5
                     </span>
                   </div>
-                  <h3 className="mb-4 text-2xl sm:text-3xl font-display font-bold text-foreground">
+                  <h3 className="mb-4 text-2xl sm:text-3xl font-display font-bold text-foreground leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
-                {/* Screenshot */}
+                {/* Screenshot — uniform 16:10 crop, object-cover from top */}
                 <div className={imageOnLeft ? "lg:order-1" : "lg:order-2"}>
                   <div className="relative">
-                    <div className="absolute -inset-1 gradient-primary rounded-2xl blur-md opacity-15" />
-                    <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-white shadow-xl">
-                      <picture>
-                        <source srcSet={step.imgWebp} type="image/webp" />
+                    {/* Gradient glow behind card */}
+                    <div
+                      className={`absolute -inset-2 rounded-3xl bg-gradient-to-br ${step.accent} blur-xl opacity-20`}
+                    />
+                    <div className="relative rounded-2xl overflow-hidden border border-border/60 bg-white shadow-2xl">
+                      {/* Fixed-ratio crop window — all screenshots display identically */}
+                      <div className="aspect-[16/10] overflow-hidden">
                         <img
-                          src={step.imgPng}
+                          src={step.img}
                           alt={step.alt}
-                          width="1200"
-                          height="800"
                           loading="lazy"
                           decoding="async"
-                          className="block w-full h-auto"
+                          className="w-full h-full object-cover object-top"
                         />
-                      </picture>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -152,7 +149,7 @@ const HowItWorksSteps = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
           <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group">
             <span>Get Started Free</span>
             <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
