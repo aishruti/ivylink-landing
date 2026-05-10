@@ -28,7 +28,7 @@ const comparisons: Comparison[] = [
     badLabel: "Yelp / Meta Ads / Nextdoor",
     badStat: "$2-15 per click",
     badText:
-      "Charges per click whether anyone books or not. You're paying to reach strangers who may never return.",
+      "Local business advertising, whether salon advertising on Yelp or medspa advertising on Meta, charges per click whether anyone books or not. You're paying to reach strangers who may never return.",
     goodStat: "$0 upfront cost",
     goodText:
       "Connects you with neighbors whose clients already match your ideal customer. Pay only when a real booking happens.",
@@ -40,7 +40,7 @@ const comparisons: Comparison[] = [
     badLabel: "Referral management apps",
     badStat: "<2% share rate",
     badText:
-      "Relies on your customers remembering to share a link. Most never do, and the ones who do bring one friend, one time.",
+      "Every referral management system relies on your customers remembering to share a link. Most never do, and the ones who do bring one friend, one time.",
     goodStat: "Entire client bases shared",
     goodText:
       "Builds partnerships with local businesses so their whole customer base actively gets pointed toward yours, week after week.",
