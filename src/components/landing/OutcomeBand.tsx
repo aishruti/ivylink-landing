@@ -82,15 +82,21 @@ const OutcomeBand = () => {
                 </div>
                 <span className="text-sm font-bold text-foreground">Your first 21 days with IvyLink</span>
               </div>
-              <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5">
-                  <span className="h-3 w-3 rounded-sm bg-muted inline-block" />
-                  Active day
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="h-3 w-3 rounded-sm gradient-primary inline-block" />
-                  Booking received
-                </span>
+              <div className="flex items-center gap-4">
+                <div className="hidden sm:flex items-center gap-4 text-xs text-muted-foreground">
+                  <span className="flex items-center gap-1.5">
+                    <span className="h-3 w-3 rounded-sm bg-muted inline-block" />
+                    Active day
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="h-3 w-3 rounded-sm gradient-primary inline-block" />
+                    Booking received
+                  </span>
+                </div>
+                <div className="flex flex-col items-end border-l border-border/50 pl-4">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider leading-none mb-0.5">Total revenue</span>
+                  <span className="text-2xl font-display font-bold text-gradient leading-none">$2,200</span>
+                </div>
               </div>
             </div>
 

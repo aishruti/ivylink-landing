@@ -10,10 +10,8 @@ import partnerNetworkImg from "@/assets/revenue_dash.png";
 /*
  * How It Works. 5 concrete steps with real product screenshots.
  *
- * All screenshot containers use the same aspect-ratio + object-cover so
- * images of varying native dimensions appear at a uniform size. object-top
- * keeps the most meaningful UI (header + top content) visible even when
- * the image is taller than the crop window.
+ * All screenshot containers use a fixed height with object-contain so images
+ * display fully without any cropping, at a uniform size across all steps.
  */
 
 type Step = {
@@ -122,7 +120,7 @@ const HowItWorksSteps = () => {
                   </p>
                 </div>
 
-                {/* Screenshot — uniform 16:10 crop, object-cover from top */}
+                {/* Screenshot — fixed height, object-contain shows full image without cropping */}
                 <div className={imageOnLeft ? "lg:order-1" : "lg:order-2"}>
                   <div className="relative">
                     {/* Gradient glow behind card */}
@@ -130,16 +128,14 @@ const HowItWorksSteps = () => {
                       className={`absolute -inset-2 rounded-3xl bg-gradient-to-br ${step.accent} blur-xl opacity-20`}
                     />
                     <div className="relative rounded-2xl overflow-hidden border border-border/60 bg-white shadow-2xl">
-                      {/* Fixed-ratio crop window — all screenshots display identically */}
-                      <div className="aspect-[16/10] overflow-hidden">
-                        <img
-                          src={step.img}
-                          alt={step.alt}
-                          loading="lazy"
-                          decoding="async"
-                          className="w-full h-full object-cover object-top"
-                        />
-                      </div>
+                      {/* Natural dimensions — no fixed height, no cropping, no whitespace */}
+                      <img
+                        src={step.img}
+                        alt={step.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="block w-full h-auto"
+                      />
                     </div>
                   </div>
                 </div>
