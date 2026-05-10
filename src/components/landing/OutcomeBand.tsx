@@ -32,7 +32,7 @@ const OutcomeBand = () => {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center mb-12">
           <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">
-            See the Result
+            See the Results
           </span>
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             5 guaranteed bookings in your first{" "}
