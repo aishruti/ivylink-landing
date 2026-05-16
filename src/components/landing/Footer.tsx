@@ -22,7 +22,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/ivylink.ai/", label: "Instagram" },
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
@@ -48,11 +48,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-background/60">
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(555) 123-4567</span>
+                <span className="text-sm">(650) 863-4556</span>
               </div>
               <div className="flex items-center gap-3 text-background/60">
                 <MapPin className="h-4 w-4" />
-                <span className="text-sm">Los Angeles, CA</span>
+                <span className="text-sm">New Jersey, NJ</span>
               </div>
             </div>
           </div>
