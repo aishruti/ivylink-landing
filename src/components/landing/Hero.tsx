@@ -18,11 +18,11 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up">
-              The <span className="text-gradient">local marketing platform</span> built for wellness businesses.
+              Recover Revenue You've Already Earned.
             </h1>
 
             <p className="mb-8 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Partner with nearby gyms, salons, and med spas to share customers, fill empty slots, and grow revenue without spending on ads.
+              IvyLink helps med spas and wellness businesses recover lost revenue by reactivating inactive clients, responding instantly to every inquiry, and filling your calendar automatically—without another software platform to manage.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>

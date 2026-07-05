@@ -5,9 +5,9 @@ const steps = [
   {
     number: "01",
     icon: Link,
-    title: "Connect Your Tools",
-    description: "Link your Instagram Business and booking system in under 5 minutes. No technical skills needed.",
-    features: ["Instagram Integration", "Calendar Sync", "One-click setup"],
+    title: "Connect Your Business",
+    description: "Give IvyLink secure access to your booking platform once. We analyze your customer data to identify where revenue is being lost and opportunities to recover it.",
+    features: ["Secure Connect", "Revenue Analysis", "Data Security"],
   },
   {
     number: "02",

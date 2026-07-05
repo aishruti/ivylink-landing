@@ -2,10 +2,8 @@ import { ArrowRight } from "lucide-react";
 import { Cta } from "@/components/ui/cta";
 
 import discoverImg from "@/assets/discovery_feed.png";
-import suggestedPlayImg from "@/assets/propose_play.png";
-import networkRequestsImg from "@/assets/accept_play.png";
-import qrBundleImg from "@/assets/qr_code.png";
-import partnerNetworkImg from "@/assets/revenue_dash.png";
+import suggestedPlayImg from "@/assets/step2.png";
+import partnerNetworkImg from "@/assets/Step3.png";
 
 /*
  * How It Works. 5 concrete steps with real product screenshots.
@@ -27,9 +25,9 @@ type Step = {
 const steps: Step[] = [
   {
     number: "01",
-    title: "Discover complementary businesses near you",
+    title: "Connect Your Business",
     description:
-      "Sign up and instantly see every potential partner within a 5-mile radius: gyms, salons, med spas, studios, and more. IvyLink ranks them by how well their customer base matches yours.",
+      "Give IvyLink secure access to your booking platform once. We analyze your customer data to identify where revenue is being lost and opportunities to recover it.",
     img: discoverImg,
     alt: "IvyLink Discover Partners screen with AI match scores for nearby wellness businesses",
     accent: "from-primary to-pink-500",
@@ -37,36 +35,18 @@ const steps: Step[] = [
   },
   {
     number: "02",
-    title: "Send a partnership play with one click",
+    title: "We Recover Your Lost Revenue",
     description:
-      "IvyLink's AI generates the offer, the discount structure, and the messaging. Pick the play you like, edit if you want, and send it to a partner. No cold outreach, no awkward DMs.",
+      "Our AI works while you focus on your clients. IvyLink automatically: Reactivates inactive clients, Responds instantly to DMs, missed calls, and website inquiries, Books appointments directly into your calendar, Follows up after visits to encourage repeat bookings. Everything runs automatically—no campaigns, workflows, or manual follow-up required.",
     img: suggestedPlayImg,
     alt: "IvyLink Suggested Play screen showing AI-generated mutual offers between two wellness businesses",
     accent: "from-purple-500 to-pink-500",
   },
   {
     number: "03",
-    title: "They accept, modify, or counter",
+    title: "Watch Your Calendar Fill",
     description:
-      "Your partner sees a clean proposal in their Network Requests inbox: who you are, what you're offering, and what they get in return. They can accept, tweak the offer, or send their own version back.",
-    img: networkRequestsImg,
-    alt: "IvyLink Network Requests screen showing an incoming partnership invite with accept and decline buttons",
-    accent: "from-pink-500 to-orange-400",
-  },
-  {
-    number: "04",
-    title: "Partnership goes live with QR codes for both sides",
-    description:
-      "The moment both businesses agree, IvyLink generates two unique QR codes: one for your offer, one for theirs. Print them, share them, post them. Each scan ties straight back to the partnership it came from.",
-    img: qrBundleImg,
-    alt: "IvyLink active partnership with two QR codes, one for each business and their respective offers",
-    accent: "from-orange-400 to-primary",
-  },
-  {
-    number: "05",
-    title: "Track every redemption, booking, and dollar",
-    description:
-      "Customers scan the QR code at the partner location to redeem their offer. You see scans, conversions, and revenue update in real time, for every active partnership, all in one dashboard.",
+      "See every booking and every recovered dollar. Track recovered appointments, returning clients, and revenue through your dashboard and weekly reports. Every result is measured, so you always know what's working and the value it's bringing to your business.",
     img: partnerNetworkImg,
     alt: "IvyLink Partner Network dashboard showing scans, conversions, and revenue per partnership",
     accent: "from-purple-500 to-primary",
@@ -111,7 +91,7 @@ const HowItWorksSteps = () => {
                       {step.number}
                     </span>
                     <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                      Step {idx + 1} of 5
+                      Step {idx + 1} of 3
                     </span>
                   </div>
                   <h3 className="mb-4 text-2xl sm:text-3xl font-display font-bold text-foreground leading-snug">

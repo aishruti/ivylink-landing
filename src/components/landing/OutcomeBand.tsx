@@ -35,14 +35,13 @@ const OutcomeBand = () => {
             See the Results
           </span>
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            5 guaranteed bookings in your first{" "}
+            Generate 5 new bookings in your first{" "}
             <span className="text-gradient">21 days</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Most local business advertising leaves you guessing. IvyLink doesn't. Every
-            partnership generates unique QR codes. When a customer redeems an
-            offer you see the booking, the partner who referred them, and the
-            revenue in real time.
+            Most local advertising stops at clicks and impressions. IvyLink guarantees
+            new bookings and shows you exactly where they came from, how much revenue
+            they generated, and which local partnerships are driving your growth.
           </p>
         </div>
 
