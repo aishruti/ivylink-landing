@@ -26,8 +26,8 @@ const ClosingCTA = () => {
                 </div>
                 <div className="rounded-xl bg-muted/50 p-5">
                   <Users className="mx-auto mb-3 h-8 w-8 text-primary" />
-                  <p className="font-display font-bold text-foreground">5+ Partners</p>
-                  <p className="text-sm text-muted-foreground">Matched nearby</p>
+                  <p className="font-display font-bold text-foreground">5 Minutes</p>
+                  <p className="text-sm text-muted-foreground">To audit your revenue gaps</p>
                 </div>
                 <div className="rounded-xl bg-muted/50 p-5">
                   <Calendar className="mx-auto mb-3 h-8 w-8 text-primary" />
@@ -42,7 +42,7 @@ const ClosingCTA = () => {
               </div>
 
               <p className="mb-10 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Join the local marketing platform built for wellness businesses. Sign up free, see who's nearby, and send your first partnership play today.
+                Join the done-for-you platform built for wellness businesses. Sign up free, see what opportunities are nearby, and launch your first recovery play today.
               </p>
 
               <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group w-full sm:w-auto">

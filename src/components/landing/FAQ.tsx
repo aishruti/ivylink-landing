@@ -16,27 +16,27 @@ const faqs = [
   },
   {
     question: "How is this different from a referral program?",
-    answer: "Referral programs reward your existing customers for sending friends. IvyLink builds partnerships with other local businesses, so their entire customer base actively gets pointed toward yours. No customer-side effort required, and the volume is dramatically higher.",
+    answer: "Referral programs depend on customer-side effort. IvyLink focuses on revenue recovery and recurring bookings by turning missed leads, lapsed clients, and local partnerships into a more predictable growth engine.",
   },
   {
     question: "Do I need to spend money on ads?",
-    answer: "No. IvyLink is built specifically for wellness businesses that want growth without a paid ads budget. The only thing you 'spend' is the discount on your partnership offer, and only when a partner's customer actually shows up and books.",
+    answer: "No — IvyLink is built to generate bookings without relying on paid ads.",
   },
   {
     question: "How much does it cost?",
-    answer: "IvyLink is free to sign up and explore. You can match with partners and create your first play at no cost. Reach out if you'd like to discuss our plans for active partnerships.",
+    answer: "Cost depends on your business, and we'll show you the numbers after the free audit.",
   },
   {
-    question: "How does the QR code tracking work?",
-    answer: "Every active partnership gets two unique QR codes, one for each business's offer. When a customer scans and books, the system records who referred them, what they booked, and what it was worth. You see full attribution in your dashboard, in real time.",
+    question: "What do I need to provide to get started?",
+    answer: "Usually just access to your booking data, lead sources, and basic business information for the audit.",
   },
   {
-    question: "How does the partner matching work?",
-    answer: "IvyLink scans your area for complementary businesses and ranks them by audience overlap, location, and partnership potential. You see every potential partner within a 5-mile radius, sorted by best match. We never share your client data with partners. Your information stays yours.",
+    question: "Is this a software tool or a done-for-you service?",
+    answer: "It's positioned as a done-for-you recovery engine, not something the owner has to manage daily.",
   },
   {
     question: "How long does it take to see results?",
-    answer: "Most businesses send their first partnership play within 10 minutes of signing up. Bookings typically follow in the first 1 to 3 weeks, depending on how quickly partners activate their offers.",
+    answer: "Most businesses should start seeing activity quickly once the system is set up, with early wins coming from missed calls, DMs, and reactivation outreach. The exact timeline depends on your current lead flow and database size.",
   },
   {
     question: "What if the partner I want isn't on IvyLink yet?",

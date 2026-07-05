@@ -28,10 +28,10 @@ const comparisons: Comparison[] = [
     badLabel: "Yelp / Meta Ads / Nextdoor",
     badStat: "$2-15 per click",
     badText:
-      "Local business advertising, whether salon advertising on Yelp or medspa advertising on Meta, charges per click whether anyone books or not. You're paying to reach strangers who may never return.",
+      "Local business advertising, whether salon advertising on Yelp or medspa advertising on Meta, charges per click whether anyone books or not. You pay to reach strangers, and most won't convert right away.",
     goodStat: "$0 upfront cost",
     goodText:
-      "Connects you with neighbors whose clients already match your ideal customer. Pay only when a real booking happens.",
+      "We work on clients you already own or leads already in your funnel, so you're not starting from zero.",
   },
   {
     icon: Users,
@@ -40,10 +40,10 @@ const comparisons: Comparison[] = [
     badLabel: "Referral management apps",
     badStat: "<2% share rate",
     badText:
-      "Every referral management system relies on your customers remembering to share a link. Most never do, and the ones who do bring one friend, one time.",
-    goodStat: "Entire client bases shared",
+      "Most customers never remember to refer, and even strong referrals come in irregularly.",
+    goodStat: "Dormant clients reactivated",
     goodText:
-      "Builds partnerships with local businesses so their whole customer base actively gets pointed toward yours, week after week.",
+      "We systematically win back past customers and follow up on every lead, so revenue is more predictable.",
   },
   {
     icon: Clock,
@@ -52,10 +52,10 @@ const comparisons: Comparison[] = [
     badLabel: "Manual outreach",
     badStat: "10+ hrs/week",
     badText:
-      "Finding partners, drafting offers, messaging owners, and tracking redemptions eats your schedule. Most owners quit by week two.",
-    goodStat: "Set up once, runs forever",
+      "Finding contacts, writing messages, following up, and tracking results takes time and usually stops after a few tries.",
+    goodStat: "Done-for-you recovery engine",
     goodText:
-      "Finds the partners, drafts the offer, generates QR codes, and tracks every booking automatically, completely hands-off.",
+      "We handle the outreach, booking, and tracking automatically, so the system keeps running without owner effort.",
   },
 ];
 

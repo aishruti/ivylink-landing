@@ -3,9 +3,9 @@ import { Check } from "lucide-react";
 const audiences = [
   "You're paying for ads but most clients come once and disappear",
   "The gym, salon, or spa next door has clients who'd love your services, but no easy way to reach them",
-  "You've tried networking but it feels awkward and rarely converts",
+  "You have lapsed clients, missed calls, or unanswered DMs sitting in your system",
   "Your calendar has empty slots while competitors seem fully booked",
-  "You want partnerships that bring in real bookings, not just Instagram likes",
+  "You want more bookings from the customers you already have, without adding more manual work.",
 ];
 
 const WhoItsFor = () => {
