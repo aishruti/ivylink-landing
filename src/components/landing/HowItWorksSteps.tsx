@@ -37,7 +37,7 @@ const steps: Step[] = [
     number: "02",
     title: "We Recover Your Lost Revenue",
     description:
-      "Our AI works while you focus on your clients. IvyLink automatically: Reactivates inactive clients, Responds instantly to DMs, missed calls, and website inquiries, Books appointments directly into your calendar, Follows up after visits to encourage repeat bookings. Everything runs automatically—no campaigns, workflows, or manual follow-up required.",
+      "Our AI works while you focus on your clients. IvyLink automatically: Reactivates inactive clients, Responds instantly to DMs, missed calls, and website inquiries, Books appointments directly into your calendar, Follows up after visits to encourage repeat bookings. Everything runs automatically - no campaigns, workflows, or manual follow-up required.",
     img: suggestedPlayImg,
     alt: "IvyLink Suggested Play screen showing AI-generated mutual offers between two wellness businesses",
     accent: "from-purple-500 to-pink-500",

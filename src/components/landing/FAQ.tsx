@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "Do I need to spend money on ads?",
-    answer: "No — IvyLink is built to generate bookings without relying on paid ads.",
+    answer: "No - IvyLink is built to generate bookings without relying on paid ads.",
   },
   {
     question: "How much does it cost?",

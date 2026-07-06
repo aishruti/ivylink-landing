@@ -22,7 +22,7 @@ const Hero = () => {
             </h1>
 
             <p className="mb-8 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              IvyLink helps med spas and wellness businesses recover lost revenue by reactivating inactive clients, responding instantly to every inquiry, and filling your calendar automatically—without another software platform to manage.
+              IvyLink helps med spas and wellness businesses recover lost revenue by reactivating inactive clients, responding instantly to every inquiry, and filling your calendar automatically - without another software platform to manage.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
