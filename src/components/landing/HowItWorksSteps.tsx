@@ -102,7 +102,7 @@ const HowItWorksSteps = () => {
                   </p>
                 </div>
 
-                {/* Screenshot — fixed height, object-contain shows full image without cropping */}
+                {/* Screenshot - fixed height, object-contain shows full image without cropping */}
                 <div className={imageOnLeft ? "lg:order-1" : "lg:order-2"}>
                   <div className="relative">
                     {/* Gradient glow behind card */}
@@ -110,7 +110,7 @@ const HowItWorksSteps = () => {
                       className={`absolute -inset-2 rounded-3xl bg-gradient-to-br ${step.accent} blur-xl opacity-20`}
                     />
                     <div className="relative rounded-2xl overflow-hidden border border-border/60 bg-white shadow-2xl">
-                      {/* Natural dimensions — no fixed height, no cropping, no whitespace */}
+                      {/* Natural dimensions - no fixed height, no cropping, no whitespace */}
                       <div className={step.padding ? "p-[5px]" : ""}>
                         <img
                           src={step.img}

@@ -34,7 +34,7 @@ const steps = [
     number: "05",
     icon: Repeat,
     title: "Scale on Autopilot",
-    description: "The system repeats and optimizes your top-performing collaborations automatically each month.",
+    description: "The system repeats your top-performing collaborations automatically each month.",
     features: ["Auto-optimization", "Partner rotation", "Continuous growth"],
   },
 ];
@@ -54,7 +54,7 @@ const HowItWorks = () => {
             From Setup to <span className="text-gradient">Filled Calendar</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Five simple steps to transform your local partnerships into consistent bookings, all automated.
+            Five simple steps to turn your local partnerships into consistent bookings, all automated.
           </p>
         </div>
 

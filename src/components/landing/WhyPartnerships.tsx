@@ -2,7 +2,7 @@ import { ArrowRight, Megaphone, Users, Clock, X, Check } from "lucide-react";
 import { Cta } from "@/components/ui/cta";
 
 /*
- * Comparison section — "Smarter than ads. Stronger than referrals."
+ * Comparison section - "Smarter than ads. Stronger than referrals."
  *
  * Visual redesign: each card now has a clear visual split with red-tinted
  * "old way" vs brand-tinted "IvyLink way", plus ✗/✓ markers and concrete
@@ -77,7 +77,7 @@ const WhyPartnerships = () => {
             <span className="text-gradient">Stronger than referrals.</span>
           </h2>
           <p className="mb-14 text-lg text-muted-foreground leading-relaxed">
-            Every other channel has tradeoffs. Partnerships have leverage.
+            Every other channel has tradeoffs. Partnerships deliver results.
           </p>
         </div>
 

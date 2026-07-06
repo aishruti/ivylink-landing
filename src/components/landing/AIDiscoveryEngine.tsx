@@ -6,7 +6,7 @@ import { Cta } from "@/components/ui/cta";
  * - Using <picture> with AVIF first (~92% browser support) and WebP fallback
  *   trims another ~8KB total off the image weight on top of the previous
  *   WebP-only version.
- * - Vite tree-shakes unused asset imports, so importing both formats is fine —
+ * - Vite tree-shakes unused asset imports, so importing both formats is fine -
  *   only what gets <source>'d into the DOM is fetched.
  * - All images get explicit width/height + loading="lazy" + decoding="async".
  *   They're all below the fold, so lazy is correct and cheap.

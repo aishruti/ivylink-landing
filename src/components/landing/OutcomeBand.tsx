@@ -1,10 +1,10 @@
 import { CheckCircle, TrendingUp, Calendar } from "lucide-react";
 
 /*
- * Outcome Band — "See the Result"
+ * Outcome Band - "See the Result"
  *
  * No screenshot. Visual makes the guarantee tangible:
- *  • Two bold stat cards (5 bookings / 21 days) — no fabricated revenue figures
+ *  • Two bold stat cards (5 bookings / 21 days) - no fabricated revenue figures
  *  • A 21-square day calendar with 5 highlighted booking days
  *  • A booking log showing each confirmed appointment (no dollar values)
  *  • A styled guarantee callout
@@ -46,7 +46,7 @@ const OutcomeBand = () => {
         </div>
 
         <div className="mx-auto max-w-5xl">
-          {/* Top stat cards — 2 cards, no revenue */}
+          {/* Top stat cards - 2 cards, no revenue */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden bg-card border border-border/50 shadow-md p-6 text-center">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-pink-500/5" />
@@ -141,7 +141,7 @@ const OutcomeBand = () => {
                 </div>
               </div>
 
-              {/* Booking log — no dollar values */}
+              {/* Booking log - no dollar values */}
               <div>
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">
                   Booking log
