@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Cta } from "@/components/ui/cta";
-import HeroProductUI from "./HeroProductUI";
+import headerImage from "@/assets/Header.png";
 
 const Hero = () => {
   return (
@@ -55,7 +55,11 @@ const Hero = () => {
 
           {/* Right Content - Product UI (real screenshot) */}
           <div className="relative animate-fade-up lg:animate-scale-in" style={{ animationDelay: '0.3s' }}>
-            <HeroProductUI />
+            <img
+              src={headerImage}
+              alt="Revenue recovery dashboard showing lapsed clients and recovery opportunities"
+              className="w-full h-auto rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
       </div>
