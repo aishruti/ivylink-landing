@@ -20,14 +20,14 @@ const steps = [
     number: "03",
     icon: Rocket,
     title: "Auto-Launch Collabs",
-    description: "Instantly match with 10+ ideal local partners and deploy your first automated 'Service Swap.'",
+    description: "Instantly discover 10+ revenue recovery opportunities and launch your first automated recovery campaign.",
     features: ["Partner matching", "Automated outreach", "Campaign launch"],
   },
   {
     number: "04",
     icon: BarChart,
     title: "Track Real Results",
-    description: "Watch bookings roll in while monitoring which partners and campaigns drive the highest ROI.",
+    description: "Watch bookings roll in while monitoring which recovery campaigns drive the highest ROI.",
     features: ["Live analytics", "Revenue tracking", "Performance insights"],
   },
   {
@@ -54,7 +54,7 @@ const HowItWorks = () => {
             From Setup to <span className="text-gradient">Filled Calendar</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Five simple steps to turn your local partnerships into consistent bookings, all automated.
+            Five simple steps to turn your dormant database into consistent bookings, all automated.
           </p>
         </div>
 

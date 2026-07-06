@@ -13,11 +13,11 @@ import { CheckCircle, TrendingUp, Calendar } from "lucide-react";
 const TOTAL_DAYS = 21;
 const BOOKED_DAYS = [4, 8, 12, 17, 21] as const;
 const BOOKING_LABELS = [
-  { day: 4,  label: "Lumina Med Spa client redeemed offer" },
-  { day: 8,  label: "Sculpt Fitness Studio referral booked" },
-  { day: 12, label: "The Glow Bar partnership conversion" },
-  { day: 17, label: "Willen Wellness cross-promotion booking" },
-  { day: 21, label: "NYC Thai Wellness collab appointment" },
+  { day: 4,  label: "Lapsed client reactivated" },
+  { day: 8,  label: "Dormant database win-back booked" },
+  { day: 12, label: "Missed call recovery converted" },
+  { day: 17, label: "Unanswered DM lead booked" },
+  { day: 21, label: "Win-back sequence appointment confirmed" },
 ];
 
 const OutcomeBand = () => {
@@ -41,7 +41,7 @@ const OutcomeBand = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Most local advertising stops at clicks and impressions. IvyLink guarantees
             new bookings and shows you exactly where they came from, how much revenue
-            they generated, and which local partnerships are driving your growth.
+            they generated, and which revenue recovery channels are driving your growth.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ const OutcomeBand = () => {
                   <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <p className="text-sm font-medium text-foreground">
                     5 bookings confirmed across{" "}
-                    <span className="text-primary font-bold">3 partner businesses</span>
+                    <span className="text-primary font-bold">3 recovery opportunities</span>
                   </p>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const OutcomeBand = () => {
             <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-primary/8 border border-primary/25 shadow-sm">
               <CheckCircle className="h-5 w-5 text-primary shrink-0" />
               <p className="text-sm font-semibold text-foreground">
-                Wellness businesses that activate their first IvyLink partnership{" "}
+                Wellness businesses that activate their first IvyLink recovery campaign{" "}
                 <span className="text-primary">typically see bookings within their first 21 days.</span>
               </p>
             </div>

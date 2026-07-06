@@ -12,11 +12,11 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "Who is IvyLink for?",
-    answer: "Owners of local wellness businesses, including med spas, salons, gyms, yoga studios, pilates studios, nail bars, wellness centers, massage practices, and aesthetic clinics. If your business has a local clientele and complementary partners nearby, IvyLink works for you.",
+    answer: "Owners of local wellness businesses with dormant client databases. Med spas, salons, gyms, yoga studios, pilates studios, nail bars, wellness centers, massage practices, and aesthetic clinics. If you have past clients who could rebook, IvyLink works for you.",
   },
   {
     question: "How is this different from a referral program?",
-    answer: "Referral programs depend on customer-side effort. IvyLink focuses on revenue recovery and recurring bookings by turning missed leads, lapsed clients, and local partnerships into a more predictable growth engine.",
+    answer: "Referral programs depend on customer-side effort. IvyLink focuses on revenue recovery and recurring bookings by turning missed leads and lapsed clients into a predictable booking pipeline.",
   },
   {
     question: "Do I need to spend money on ads?",
@@ -39,8 +39,8 @@ const faqs = [
     answer: "Most businesses should start seeing activity quickly once the system is set up, with early wins coming from missed calls, DMs, and reactivation outreach. The exact timeline depends on your current lead flow and database size.",
   },
   {
-    question: "What if the partner I want isn't on IvyLink yet?",
-    answer: "You can still send them a partnership invitation through IvyLink. We handle the outreach, generate the play, and walk them through joining. No awkward cold DMs from you.",
+    question: "How does IvyLink find my dormant clients?",
+    answer: "You grant us secure access to your booking platform (Mindbody, Vagaro, Jane App). We pull your complete client history and identify which past clients are most likely to rebook based on their visit patterns and recency.",
   },
 ];
 

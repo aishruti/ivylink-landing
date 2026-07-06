@@ -2,12 +2,12 @@ import { ArrowRight, MapPin, Zap, Share2, BarChart3, RefreshCw, Settings } from 
 import { Cta } from "@/components/ui/cta";
 
 const pillars = [
-  { icon: MapPin,    title: "Smart Partner Discovery", description: "Finds and prioritizes nearby businesses most likely to send you bookings automatically.", gradient: "from-primary to-pink-500" },
-  { icon: Zap,       title: "Proven Collab Plays",     description: "Launches ready-to-go campaigns that attract local clients without manual messaging.",      gradient: "from-purple-500 to-pink-500" },
-  { icon: Share2,    title: "Done-For-You Posting",    description: "Handles every post and DM for you. No late-night scheduling needed.",                      gradient: "from-primary to-orange-400" },
-  { icon: BarChart3, title: "Revenue Scoreboard",      description: "Shows exactly which plays and partners produce new bookings.",                              gradient: "from-pink-500 to-purple-500" },
-  { icon: RefreshCw, title: "Partner Rotation",        description: "Keeps your campaigns fresh with automated monthly updates.",                                gradient: "from-purple-500 to-primary" },
-  { icon: Settings,  title: "Hands-Off Execution",     description: "We handle all the maintenance. Campaign updates, partner outreach, and optimization run automatically.", gradient: "from-orange-400 to-pink-500" },
+  { icon: MapPin,    title: "Revenue Opportunity Scanner", description: "Identifies dormant clients and missed leads most likely to rebook automatically.", gradient: "from-primary to-pink-500" },
+  { icon: Zap,       title: "Win-Back Sequences",     description: "Launches ready-to-go campaigns that reactivate lapsed clients without manual messaging.",      gradient: "from-purple-500 to-pink-500" },
+  { icon: Share2,    title: "Done-For-You Outreach",    description: "Handles every DM, email, and call response for you. No manual follow-up needed.",                      gradient: "from-primary to-orange-400" },
+  { icon: BarChart3, title: "Revenue Scoreboard",      description: "Shows exactly which campaigns produce new bookings and recovered revenue.",                              gradient: "from-pink-500 to-purple-500" },
+  { icon: RefreshCw, title: "Auto-Optimization",        description: "Keeps your recovery campaigns fresh with automated monthly refinements.",                                gradient: "from-purple-500 to-primary" },
+  { icon: Settings,  title: "Hands-Off Execution",     description: "We handle all the work. Recovery campaigns, client outreach, and results tracking run automatically.", gradient: "from-orange-400 to-pink-500" },
 ];
 
 const OutcomePillars = () => {
@@ -26,7 +26,7 @@ const OutcomePillars = () => {
             Everything You Need to <span className="text-gradient">Fill Your Calendar</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Six powerful features working together to turn local partnerships into consistent bookings.
+            Six powerful features working together to turn your dormant database into consistent bookings.
           </p>
         </div>
 
