@@ -10,14 +10,14 @@ import { CheckCircle, TrendingUp, Calendar } from "lucide-react";
  *  • A styled guarantee callout
  */
 
-const TOTAL_DAYS = 21;
-const BOOKED_DAYS = [4, 8, 12, 17, 21] as const;
+const TOTAL_DAYS = 30;
+const BOOKED_DAYS = [5, 12, 18, 24, 30] as const;
 const BOOKING_LABELS = [
-  { day: 4,  label: "Lapsed client reactivated" },
-  { day: 8,  label: "Dormant database win-back booked" },
-  { day: 12, label: "Missed call recovery converted" },
-  { day: 17, label: "Unanswered DM lead booked" },
-  { day: 21, label: "Win-back sequence appointment confirmed" },
+  { day: 5,  label: "Lapsed client reactivated" },
+  { day: 12, label: "Dormant database win-back booked" },
+  { day: 18, label: "Missed call recovery converted" },
+  { day: 24, label: "Unanswered DM lead answered and booked" },
+  { day: 30, label: "First-visit follow-up booked second appointment" },
 ];
 
 const OutcomeBand = () => {
@@ -35,13 +35,11 @@ const OutcomeBand = () => {
             See the Results
           </span>
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Generate 5 new bookings in your first{" "}
-            <span className="text-gradient">21 days</span>
+            See recovered revenue in your first{" "}
+            <span className="text-gradient">30 days</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Most local advertising stops at clicks and impressions. IvyLink guarantees
-            new bookings and shows you exactly where they came from, how much revenue
-            they generated, and which revenue recovery channels are driving your growth.
+            Most local advertising stops at clicks and impressions. IvyLink recovers revenue already sitting in your database and shows you where each booking came from, how much revenue it generated, and which recovery channel drove it.
           </p>
         </div>
 
@@ -54,8 +52,8 @@ const OutcomeBand = () => {
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl gradient-primary">
                   <Calendar className="h-6 w-6 text-white" />
                 </div>
-                <p className="text-4xl font-display font-bold text-foreground mb-1">5</p>
-                <p className="text-sm font-semibold text-muted-foreground">Guaranteed Bookings</p>
+                <p className="text-4xl font-display font-bold text-foreground mb-1">30</p>
+                <p className="text-sm font-semibold text-muted-foreground">Days to First Results</p>
               </div>
             </div>
 
@@ -65,8 +63,8 @@ const OutcomeBand = () => {
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500">
                   <TrendingUp className="h-6 w-6 text-white" />
                 </div>
-                <p className="text-4xl font-display font-bold text-foreground mb-1">21</p>
-                <p className="text-sm font-semibold text-muted-foreground">Days to First Results</p>
+                <p className="text-4xl font-display font-bold text-foreground mb-1">10x</p>
+                <p className="text-sm font-semibold text-muted-foreground">Minimum Target ROI</p>
               </div>
             </div>
           </div>
@@ -79,7 +77,7 @@ const OutcomeBand = () => {
                 <div className="h-8 w-8 rounded-lg gradient-primary flex items-center justify-center">
                   <Calendar className="h-4 w-4 text-white" />
                 </div>
-                <span className="text-sm font-bold text-foreground">Your first 21 days with IvyLink</span>
+                <span className="text-sm font-bold text-foreground">Your first 30 days with IvyLink</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="hidden sm:flex items-center gap-4 text-xs text-muted-foreground">
@@ -93,56 +91,15 @@ const OutcomeBand = () => {
                   </span>
                 </div>
                 <div className="flex flex-col items-end border-l border-border/50 pl-4">
-                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider leading-none mb-0.5">Total revenue</span>
-                  <span className="text-2xl font-display font-bold text-gradient leading-none">$2,200</span>
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider leading-none mb-0.5">Recovered revenue</span>
+                  <span className="text-2xl font-display font-bold text-gradient leading-none">$4,850</span>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 grid lg:grid-cols-2 gap-8">
-              {/* Calendar grid */}
-              <div>
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-                  Day-by-day view
-                </p>
-                <div className="grid grid-cols-7 gap-2">
-                  {days.map((day) => {
-                    const isBooked = (BOOKED_DAYS as readonly number[]).includes(day);
-                    const bookingIndex = BOOKED_DAYS.indexOf(day as typeof BOOKED_DAYS[number]);
-                    return (
-                      <div
-                        key={day}
-                        className={`
-                          aspect-square rounded-xl flex flex-col items-center justify-center text-xs font-semibold transition-all
-                          ${isBooked
-                            ? "gradient-primary text-white shadow-lg scale-105"
-                            : "bg-muted/60 text-muted-foreground"
-                          }
-                        `}
-                      >
-                        {isBooked && (
-                          <span className="text-[10px] font-bold text-white/80 leading-none mb-0.5">
-                            #{bookingIndex + 1}
-                          </span>
-                        )}
-                        <span className={isBooked ? "text-white font-bold" : ""}>{day}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Summary */}
-                <div className="mt-5 flex items-center gap-2 p-3 rounded-xl bg-primary/8 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
-                  <p className="text-sm font-medium text-foreground">
-                    5 bookings confirmed across{" "}
-                    <span className="text-primary font-bold">3 recovery opportunities</span>
-                  </p>
-                </div>
-              </div>
-
+            <div className="p-6">
               {/* Booking log - no dollar values */}
-              <div>
+              <div className="max-w-2xl mx-auto">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">
                   Booking log
                 </p>
@@ -167,13 +124,13 @@ const OutcomeBand = () => {
             </div>
           </div>
 
-          {/* Guarantee callout */}
+          {/* Zero risk callout */}
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left">
             <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-primary/8 border border-primary/25 shadow-sm">
               <CheckCircle className="h-5 w-5 text-primary shrink-0" />
               <p className="text-sm font-semibold text-foreground">
-                Wellness businesses that activate their first IvyLink recovery campaign{" "}
-                <span className="text-primary">typically see bookings within their first 21 days.</span>
+                Zero risk. Results in 30 days or{" "}
+                <span className="text-primary">you pay nothing.</span>
               </p>
             </div>
           </div>

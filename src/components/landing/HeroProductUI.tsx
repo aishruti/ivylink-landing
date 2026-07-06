@@ -28,7 +28,7 @@ const HeroProductUI = () => {
           <div className="flex items-center gap-2 sm:gap-3 mb-6 p-3 rounded-xl bg-muted/50 border border-border/50">
             <MapPin className="h-5 w-5 text-primary shrink-0" />
             <span className="text-sm text-foreground font-medium whitespace-nowrap">Hoboken, NJ</span>
-            <span className="text-xs text-muted-foreground ml-auto text-right">3 active partners</span>
+            <span className="text-xs text-muted-foreground ml-auto text-right">Recovery opportunities</span>
           </div>
 
           {/* Partner Cards */}
@@ -100,7 +100,7 @@ const HeroProductUI = () => {
         </div>
       </div>
 
-      {/* Floating partners card */}
+      {/* Floating recovery card */}
       <div className="absolute -top-4 -right-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.6s' }}>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-lg gradient-purple flex items-center justify-center">
@@ -108,7 +108,7 @@ const HeroProductUI = () => {
           </div>
           <div>
             <p className="text-2xl font-bold text-foreground">$10.4K</p>
-            <p className="text-xs text-muted-foreground">Partner revenue</p>
+            <p className="text-xs text-muted-foreground">Recovered revenue</p>
           </div>
         </div>
       </div>
