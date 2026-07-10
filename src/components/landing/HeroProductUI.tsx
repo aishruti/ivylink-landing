@@ -34,8 +34,8 @@ const HeroProductUI = () => {
           {/* Partner Cards */}
           <div className="space-y-3">
             <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/20">
-              <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
-                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              <div className="h-18 w-18 rounded-lg gradient-primary flex items-center justify-center shrink-0">
+                <Users className="h-9 w-9 text-white" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
@@ -90,12 +90,12 @@ const HeroProductUI = () => {
       {/* Floating revenue card */}
       <div className="absolute -bottom-4 -left-4 glass rounded-xl p-4 shadow-lg animate-fade-up hidden sm:block" style={{ animationDelay: '0.5s' }}>
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
-            <Calendar className="h-5 w-5 text-white" />
+          <div className="h-18 w-18 rounded-lg gradient-primary flex items-center justify-center">
+            <Calendar className="h-9 w-9 text-white" />
           </div>
           <div>
-            <p className="text-2xl font-bold text-foreground">53</p>
-            <p className="text-xs text-muted-foreground">Bookings this month</p>
+            <p className="text-2xl font-bold text-foreground">34</p>
+            <p className="text-xs text-muted-foreground">Booked</p>
           </div>
         </div>
       </div>
@@ -107,8 +107,8 @@ const HeroProductUI = () => {
             <Users className="h-5 w-5 text-white" />
           </div>
           <div>
-            <p className="text-2xl font-bold text-foreground">$10.4K</p>
-            <p className="text-xs text-muted-foreground">Recovered revenue</p>
+            <p className="text-2xl font-bold text-foreground">$23,040</p>
+            <p className="text-xs text-muted-foreground">Recovered</p>
           </div>
         </div>
       </div>

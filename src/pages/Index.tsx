@@ -21,7 +21,7 @@ import { LazyMount } from "@/components/LazyMount";
  */
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       <Navigation />
       <Hero />
       <LazyMount load={() => import("@/components/landing/OutcomeBand")} minHeight={1100} />

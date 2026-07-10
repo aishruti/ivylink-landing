@@ -15,9 +15,8 @@ const footerLinks = {
     { label: "Contact", href: "#" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
+    { label: "Privacy", href: "#" },
+    { label: "Terms", href: "#" },
   ],
 };
 
@@ -29,22 +28,22 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background pt-16 pb-8">
+    <footer className="bg-foreground text-background pt-16 pb-8 w-full">
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-4 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-6">
-              <img src={ivylinkLogo} alt="IvyLink logo" className="h-10 w-10 rounded-xl object-cover" />
+              <img src={ivylinkLogo} alt="IvyLink logo" className="h-7 w-auto rounded-xl object-cover" />
               <span className="text-2xl font-display font-bold">IvyLink</span>
             </a>
             <p className="text-background/60 mb-6 leading-relaxed">
-              The local marketing platform for wellness businesses. Partner with nearby gyms, salons, and med spas to share customers and fill your calendar without ad spend.
+              Done-for-you revenue recovery for wellness & med spa owners.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-background/60">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">hello@ivylink.com</span>
+                <span className="text-sm">nalin@ivylink.co</span>
               </div>
               <div className="flex items-center gap-3 text-background/60">
                 <Phone className="h-4 w-4" />

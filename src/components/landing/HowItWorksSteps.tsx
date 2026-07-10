@@ -1,7 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Cta } from "@/components/ui/cta";
 
-import discoverImg from "@/assets/discovery_feed.png";
 import suggestedPlayImg from "@/assets/step2.png";
 import partnerNetworkImg from "@/assets/Step3.png";
 
@@ -25,28 +24,27 @@ type Step = {
 const steps: Step[] = [
   {
     number: "01",
-    title: "Connect Your Business",
+    title: "We pull your numbers",
     description:
-      "Give IvyLink secure access to your booking platform once. We analyze your customer data to identify where revenue is being lost and opportunities to recover it.",
-    img: discoverImg,
+      "We export your lapsed client list from your booking platform. You give us access once. We do everything else.",
+    img: "/step1.png",
     alt: "IvyLink Discover Partners screen with AI match scores for nearby wellness businesses",
     accent: "from-primary to-pink-500",
-    padding: true,
   },
   {
     number: "02",
-    title: "We Recover Your Lost Revenue",
+    title: "We size the gap",
     description:
-      "Our AI works while you focus on your clients. IvyLink automatically: Reactivates inactive clients, Responds instantly to DMs, missed calls, and website inquiries, Books appointments directly into your calendar, Follows up after visits to encourage repeat bookings. Everything runs automatically - no campaigns, workflows, or manual follow-up required.",
+      "We put a real dollar figure on what's sitting in your database — your actual numbers, not generic estimates.",
     img: suggestedPlayImg,
     alt: "IvyLink Suggested Play screen showing AI-generated mutual offers between two wellness businesses",
     accent: "from-purple-500 to-pink-500",
   },
   {
     number: "03",
-    title: "Watch Your Calendar Fill",
+    title: "We run the recovery",
     description:
-      "See every booking and every recovered dollar. Track recovered appointments, returning clients, and revenue through your dashboard and weekly reports. Every result is measured, so you always know what's working and the value it's bringing to your business.",
+      "AI-powered outreach to every lapsed client. Every inbound DM and missed call answered instantly. Bookings appear in your calendar automatically.",
     img: partnerNetworkImg,
     alt: "IvyLink Partner Network dashboard showing scans, conversions, and revenue per partnership",
     accent: "from-purple-500 to-primary",
@@ -55,7 +53,7 @@ const steps: Step[] = [
 
 const HowItWorksSteps = () => {
   return (
-    <section id="how-it-works" className="py-16 lg:py-24 relative overflow-hidden bg-muted/30">
+    <section id="how-it-works" className="py-10 lg:py-16 relative overflow-hidden bg-muted/30 w-full">
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-20 left-0 h-80 w-80 rounded-full bg-accent/30 blur-3xl" />
 
@@ -66,10 +64,10 @@ const HowItWorksSteps = () => {
             How It Works
           </span>
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            From sign-up to first booking in <span className="text-gradient">5 steps</span>
+            From lapsed client list to booked appointments in <span className="text-gradient">30 days</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            No cold outreach. No spreadsheets. No marketing budget required.
+            We pull your data, size the gap, and run the recovery. You just see results appear.
           </p>
         </div>
 
@@ -80,13 +78,13 @@ const HowItWorksSteps = () => {
             return (
               <div
                 key={step.number}
-                className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center"
+                className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center h-full"
               >
                 {/* Text content */}
                 <div className={imageOnLeft ? "lg:order-2" : "lg:order-1"}>
                   <div className="inline-flex items-center gap-3 mb-5">
                     <span
-                      className={`inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${step.accent} text-white font-bold text-lg shadow-md`}
+                      className={`inline-flex h-18 w-18 items-center justify-center rounded-xl bg-gradient-to-br ${step.accent} text-white font-bold text-3xl shadow-md`}
                     >
                       {step.number}
                     </span>
@@ -102,8 +100,8 @@ const HowItWorksSteps = () => {
                   </p>
                 </div>
 
-                {/* Screenshot - fixed height, object-contain shows full image without cropping */}
-                <div className={imageOnLeft ? "lg:order-1" : "lg:order-2"}>
+                {/* Screenshot - responsive sizing */}
+                <div className={`${imageOnLeft ? "lg:order-1" : "lg:order-2"} max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-none h-full flex items-center`}>
                   <div className="relative">
                     {/* Gradient glow behind card */}
                     <div
@@ -117,7 +115,7 @@ const HowItWorksSteps = () => {
                           alt={step.alt}
                           loading="lazy"
                           decoding="async"
-                          className={`block w-full h-auto${step.padding ? " rounded-xl" : ""}`}
+                          className={`block w-full h-auto max-h-96 object-contain${step.padding ? " rounded-xl" : ""}`}
                         />
                       </div>
                     </div>
@@ -128,14 +126,21 @@ const HowItWorksSteps = () => {
           })}
         </div>
 
+        {/* Below steps note */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-muted-foreground italic">
+            You never log in. You never approve a message. You just see results.
+          </p>
+        </div>
+
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
           <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group">
-            <span>Get Started Free</span>
+            <span>Book Free Audit →</span>
             <ArrowRight className="hidden sm:inline h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
           </Cta>
           <p className="mt-3 text-sm text-muted-foreground">
-            Free to sign up. No credit card required.
+            Free to audit. No credit card. Results in 30 days.
           </p>
         </div>
       </div>

@@ -24,7 +24,7 @@ const OutcomeBand = () => {
   const days = Array.from({ length: TOTAL_DAYS }, (_, i) => i + 1);
 
   return (
-    <section id="outcome" className="py-16 lg:py-24 relative overflow-hidden">
+    <section id="outcome" className="py-10 lg:py-16 relative overflow-hidden w-full">
       <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-purple-500/5 blur-3xl" />
 

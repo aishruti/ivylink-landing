@@ -4,7 +4,7 @@ import HeroProductUI from "./HeroProductUI";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
+    <section className="relative overflow-hidden py-10 lg:py-16 w-full">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 mesh-gradient" />
 
@@ -18,21 +18,24 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="mb-6 text-4xl font-display font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-up">
-              Recover Revenue You've Already Earned.
+              We recover revenue<br />you've already earned.
             </h1>
 
             <p className="mb-8 text-lg text-muted-foreground sm:text-xl lg:text-xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              IvyLink helps med spas and wellness businesses recover lost revenue by reactivating inactive clients, responding instantly to every inquiry, and filling your calendar automatically - without another software platform to manage.
+              Most med spas have 200–800 lapsed clients worth $40,000–$150,000 sitting untouched in their database. We recover that revenue for you — without you touching any software, running any campaign, or spending anything upfront.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <Cta size="xl" href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer" className="group">
-                Get Started Free
+                Book Free Audit →
                 <ArrowRight className="hidden sm:inline h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Cta>
+              <button className="px-6 py-3 text-base font-medium text-primary hover:text-primary/80 transition-colors">
+                See how it works
+              </button>
             </div>
             <p className="mt-3 text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: '0.25s' }}>
-              Free to sign up. No credit card required.
+              Free to audit. No credit card. Results in 30 days.
             </p>
 
             {/* Trust band. Kills med-spa-only perception immediately. */}
@@ -41,7 +44,7 @@ const Hero = () => {
                 Built for
               </p>
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                {["Med Spas", "Salons", "Gyms", "Yoga Studios", "Nail Bars", "Wellness Studios"].map((type) => (
+                {["Med Spas", "Wellness Clinics", "Salons", "Yoga Studios", "Nail Bars"].map((type) => (
                   <span
                     key={type}
                     className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary/15 transition-colors"

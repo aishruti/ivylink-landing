@@ -10,7 +10,7 @@ const audiences = [
 
 const WhoItsFor = () => {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden">
+    <section className="py-10 lg:py-16 relative overflow-hidden w-full">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-purple-500/5 blur-3xl" />
 

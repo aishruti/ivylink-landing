@@ -51,10 +51,10 @@ const HowItWorks = () => {
             How It Works
           </span>
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            From Setup to <span className="text-gradient">Filled Calendar</span>
+            From lapsed client list to booked appointments in <span className="text-gradient">30 days</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Five simple steps to turn your dormant database into consistent bookings, all automated.
+            We pull your data, size the gap, and run the recovery. You just see results appear.
           </p>
         </div>
 

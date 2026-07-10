@@ -9,7 +9,7 @@ import { Quote, Star } from "lucide-react";
 
 const SocialProof = () => {
   return (
-    <section className="relative py-20 lg:py-28 overflow-hidden bg-muted/30">
+    <section className="relative py-10 lg:py-16 overflow-hidden bg-muted/30 w-full">
       <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-20 right-10 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
 
