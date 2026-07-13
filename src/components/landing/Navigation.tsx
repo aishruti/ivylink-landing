@@ -12,12 +12,12 @@ const navLinks = [
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50 w-full">
       <div className="section-container">
         <div className="flex h-16 items-center justify-between">
           {/* Logo. PERF: width/height attrs prevent CLS while logo loads. */}
           <a href="/" className="flex items-center gap-2">
-            <img src={ivylinkLogo} alt="IvyLink logo" width="36" height="36" className="h-9 w-9 rounded-xl object-cover" />
+            <img src={ivylinkLogo} alt="IvyLink logo" width="32" height="32" className="h-8 w-auto rounded-xl object-cover" />
             <span className="text-xl font-display font-bold text-foreground">IvyLink</span>
           </a>
 
@@ -33,7 +33,7 @@ const Navigation = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Cta href="https://app.ivylink.ai" target="_blank" rel="noopener noreferrer">
-              Get Started Free
+              Book Free Audit →
             </Cta>
           </div>
 

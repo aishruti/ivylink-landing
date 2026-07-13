@@ -11,42 +11,30 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is IvyLink for?",
-    answer: "Owners of local wellness businesses, including med spas, salons, gyms, yoga studios, pilates studios, nail bars, wellness centers, massage practices, and aesthetic clinics. If your business has a local clientele and complementary partners nearby, IvyLink works for you.",
+    question: "How does IvyLink get access to my client list?",
+    answer: "We connect to your booking platform (Mindbody, Vagaro, Jane App, or Boulevard) with read-only access. You authorize it once — we never modify your data, only read it.",
   },
   {
-    question: "How is this different from a referral program?",
-    answer: "Referral programs depend on customer-side effort. IvyLink focuses on revenue recovery and recurring bookings by turning missed leads, lapsed clients, and local partnerships into a more predictable growth engine.",
+    question: "Do I have to do anything once we start?",
+    answer: "Nothing. We handle all outreach, all replies, all follow-up, and all booking coordination. You review a weekly summary email. That's it.",
   },
   {
-    question: "Do I need to spend money on ads?",
-    answer: "No - IvyLink is built to generate bookings without relying on paid ads.",
+    question: "How does pricing work?",
+    answer: "The first 30 days are performance-only — we take 20–25% of revenue we actually recover. If we don't bring clients back, you owe nothing. After proof of results we move to a monthly retainer.",
   },
   {
-    question: "How much does it cost?",
-    answer: "Cost depends on your business, and we'll show you the numbers after the free audit.",
+    question: "Which booking platforms do you work with?",
+    answer: "Mindbody, Vagaro, Jane App, and Boulevard. If you use a different platform, reach out — we're adding new integrations regularly.",
   },
   {
-    question: "What do I need to provide to get started?",
-    answer: "Usually just access to your booking data, lead sources, and basic business information for the audit.",
-  },
-  {
-    question: "Is this a software tool or a done-for-you service?",
-    answer: "It's positioned as a done-for-you recovery engine, not something the owner has to manage daily.",
-  },
-  {
-    question: "How long does it take to see results?",
-    answer: "Most businesses should start seeing activity quickly once the system is set up, with early wins coming from missed calls, DMs, and reactivation outreach. The exact timeline depends on your current lead flow and database size.",
-  },
-  {
-    question: "What if the partner I want isn't on IvyLink yet?",
-    answer: "You can still send them a partnership invitation through IvyLink. We handle the outreach, generate the play, and walk them through joining. No awkward cold DMs from you.",
+    question: "How long until I see results?",
+    answer: "Most clients see the first booked appointments within 7–10 days of launch. Full 30-day campaign results are reviewed together at the end of month one.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-20 lg:py-28 relative overflow-hidden">
+    <section id="faq" className="py-10 lg:py-16 relative overflow-hidden w-full">
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="section-container relative">
@@ -54,11 +42,8 @@ const FAQ = () => {
           <div className="text-center">
             <span className="inline-block mb-4 text-sm font-semibold text-primary uppercase tracking-wider">FAQ</span>
             <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Frequently Asked <span className="text-gradient">Questions</span>
+              Frequently asked <span className="text-gradient">questions</span>
             </h2>
-            <p className="mb-12 text-lg text-muted-foreground">
-              Everything you need to know about getting started with IvyLink.
-            </p>
           </div>
 
           <div className="w-full space-y-4">

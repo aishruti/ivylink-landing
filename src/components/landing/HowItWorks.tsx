@@ -20,21 +20,21 @@ const steps = [
     number: "03",
     icon: Rocket,
     title: "Auto-Launch Collabs",
-    description: "Instantly match with 10+ ideal local partners and deploy your first automated 'Service Swap.'",
+    description: "Instantly discover 10+ revenue recovery opportunities and launch your first automated recovery campaign.",
     features: ["Partner matching", "Automated outreach", "Campaign launch"],
   },
   {
     number: "04",
     icon: BarChart,
     title: "Track Real Results",
-    description: "Watch bookings roll in while monitoring which partners and campaigns drive the highest ROI.",
+    description: "Watch bookings roll in while monitoring which recovery campaigns drive the highest ROI.",
     features: ["Live analytics", "Revenue tracking", "Performance insights"],
   },
   {
     number: "05",
     icon: Repeat,
     title: "Scale on Autopilot",
-    description: "The system repeats and optimizes your top-performing collaborations automatically each month.",
+    description: "The system repeats your top-performing collaborations automatically each month.",
     features: ["Auto-optimization", "Partner rotation", "Continuous growth"],
   },
 ];
@@ -51,10 +51,10 @@ const HowItWorks = () => {
             How It Works
           </span>
           <h2 className="mb-4 text-3xl font-display font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            From Setup to <span className="text-gradient">Filled Calendar</span>
+            From lapsed client list to booked appointments in <span className="text-gradient">30 days</span>
           </h2>
           <p className="mb-16 text-lg text-muted-foreground">
-            Five simple steps to transform your local partnerships into consistent bookings, all automated.
+            We pull your data, size the gap, and run the recovery. You just see results appear.
           </p>
         </div>
 
