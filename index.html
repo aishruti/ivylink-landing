@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IvyLink: Local Marketing Platform for Wellness Businesses</title>
-    <meta name="description" content="IvyLink is the local marketing platform for wellness businesses. Partner with nearby gyms, salons, and med spas to share customers and fill your calendar without ads." />
+    <title>Wellness Business Revenue Recovery | IvyLink</title>
+    <meta name="description" content="IvyLink recovers lost revenue for med spas, gyms, and salons. Lapsed clients, missed calls, unanswered DMs — handled automatically. Results in 30 days." />
     <meta name="author" content="IvyLink" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#7c3aed" />
+    <meta name="theme-color" content="#E85D4A" />
 
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -43,90 +43,94 @@
       #root{min-height:100vh;width:100%;}
     </style>
 
-    <!-- Structured Data: Organization -->
+    <!-- Structured Data: Organization, SoftwareApplication, and FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IvyLink",
-      "url": "https://ivylink.ai",
-      "logo": "https://ivylink.ai/favicon.png?v=2",
-      "description": "IvyLink is the local marketing platform built for wellness businesses. Partner with nearby gyms, salons, and med spas to share customers, fill empty slots, and grow revenue without spending on ads.",
-      "sameAs": ["https://app.ivylink.ai"],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hello@ivylink.com",
-        "contactType": "customer support"
-      }
-    }
-    </script>
-
-    <!-- Structured Data: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "IvyLink",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "url": "https://ivylink.ai",
-      "description": "Local marketing platform for wellness businesses. Match with nearby partners, run AI-designed joint promotions with mutual offers, and track every booking back to its source via QR codes.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-    <!-- Structured Data: WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "IvyLink",
-      "url": "https://ivylink.ai"
-    }
-    </script>
-
-    <!-- Structured Data: FAQPage. Keep in sync with FAQ.tsx component. -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Who is IvyLink for?", "acceptedAnswer": { "@type": "Answer", "text": "Owners of local wellness businesses, including med spas, salons, gyms, yoga studios, pilates studios, nail bars, wellness centers, massage practices, and aesthetic clinics. If your business has a local clientele and complementary partners nearby, IvyLink works for you." } },
-        { "@type": "Question", "name": "How is this different from a referral program?", "acceptedAnswer": { "@type": "Answer", "text": "Referral programs reward your existing customers for sending friends. IvyLink builds partnerships with other local businesses, so their entire customer base actively gets pointed toward yours. No customer-side effort required, and the volume is dramatically higher." } },
-        { "@type": "Question", "name": "Do I need to spend money on ads?", "acceptedAnswer": { "@type": "Answer", "text": "No. IvyLink is built specifically for wellness businesses that want growth without a paid ads budget. The only thing you 'spend' is the discount on your partnership offer, and only when a partner's customer actually shows up and books." } },
-        { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "IvyLink is free to sign up and explore. You can match with partners and create your first play at no cost. Reach out if you'd like to discuss our plans for active partnerships." } },
-        { "@type": "Question", "name": "How does the QR code tracking work?", "acceptedAnswer": { "@type": "Answer", "text": "Every active partnership gets two unique QR codes, one for each business's offer. When a customer scans and books, the system records who referred them, what they booked, and what it was worth. You see full attribution in your dashboard, in real time." } },
-        { "@type": "Question", "name": "How does the partner matching work?", "acceptedAnswer": { "@type": "Answer", "text": "IvyLink scans your area for complementary businesses and ranks them by audience overlap, location, and partnership potential. You see every potential partner within a 5-mile radius, sorted by best match. We never share your client data with partners. Your information stays yours." } },
-        { "@type": "Question", "name": "How long does it take to see results?", "acceptedAnswer": { "@type": "Answer", "text": "Most businesses send their first partnership play within 10 minutes of signing up. Bookings typically follow in the first 1 to 3 weeks, depending on how quickly partners activate their offers." } },
-        { "@type": "Question", "name": "What if the partner I want isn't on IvyLink yet?", "acceptedAnswer": { "@type": "Answer", "text": "You can still send them a partnership invitation through IvyLink. We handle the outreach, generate the play, and walk them through joining. No awkward cold DMs from you." } }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "IvyLink",
+          "url": "https://ivylink.ai",
+          "logo": "https://ivylink.ai/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "nalin@ivylink.co",
+            "contactType": "customer support"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "IvyLink",
+          "description": "Revenue recovery service for wellness businesses. IvyLink texts lapsed clients, answers inbound DMs, and books appointments automatically. Performance pricing: 20% of recovered revenue.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Performance-based pricing. Pay 20% of recovered revenue only."
+          },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Wellness businesses including med spas, gyms, salons, and yoga studios"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does IvyLink pricing work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IvyLink charges 20% of recovered revenue only. If we do not recover revenue for your business, you pay nothing. There is no setup fee and no monthly retainer."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What types of wellness businesses does IvyLink work with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IvyLink works with med spas, gyms, salons, yoga studios, and other wellness businesses that use booking systems like Mindbody, Vagaro, or Jane App."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly does IvyLink respond to client inquiries?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IvyLink responds to inbound DMs and missed calls in under 15 seconds on average."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the win-back rate for lapsed clients?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IvyLink achieves an average 11% win-back rate on lapsed client campaigns."
+              }
+            }
+          ]
+        }
       ]
     }
     </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ivylink.ai/" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="IvyLink" />
-    <meta property="og:title" content="IvyLink: Local Marketing Platform for Wellness Businesses" />
-    <meta property="og:description" content="IvyLink is the local marketing platform for med spas, salons, gyms, and studios. Partner with nearby businesses to share customers and fill empty slots without ads." />
-    <meta property="og:image" content="https://ivylink.ai/og-image.png" />
+    <meta property="og:url" content="https://ivylink.ai" />
+    <meta property="og:title" content="Wellness Business Revenue Recovery | IvyLink" />
+    <meta property="og:description" content="IvyLink's booking agent texts lapsed clients, answers DMs, and books appointments while you are in a treatment room. 20% of recovered revenue. Nothing if it does not work." />
+    <meta property="og:image" content="/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="IvyLink: Local Marketing Platform for Wellness Businesses" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@IvyLink" />
-    <meta name="twitter:creator" content="@IvyLink" />
-    <meta name="twitter:title" content="IvyLink: Local Marketing Platform for Wellness Businesses" />
-    <meta name="twitter:description" content="IvyLink is the local marketing platform for med spas, salons, gyms, and studios. Partner with nearby businesses to share customers and fill empty slots without ads." />
-    <meta name="twitter:image" content="https://ivylink.ai/og-image.png" />
-    <meta name="twitter:image:alt" content="IvyLink: Local Marketing Platform for Wellness Businesses" />
+    <meta name="twitter:title" content="Wellness Business Revenue Recovery | IvyLink" />
+    <meta name="twitter:description" content="Lapsed clients, missed calls, unanswered DMs. IvyLink handles all of it and books the appointment." />
+    <meta name="twitter:image" content="/og-image.png" />
   </head>
   <body>
     <div id="root"></div>
