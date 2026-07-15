@@ -157,8 +157,7 @@ const ComparisonTable = () => {
             className="text-base italic font-medium"
             style={{ color: '#FFFFFF' }}
           >
-            "We recover revenue you've already earned — without you touching any software.
-            Results in 30 days or you pay nothing."
+            "We recover revenue you've already earned without you touching any software. Results in 30 days or you pay nothing."
           </p>
         </div>
       </div>

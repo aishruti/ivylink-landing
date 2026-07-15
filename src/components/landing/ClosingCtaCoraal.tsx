@@ -31,8 +31,7 @@ const ClosingCtaCoraal = () => {
             lineHeight: '1.6',
           }}
         >
-          IvyLink's AI agent runs your entire revenue recovery — 24/7,
-          on your booking system, for wellness businesses only.
+          IvyLink runs your entire revenue recovery. 24/7, on your booking system, for wellness businesses only.
         </p>
 
         {/* Button */}

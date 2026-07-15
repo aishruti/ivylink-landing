@@ -210,8 +210,7 @@ const CalculatorDark = () => {
           className="text-sm text-center italic mb-6"
           style={{ color: '#64748B', maxWidth: '480px', margin: '0 auto 24px' }}
         >
-          IvyLink closes this gap on performance — you pay 20% of what we recover,
-          nothing if we don't.
+          IvyLink works on performance. You pay 20% of what we recover, nothing if we don't.
         </p>
 
         {/* CTA Button */}

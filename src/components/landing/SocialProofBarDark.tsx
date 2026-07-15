@@ -1,5 +1,5 @@
 /*
- * Social proof bar — directly below hero.
+ * Social proof bar. Directly below hero.
  * Dark background (#151525), three stats in coral.
  * On mobile: stacked vertically with horizontal rules.
  */

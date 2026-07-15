@@ -27,7 +27,7 @@ const PainPanels = () => {
               margin: '0 auto',
             }}
           >
-            Revenue you've already earned — just not collected.
+            Revenue you've already earned. Just not collected.
           </h2>
         </div>
 
@@ -38,7 +38,7 @@ const PainPanels = () => {
               className="text-xs font-semibold tracking-widest mb-3"
               style={{ color: '#E85D4A' }}
             >
-              01 — INBOUND INQUIRIES
+              01. INBOUND INQUIRIES
             </p>
             <h3
               className="text-2xl lg:text-3xl font-bold mb-4"
@@ -57,7 +57,7 @@ const PainPanels = () => {
             >
               The average wellness studio takes 4+ hours to reply to an Instagram DM.
               By then, Maya has booked with someone else. IvyLink replies in 4 seconds,
-              handles her question about pain, and books the consultation —
+              handles her question about pain, and books the consultation
               before you've finished the treatment.
             </p>
             <div
@@ -130,7 +130,7 @@ const PainPanels = () => {
                 }}
               >
                 <p style={{ color: '#1A1A2E' }}>
-                  Hi! I'm really interested in Botox but I'm nervous it'll hurt — is it bad?
+                  Hi! I'm really interested in Botox but I'm nervous it'll hurt. Is it bad?
                 </p>
                 <p
                   className="text-xs mt-2"
@@ -147,7 +147,7 @@ const PainPanels = () => {
                 }}
               >
                 <p>
-                  Totally understandable! Most clients describe it as a tiny pinch — many come on their lunch break. Want to book a free consult to meet our team first?
+                  Totally understandable! Most clients describe it as a tiny pinch. Many come on their lunch break. Want to book a free consult to meet our team first?
                 </p>
                 <p
                   className="text-xs mt-2 opacity-80"
@@ -190,7 +190,7 @@ const PainPanels = () => {
                     className="text-sm font-bold"
                     style={{ color: '#1A1A2E' }}
                   >
-                    Missed call — Jennifer L.
+                    Missed call. Jennifer L.
                   </p>
                   <p
                     className="text-xs"
@@ -294,7 +294,7 @@ const PainPanels = () => {
               className="text-xs font-semibold tracking-widest mb-3"
               style={{ color: '#E85D4A' }}
             >
-              02 — MISSED CALLS
+              02. MISSED CALLS
             </p>
             <h3
               className="text-2xl lg:text-3xl font-bold mb-4"
@@ -305,7 +305,7 @@ const PainPanels = () => {
               }}
             >
               A call rings at 11:02am. You're mid-treatment.
-              That lead is gone in 11 seconds — or recovered.
+              That lead is gone in 11 seconds. Or recovered.
             </h3>
             <p
               className="text-base mb-6"
@@ -313,7 +313,7 @@ const PainPanels = () => {
             >
               Jennifer called about bridal facials. She'll call the next place on her list
               if she doesn't hear back fast. IvyLink fires a text in 11 seconds:
-              "Hi, we just missed your call at Alivio Wellness — how can we help?"
+              "Hi, we just missed your call at Alivio Wellness. How can we help?"
               Jennifer replied. Jennifer booked.
             </p>
             <div
@@ -340,7 +340,7 @@ const PainPanels = () => {
               className="text-xs font-semibold tracking-widest mb-3"
               style={{ color: '#E85D4A' }}
             >
-              03 — LAPSED CLIENTS
+              03. LAPSED CLIENTS
             </p>
             <h3
               className="text-2xl lg:text-3xl font-bold mb-4"
@@ -359,7 +359,7 @@ const PainPanels = () => {
             >
               Your database is full of clients who loved you and then got busy.
               IvyLink identifies them, sends a personalised win-back message, and
-              offers a complimentary add-on — not a discount — to bring them back.
+              offers a complimentary add-on, not a discount, to bring them back.
               Average win-back rate: 11%. Average appointment value: $192.
             </p>
             <div
@@ -395,7 +395,7 @@ const PainPanels = () => {
                 }}
               >
                 <p style={{ color: '#1A1A2E' }}>
-                  Hi Sarah! It's Alivio Wellness — we've missed you! Your last HydraFacial
+                  Hi Sarah! It's Alivio Wellness. We've missed you! Your last HydraFacial
                   was 8 months ago. We're including a complimentary LED add-on for returning
                   clients this month. Want me to check availability?
                 </p>
@@ -424,7 +424,7 @@ const PainPanels = () => {
               >
                 <p style={{ color: '#1A1A2E' }}>
                   So glad! We have Tuesday afternoon and Thursday morning next week.
-                  Maya is also available — she did your last treatment. Here's your booking link 🌿
+                  Maya is also available. She did your last treatment. Here's your booking link.
                 </p>
                 <p
                   className="text-xs mt-2"

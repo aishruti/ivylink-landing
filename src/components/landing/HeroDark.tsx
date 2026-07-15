@@ -40,8 +40,7 @@ const HeroDark = () => {
             maxWidth: '600px',
           }}
         >
-          IvyLink's AI agent texts lapsed clients, answers every DM, and books the
-          appointment — while you're in a treatment room.
+          IvyLink's AI agent texts lapsed clients, answers every DM, and books the appointment while you're in a treatment room.
         </p>
 
         {/* CTA Button */}

@@ -13,7 +13,7 @@ const HowItWorksDark = () => {
     {
       number: '02',
       title: 'Your AI agent goes to work.',
-      body: "It texts lapsed clients, answers every DM, handles objections, and books appointments — while you're in the treatment room.",
+      body: "It texts lapsed clients, answers every DM, handles objections, and books appointments while you're in the treatment room.",
     },
     {
       number: '03',
