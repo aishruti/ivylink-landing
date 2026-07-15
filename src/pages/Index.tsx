@@ -1,37 +1,52 @@
-import Navigation from "@/components/landing/Navigation";
-import Hero from "@/components/landing/Hero";
-import { LazyMount } from "@/components/LazyMount";
+import NavBar from "@/components/landing/NavBar";
+import HeroDark from "@/components/landing/HeroDark";
+import SocialProofBarDark from "@/components/landing/SocialProofBarDark";
+import PainPanels from "@/components/landing/PainPanels";
+import InteractiveDemo from "@/components/landing/InteractiveDemo";
+import CalculatorDark from "@/components/landing/CalculatorDark";
+import HowItWorksDark from "@/components/landing/HowItWorksDark";
+import ComparisonTable from "@/components/landing/ComparisonTable";
+import ClosingCtaCoraal from "@/components/landing/ClosingCtaCoraal";
+import FooterDark from "@/components/landing/FooterDark";
 
 /*
- * PERF: Below-the-fold sections are mounted via IntersectionObserver
- * (LazyMount), not Suspense. They don't even hit the network until the user
- * scrolls within 400px of them.
- *
- * Order is intentional:
- * 1. Hero. Primary keyword in H1, outcome+mechanism in sub.
- * 2. OutcomeBand. Show the result FIRST (revenue dashboard) before explaining
- *    how it works. Most compelling reason to sign up.
- * 3. HowItWorksSteps. 4 concrete steps with real product screenshots.
- * 4. WhyPartnerships. Comparison vs ads / referrals / DIY (replaces features).
- * 5. WhoItsFor. Qualifying pains, broadened beyond med spas.
- * 6. SocialProof. Quote + stats.
- * 7. FAQ. Long-tail SEO + objection handling.
- * 8. ClosingCTA. Final push.
- * 9. Footer.
+ * IvyLink Landing Page v2 - Gojiberry.ai inspired rebuild
+ * Dark hero, pain panels, interactive demo, revenue calculator,
+ * comparison table, closing CTA, footer.
  */
+
 const Index = () => {
   return (
     <div className="min-h-screen w-full">
-      <Navigation />
-      <Hero />
-      <LazyMount load={() => import("@/components/landing/OutcomeBand")} minHeight={1100} />
-      <LazyMount load={() => import("@/components/landing/HowItWorksSteps")} minHeight={3000} />
-      <LazyMount load={() => import("@/components/landing/WhyPartnerships")} minHeight={1100} />
-      <LazyMount load={() => import("@/components/landing/WhoItsFor")} minHeight={800} />
-      <LazyMount load={() => import("@/components/landing/SocialProof")} minHeight={800} />
-      <LazyMount load={() => import("@/components/landing/FAQ")} minHeight={900} />
-      <LazyMount load={() => import("@/components/landing/ClosingCTA")} minHeight={700} />
-      <LazyMount load={() => import("@/components/landing/Footer")} minHeight={500} />
+      {/* 1. Navigation */}
+      <NavBar />
+
+      {/* 2. Hero */}
+      <HeroDark />
+
+      {/* 3. Social Proof Bar */}
+      <SocialProofBarDark />
+
+      {/* 4. Pain Panels */}
+      <PainPanels />
+
+      {/* 5. Interactive Demo */}
+      <InteractiveDemo />
+
+      {/* 6. Revenue Calculator */}
+      <CalculatorDark />
+
+      {/* 7. How It Works */}
+      <HowItWorksDark />
+
+      {/* 8. Comparison Table */}
+      <ComparisonTable />
+
+      {/* 9. Closing CTA */}
+      <ClosingCtaCoraal />
+
+      {/* 10. Footer */}
+      <FooterDark />
     </div>
   );
 };
