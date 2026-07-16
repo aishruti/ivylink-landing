@@ -7,16 +7,16 @@
 const SocialProofBarDark = () => {
   const stats = [
     {
-      number: '$380K+',
-      label: 'recovered across pilot programs',
+      number: '4 leaks',
+      label: 'revenue gaps IvyLink closes for you',
     },
     {
-      number: '8 sec',
-      label: 'avg AI response time vs 4+ hrs before',
+      number: '12 sec',
+      label: 'avg response time to missed calls and DMs',
     },
     {
-      number: '11%',
-      label: 'win-back rate on lapsed client campaigns',
+      number: '30 days',
+      label: 'to see your first recovered bookings',
     },
   ];
 

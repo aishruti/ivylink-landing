@@ -25,6 +25,9 @@ const PainPanels = () => {
               letterSpacing: '-0.5px',
               maxWidth: '600px',
               margin: '0 auto',
+              fontSize: 'clamp(24px, 3vw, 40px)',
+              whiteSpace: 'nowrap',
+              overflow: 'visible',
             }}
           >
             Revenue you've already earned. Just not collected.
