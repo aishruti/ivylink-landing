@@ -25,7 +25,7 @@ const PainPanels = () => {
               padding: '0',
             }}
           >
-            Revenue you've already earned. Just not collected.
+            Your past clients didn't leave because they were unhappy. They just got busy.
           </h2>
         </div>
 
@@ -53,10 +53,10 @@ const PainPanels = () => {
               className="text-base mb-6"
               style={{ color: '#4A4A6A', lineHeight: '1.7' }}
             >
-              Your database is full of clients who loved you and then got busy.
-              IvyLink identifies them, sends a personalised win-back message, and
-              offers a complimentary add-on, not a discount, to bring them back.
-              Average win-back rate: 11%. Average appointment value: $192.
+              Your database has hundreds of clients who loved you and then got busy.
+              IvyLink finds every lapsed client, sends a personal win-back message,
+              and offers a complimentary add-on to bring them back.
+              No discounts. No ad spend. No manual work on your end.
             </p>
             <div
               className="inline-block px-4 py-2 rounded-full border"
@@ -69,7 +69,7 @@ const PainPanels = () => {
                 className="text-xs font-semibold"
                 style={{ color: '#E85D4A' }}
               >
-                💰 312 lapsed clients = $163K in recoverable revenue
+                11% average win-back rate · $192 avg appointment value
               </p>
             </div>
           </div>
@@ -298,16 +298,16 @@ const PainPanels = () => {
               }}
             >
               A call rings at 11:02am. You're mid-treatment.
-              That lead is gone in 11 seconds. Or recovered.
+              IvyLink answers in 11 seconds.
             </h3>
             <p
               className="text-base mb-6"
               style={{ color: '#4A4A6A', lineHeight: '1.7' }}
             >
-              Jennifer called about bridal facials. She'll call the next place on her list
-              if she doesn't hear back fast. IvyLink fires a text in 11 seconds:
-              "Hi, we just missed your call at Alivio Wellness. How can we help?"
-              Jennifer replied. Jennifer booked.
+              Every missed call is a lead that will call somewhere else if they
+              don't hear back fast. IvyLink sends a text within seconds,
+              qualifies the lead, and books the appointment.
+              You find out when it's done.
             </p>
             <div
               className="inline-block px-4 py-2 rounded-full border"
@@ -320,7 +320,7 @@ const PainPanels = () => {
                 className="text-xs font-semibold"
                 style={{ color: '#E85D4A' }}
               >
-                📞 Missed call → booked in 12 minutes
+                Missed call to booked in 12 minutes
               </p>
             </div>
           </div>
@@ -343,17 +343,16 @@ const PainPanels = () => {
                 lineHeight: '1.3',
               }}
             >
-              While you're with a client, Maya just DMed about Botox.
-              She won't wait 4 hours.
+              A client DMs about Botox at 2pm.
+              You're with someone until 5. IvyLink replies in 4 seconds.
             </h3>
             <p
               className="text-base mb-6"
               style={{ color: '#4A4A6A', lineHeight: '1.7' }}
             >
-              The average wellness studio takes 4+ hours to reply to an Instagram DM.
-              By then, Maya has booked with someone else. IvyLink replies in 4 seconds,
-              handles her question about pain, and books the consultation
-              before you've finished the treatment.
+              Unanswered DMs don't wait. IvyLink monitors every inbound message,
+              responds instantly, and moves the conversation toward a booking.
+              You never miss a lead because you were busy with another client.
             </p>
             <div
               className="inline-block px-4 py-2 rounded-full border"
@@ -366,7 +365,7 @@ const PainPanels = () => {
                 className="text-xs font-semibold"
                 style={{ color: '#E85D4A' }}
               >
-                ⚡ Avg response time: 4 seconds
+                Avg response time: 4 seconds
               </p>
             </div>
           </div>

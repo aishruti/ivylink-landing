@@ -7,18 +7,18 @@ const HowItWorksDark = () => {
   const steps = [
     {
       number: '01',
-      title: 'We audit your gaps.',
-      body: 'We map your lapsed client database, inbound volume, and missed calls. You see the recoverable number before spending a dollar.',
+      title: 'We pull your lapsed client list.',
+      body: 'You give us access to your booking platform once. We export every client who hasn\'t booked in 90+ days and put a real dollar figure on what they\'re worth.',
     },
     {
       number: '02',
-      title: 'The booking agent gets to work.',
-      body: "It texts lapsed clients, answers every DM, handles questions, and books appointments while you're in the treatment room.",
+      title: 'We run the win-back campaign.',
+      body: 'Personal messages go out to every lapsed client. We offer a complimentary add-on, not a discount, to bring them back. You never write a single message.',
     },
     {
       number: '03',
-      title: 'Appointments appear. You pay on results.',
-      body: "You get a push notification. The client gets a calendar invite. IvyLink takes 20% of what it recovers. If we don't recover revenue, you pay nothing.",
+      title: 'Bookings appear in your calendar.',
+      body: 'You get a push notification for every recovery. IvyLink takes 20% of what we recover. Nothing if we don\'t.',
     },
   ];
 

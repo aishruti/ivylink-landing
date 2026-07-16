@@ -19,8 +19,7 @@ const ClosingCtaCoraal = () => {
             lineHeight: '1.2',
           }}
         >
-          Your lapsed clients haven't forgotten you.
-          They just need a nudge.
+          Your past clients are your lowest-cost bookings.<br />We go get them back for you.
         </h2>
 
         {/* Subtext */}
@@ -31,7 +30,7 @@ const ClosingCtaCoraal = () => {
             lineHeight: '1.6',
           }}
         >
-          IvyLink runs your entire revenue recovery. 24/7, on your booking system, for wellness businesses only.
+          No software to learn. No campaigns to manage. Pay only when we recover revenue.
         </p>
 
         {/* Button */}

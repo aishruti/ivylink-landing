@@ -33,11 +33,11 @@ const ReactivationResults = () => {
   ];
 
   const checklistItems = [
-    "You're paying for ads but most clients come once and disappear.",
-    'You have lapsed clients, missed calls, or unanswered DMs sitting in your system.',
-    'Your calendar has empty slots.',
-    'You're losing revenue to competitors who respond faster.',
-    'You want to grow without spending more on ads.',
+    'You have 200+ past clients who haven\'t booked in over 3 months.',
+    'You know those clients liked you. They just stopped coming in.',
+    'You don\'t have time to personally follow up with hundreds of people.',
+    'You\'ve tried email blasts. Most went ignored.',
+    'You want those clients back without running ads or hiring staff.',
   ];
 
   return (
@@ -92,7 +92,7 @@ const ReactivationResults = () => {
               margin: '12px 0 0 0',
             }}
           >
-            Most wellness businesses have 200–800 lapsed clients worth $40,000–$150,000 sitting untouched. We recover it without you touching any software, running any campaign, or spending anything upfront.
+            We pull your lapsed client list, size the gap, and run the recovery. You just see results appear.
           </p>
         </div>
 
