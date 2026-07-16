@@ -45,15 +45,44 @@ const ComparisonTable = () => {
 
   return (
     <section
-      className="w-full py-20"
-      style={{ backgroundColor: '#F4F6F8' }}
+      className="w-full"
+      style={{
+        backgroundColor: '#F4F6F8',
+        paddingTop: '64px',
+        paddingBottom: '64px',
+      }}
     >
-      <div className="max-w-4xl mx-auto px-6">
+      <div
+        className="max-w-4xl mx-auto px-6"
+        style={{
+          textAlign: 'left',
+          alignItems: 'flex-start',
+          alignSelf: 'flex-start',
+          marginLeft: '0',
+          marginRight: 'auto',
+        }}
+      >
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          style={{
+            marginBottom: '48px',
+            textAlign: 'left',
+            alignItems: 'flex-start',
+            alignSelf: 'flex-start',
+            marginLeft: '0',
+            marginRight: 'auto',
+          }}
+        >
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
+            style={{
+              color: '#E85D4A',
+              letterSpacing: '0.1em',
+              textAlign: 'left',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
+            }}
           >
             WHY IVYLINK
           </p>
@@ -62,9 +91,16 @@ const ComparisonTable = () => {
             style={{
               color: '#1A1A2E',
               letterSpacing: '-0.5px',
-              maxWidth: '580px',
-              margin: '0 auto',
-              whiteSpace: 'nowrap',
+              maxWidth: '100%',
+              margin: '0',
+              whiteSpace: 'normal',
+              fontSize: 'clamp(24px, 3.5vw, 48px)',
+              textAlign: 'left',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
             }}
           >
             One agent. Replaces your entire revenue recovery stack.

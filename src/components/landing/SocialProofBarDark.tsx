@@ -22,10 +22,12 @@ const SocialProofBarDark = () => {
 
   return (
     <section
-      className="w-full py-10 lg:py-12 border-t"
+      className="w-full border-t"
       style={{
         backgroundColor: '#151525',
         borderTopColor: 'rgba(255, 255, 255, 0.08)',
+        paddingTop: '64px',
+        paddingBottom: '64px',
       }}
     >
       <div className="max-w-4xl mx-auto px-6">

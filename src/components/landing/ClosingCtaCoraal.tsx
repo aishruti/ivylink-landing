@@ -6,17 +6,32 @@
 const ClosingCtaCoraal = () => {
   return (
     <section
-      className="w-full py-28"
-      style={{ backgroundColor: '#E85D4A' }}
+      className="w-full"
+      style={{
+        backgroundColor: '#E85D4A',
+        paddingTop: '64px',
+        paddingBottom: '64px',
+      }}
     >
-      <div className="max-w-2xl mx-auto px-6 text-center">
+      <div
+        className="max-w-2xl mx-auto px-6"
+        style={{
+          textAlign: 'center',
+        }}
+      >
         {/* Headline */}
         <h2
-          className="text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+          className="text-5xl lg:text-6xl font-bold tracking-tight"
           style={{
             color: '#FFFFFF',
+            fontSize: 'clamp(28px, 4vw, 42px)',
+            fontWeight: '700',
             letterSpacing: '-1px',
             lineHeight: '1.2',
+            textAlign: 'center',
+            maxWidth: '640px',
+            margin: '0 auto',
+            marginBottom: '24px',
           }}
         >
           Your past clients are your lowest-cost bookings.<br />We go get them back for you.
@@ -24,10 +39,15 @@ const ClosingCtaCoraal = () => {
 
         {/* Subtext */}
         <p
-          className="text-lg mb-10"
+          className="text-lg"
           style={{
             color: 'rgba(255, 255, 255, 0.8)',
             lineHeight: '1.6',
+            fontSize: '17px',
+            textAlign: 'center',
+            maxWidth: '480px',
+            margin: '0 auto',
+            marginBottom: '32px',
           }}
         >
           No software to learn. No campaigns to manage. Pay only when we recover revenue.
@@ -35,7 +55,13 @@ const ClosingCtaCoraal = () => {
 
         {/* Button */}
         <button
-          className="bg-white text-[#E85D4A] px-10 py-4 rounded-lg font-bold text-lg hover:bg-[#F8F8F8] transition-colors inline-block mb-3"
+          className="bg-white text-[#E85D4A] px-10 py-4 rounded-lg font-bold text-lg hover:bg-[#F8F8F8] transition-colors"
+          style={{
+            display: 'block',
+            width: 'fit-content',
+            margin: '0 auto',
+            marginBottom: '16px',
+          }}
         >
           See what IvyLink would recover for you →
         </button>

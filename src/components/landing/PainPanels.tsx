@@ -6,23 +6,42 @@
 const PainPanels = () => {
   return (
     <section
-      className="w-full py-20"
-      style={{ backgroundColor: '#F4F6F8' }}
+      className="w-full"
+      style={{
+        backgroundColor: '#F4F6F8',
+        paddingTop: '64px',
+        paddingBottom: '64px',
+      }}
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
-        <div className="text-center mb-20">
+        <div
+          style={{
+            marginBottom: '48px',
+            textAlign: 'left',
+            alignItems: 'flex-start',
+            alignSelf: 'flex-start',
+            marginLeft: '0',
+            marginRight: 'auto',
+          }}
+        >
           <h2
             className="text-4xl lg:text-5xl font-bold tracking-tight"
             style={{
               color: '#1A1A2E',
               letterSpacing: '-0.5px',
-              maxWidth: '600px',
-              whiteSpace: 'nowrap',
+              maxWidth: '720px',
+              whiteSpace: 'normal',
               fontSize: 'clamp(20px, 2.5vw, 36px)',
               textAlign: 'left',
               margin: '0',
               padding: '0',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
+              fontWeight: '700',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
             }}
           >
             Your past clients didn't leave because they were unhappy. They just got busy.
@@ -31,10 +50,16 @@ const PainPanels = () => {
 
         {/* Panel 1: Lapsed Client Reactivation (PRIMARY) */}
         <div className="mb-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
+          <div style={{ textAlign: 'left', alignItems: 'flex-start', alignSelf: 'flex-start', marginLeft: '0', marginRight: 'auto' }}>
             <p
               className="text-xs font-semibold tracking-widest mb-3"
-              style={{ color: '#E85D4A' }}
+              style={{
+                color: '#E85D4A',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+                marginLeft: '0',
+                marginRight: 'auto',
+              }}
             >
               01. LAPSED CLIENT REACTIVATION
             </p>
@@ -44,6 +69,10 @@ const PainPanels = () => {
                 color: '#1A1A2E',
                 letterSpacing: '-0.3px',
                 lineHeight: '1.3',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+                marginLeft: '0',
+                marginRight: 'auto',
               }}
             >
               Sarah had her last HydraFacial 8 months ago.
@@ -282,10 +311,16 @@ const PainPanels = () => {
           </div>
 
           {/* Text content */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2" style={{ textAlign: 'left', alignItems: 'flex-start', alignSelf: 'flex-start', marginLeft: '0', marginRight: 'auto' }}>
             <p
               className="text-xs font-semibold tracking-widest mb-3"
-              style={{ color: '#E85D4A' }}
+              style={{
+                color: '#E85D4A',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+                marginLeft: '0',
+                marginRight: 'auto',
+              }}
             >
               02. MISSED CALLS
             </p>
@@ -295,6 +330,10 @@ const PainPanels = () => {
                 color: '#1A1A2E',
                 letterSpacing: '-0.3px',
                 lineHeight: '1.3',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+                marginLeft: '0',
+                marginRight: 'auto',
               }}
             >
               A call rings at 11:02am. You're mid-treatment.
@@ -328,10 +367,16 @@ const PainPanels = () => {
 
         {/* Panel 3: Unanswered DMs (TERTIARY) */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
+          <div style={{ textAlign: 'left', alignItems: 'flex-start', alignSelf: 'flex-start', marginLeft: '0', marginRight: 'auto' }}>
             <p
               className="text-xs font-semibold tracking-widest mb-3"
-              style={{ color: '#E85D4A' }}
+              style={{
+                color: '#E85D4A',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+                marginLeft: '0',
+                marginRight: 'auto',
+              }}
             >
               03. UNANSWERED DMS
             </p>
@@ -341,6 +386,10 @@ const PainPanels = () => {
                 color: '#1A1A2E',
                 letterSpacing: '-0.3px',
                 lineHeight: '1.3',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+                marginLeft: '0',
+                marginRight: 'auto',
               }}
             >
               A client DMs about Botox at 2pm.

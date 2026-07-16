@@ -7,10 +7,12 @@ import ivylinkLogo from "@/assets/ivylink-logo.svg";
 const FooterDark = () => {
   return (
     <footer
-      className="w-full py-12 border-t"
+      className="w-full border-t"
       style={{
         backgroundColor: '#1A1A2E',
         borderTopColor: 'rgba(255, 255, 255, 0.07)',
+        paddingTop: '64px',
+        paddingBottom: '64px',
       }}
     >
       <div className="max-w-4xl mx-auto px-6">

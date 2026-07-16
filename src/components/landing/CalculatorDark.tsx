@@ -19,16 +19,41 @@ const CalculatorDark = () => {
       className="w-full"
       style={{
         backgroundColor: '#1A1A2E',
-        paddingTop: '48px',
-        paddingBottom: '48px',
+        paddingTop: '64px',
+        paddingBottom: '64px',
       }}
     >
-      <div className="max-w-3xl mx-auto px-6">
+      <div
+        className="max-w-3xl mx-auto px-6"
+        style={{
+          textAlign: 'left',
+          alignItems: 'flex-start',
+          alignSelf: 'flex-start',
+          marginLeft: '0',
+          marginRight: 'auto',
+        }}
+      >
         {/* Header */}
-        <div style={{ marginBottom: '80px', textAlign: 'left' }}>
+        <div
+          style={{
+            marginBottom: '48px',
+            textAlign: 'left',
+            alignItems: 'flex-start',
+            alignSelf: 'flex-start',
+            marginLeft: '0',
+            marginRight: 'auto',
+          }}
+        >
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
+            style={{
+              color: '#E85D4A',
+              letterSpacing: '0.1em',
+              textAlign: 'left',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
+            }}
           >
             FREE REVENUE AUDIT
           </p>
@@ -43,13 +68,22 @@ const CalculatorDark = () => {
               textAlign: 'left',
               margin: '0',
               padding: '0',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
             }}
           >
             See exactly what IvyLink would recover for you. Takes 30 seconds.
           </h2>
           <p
             className="text-lg"
-            style={{ color: '#94A3B8' }}
+            style={{
+              color: '#94A3B8',
+              textAlign: 'left',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
+            }}
           >
             Drag the sliders to your real numbers.
           </p>
@@ -214,16 +248,34 @@ const CalculatorDark = () => {
 
         {/* Footer text */}
         <p
-          className="text-sm text-center italic mb-6"
-          style={{ color: '#64748B', maxWidth: '480px', margin: '0 auto 24px' }}
+          className="text-sm italic"
+          style={{
+            color: '#64748B',
+            maxWidth: '480px',
+            margin: '0',
+            marginBottom: '24px',
+            textAlign: 'left',
+            marginLeft: '0',
+          }}
         >
           IvyLink works on performance. You pay 20% of what we recover, nothing if we don't.
         </p>
 
         {/* CTA Button */}
-        <div className="text-center">
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+          }}
+        >
           <button
-            className="bg-[#E85D4A] text-white px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-[#C94535] transition-colors inline-block"
+            className="bg-[#E85D4A] text-white px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-[#C94535] transition-colors"
+            style={{
+              display: 'block',
+              width: 'fit-content',
+              marginLeft: '0',
+            }}
           >
             Get my 30-day recovery plan →
           </button>

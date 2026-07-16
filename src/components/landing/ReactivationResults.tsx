@@ -45,16 +45,32 @@ const ReactivationResults = () => {
       className="w-full"
       style={{
         backgroundColor: '#FFFFFF',
-        paddingTop: '80px',
-        paddingBottom: '80px',
+        paddingTop: '64px',
+        paddingBottom: '64px',
       }}
     >
       <div
         className="mx-auto px-6"
-        style={{ maxWidth: '1000px' }}
+        style={{
+          maxWidth: '1000px',
+          textAlign: 'left',
+          alignItems: 'flex-start',
+          alignSelf: 'flex-start',
+          marginLeft: '0',
+          marginRight: 'auto',
+        }}
       >
         {/* HEADER */}
-        <div style={{ marginBottom: '48px' }}>
+        <div
+          style={{
+            marginBottom: '48px',
+            textAlign: 'left',
+            alignItems: 'flex-start',
+            alignSelf: 'flex-start',
+            marginLeft: '0',
+            marginRight: 'auto',
+          }}
+        >
           <p
             style={{
               fontSize: '11px',
@@ -64,6 +80,9 @@ const ReactivationResults = () => {
               textTransform: 'uppercase',
               textAlign: 'left',
               margin: '0',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
             }}
           >
             YOUR FIRST 30 DAYS
@@ -77,6 +96,9 @@ const ReactivationResults = () => {
               textAlign: 'left',
               margin: '0',
               marginTop: '12px',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
             }}
           >
             We recover revenue already sitting in your database.
@@ -90,6 +112,9 @@ const ReactivationResults = () => {
               textAlign: 'left',
               marginTop: '12px',
               margin: '12px 0 0 0',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
             }}
           >
             We pull your lapsed client list, size the gap, and run the recovery. You just see results appear.
@@ -213,7 +238,16 @@ const ReactivationResults = () => {
         </div>
 
         {/* IS THIS YOU? */}
-        <div style={{ marginTop: '48px' }}>
+        <div
+          style={{
+            marginTop: '48px',
+            textAlign: 'left',
+            alignItems: 'flex-start',
+            alignSelf: 'flex-start',
+            marginLeft: '0',
+            marginRight: 'auto',
+          }}
+        >
           <p
             style={{
               fontSize: '11px',
@@ -224,6 +258,9 @@ const ReactivationResults = () => {
               textAlign: 'left',
               margin: '0',
               marginBottom: '20px',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
             }}
           >
             IS THIS YOU?

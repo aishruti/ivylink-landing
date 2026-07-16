@@ -24,15 +24,34 @@ const HowItWorksDark = () => {
 
   return (
     <section
-      className="w-full py-20"
-      style={{ backgroundColor: '#0F0F1A' }}
+      className="w-full"
+      style={{
+        backgroundColor: '#0F0F1A',
+        paddingTop: '64px',
+        paddingBottom: '64px',
+      }}
     >
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
-        <div style={{ marginBottom: '80px', textAlign: 'left' }}>
+        <div
+          style={{
+            marginBottom: '48px',
+            textAlign: 'left',
+            alignItems: 'flex-start',
+            alignSelf: 'flex-start',
+            marginLeft: '0',
+            marginRight: 'auto',
+          }}
+        >
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{ color: '#E85D4A' }}
+            style={{
+              color: '#E85D4A',
+              textAlign: 'left',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
+            }}
           >
             HOW IT WORKS
           </p>
@@ -47,6 +66,9 @@ const HowItWorksDark = () => {
               textAlign: 'left',
               margin: '0',
               padding: '0',
+              alignSelf: 'flex-start',
+              marginLeft: '0',
+              marginRight: 'auto',
             }}
           >
             3 minutes to set up. First bookings within 24 hours.
@@ -66,21 +88,32 @@ const HowItWorksDark = () => {
             >
               <p
                 className="text-xs font-bold tracking-widest mb-4"
-                style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
+                style={{
+                  color: '#E85D4A',
+                  letterSpacing: '0.1em',
+                  fontSize: '11px',
+                  fontWeight: '700',
+                }}
               >
                 {step.number}
               </p>
               <h3
                 className="text-xl font-bold mb-3"
-                style={{ color: '#FFFFFF' }}
+                style={{
+                  color: '#FFFFFF',
+                  fontSize: '18px',
+                  fontWeight: '600',
+                }}
               >
                 {step.title}
               </h3>
               <p
                 className="text-sm"
                 style={{
-                  color: '#94A3B8',
+                  color: '#4A4A6A',
                   lineHeight: '1.7',
+                  fontSize: '14px',
+                  fontWeight: '500',
                 }}
               >
                 {step.body}
