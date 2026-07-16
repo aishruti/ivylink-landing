@@ -25,7 +25,7 @@ const CalculatorDark = () => {
     >
       <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div style={{ marginBottom: '80px', textAlign: 'left' }}>
           <p
             className="text-xs font-semibold tracking-widest mb-4"
             style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
