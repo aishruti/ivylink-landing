@@ -25,27 +25,10 @@ const CalculatorDark = () => {
     >
       <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
-        <div
-          style={{
-            marginBottom: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            width: '100%',
-          }}
-        >
+        <div className="text-center mb-20">
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{
-              color: '#E85D4A',
-              letterSpacing: '0.1em',
-              display: 'block',
-              textAlign: 'left',
-              width: '100%',
-              marginLeft: '0',
-              marginRight: '0',
-              alignSelf: 'flex-start',
-            }}
+            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
           >
             FREE REVENUE AUDIT
           </p>
@@ -55,21 +38,13 @@ const CalculatorDark = () => {
               color: '#FFFFFF',
               letterSpacing: '-0.8px',
               lineHeight: '1.2',
-              textAlign: 'left',
-              whiteSpace: 'nowrap',
-              fontSize: 'clamp(18px, 2.5vw, 36px)',
-              marginBottom: '12px',
             }}
           >
             See exactly what IvyLink would recover for you. Takes 30 seconds.
           </h2>
           <p
             className="text-lg"
-            style={{
-              color: '#94A3B8',
-              textAlign: 'left',
-              marginBottom: '24px',
-            }}
+            style={{ color: '#94A3B8' }}
           >
             Drag the sliders to your real numbers.
           </p>

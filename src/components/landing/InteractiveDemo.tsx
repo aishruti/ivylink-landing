@@ -9,27 +9,10 @@ const InteractiveDemo = () => {
     <section className="w-full py-20" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-5xl mx-auto px-6">
         {/* Section header */}
-        <div
-          style={{
-            marginBottom: '64px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            width: '100%',
-          }}
-        >
+        <div className="text-center mb-20">
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{
-              color: '#E85D4A',
-              letterSpacing: '0.1em',
-              display: 'block',
-              textAlign: 'left',
-              width: '100%',
-              marginLeft: '0',
-              marginRight: '0',
-              alignSelf: 'flex-start',
-            }}
+            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
           >
             LIVE DEMO
           </p>
@@ -39,9 +22,6 @@ const InteractiveDemo = () => {
               color: '#1A1A2E',
               letterSpacing: '-0.5px',
               maxWidth: '600px',
-              textAlign: 'left',
-              whiteSpace: 'nowrap',
-              fontSize: 'clamp(18px, 2.5vw, 32px)',
             }}
           >
             Step through a real client conversation. Then book the appointment yourself.
