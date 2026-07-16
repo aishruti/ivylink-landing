@@ -31,7 +31,7 @@ const HeroDark = () => {
             overflowWrap: 'break-word',
           }}
         >
-          Lapsed clients, missed calls, ignored DMs.<br />That's revenue you've already lost. We get it back.
+          Lapsed clients and missed calls<br />are revenue. We recover them.
         </h1>
 
         {/* Subheadline */}
