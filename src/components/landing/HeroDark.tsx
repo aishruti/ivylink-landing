@@ -7,53 +7,80 @@
 const HeroDark = () => {
   return (
     <section
-      className="w-full pt-32 pb-20 lg:pb-24"
-      style={{ backgroundColor: '#1A1A2E' }}
+      style={{
+        backgroundColor: '#1A1A2E',
+        paddingTop: '60px',
+        paddingBottom: '40px',
+        width: '100%',
+      }}
     >
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        {/* Eyebrow */}
-        <p
-          className="text-xs font-semibold tracking-widest mb-4"
-          style={{ color: '#8B8BA7', letterSpacing: '0.05em' }}
-        >
-          Used by wellness studios across New Jersey · Results guaranteed in 30 days
-        </p>
-
+      <div style={{ textAlign: 'center', maxWidth: '100%' }}>
         {/* Headline */}
         <h1
-          className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6"
           style={{
             color: '#FFFFFF',
+            fontSize: 'clamp(32px, 5vw, 64px)',
+            fontWeight: 800,
+            lineHeight: '1.05',
             letterSpacing: '-1.5px',
-            lineHeight: '1.1',
+            maxWidth: '100%',
+            width: '100%',
+            margin: '0 auto',
+            wordWrap: 'break-word',
+            whiteSpace: 'normal',
+            overflowWrap: 'break-word',
           }}
         >
-          Your med spa is leaving $40,000 on the table every year.
+          Lapsed clients, missed calls, ignored DMs.<br />That's revenue you've already lost. We get it back.
         </h1>
 
         {/* Subheadline */}
         <p
-          className="text-lg lg:text-xl mb-8 mx-auto"
           style={{
-            color: '#94A3B8',
+            fontSize: 'clamp(17px, 2.5vw, 20px)',
+            color: '#6B7280',
+            fontWeight: 400,
             lineHeight: '1.6',
-            maxWidth: '600px',
+            maxWidth: '540px',
+            margin: '0 auto',
+            marginTop: '16px',
+            marginBottom: '24px',
           }}
         >
-          IvyLink's AI agent texts lapsed clients, answers every DM, and books the appointment while you're in a treatment room.
+          IvyLink finds lapsed clients, answers missed calls and DMs, and books the appointment. You find out when it's done.
         </p>
 
         {/* CTA Button */}
         <button
-          className="bg-[#E85D4A] text-white px-8 py-3.5 rounded-lg font-semibold text-base mb-3 hover:bg-[#C94535] transition-colors inline-block"
+          style={{
+            backgroundColor: '#E85D4A',
+            color: '#FFFFFF',
+            paddingLeft: '32px',
+            paddingRight: '32px',
+            paddingTop: '14px',
+            paddingBottom: '14px',
+            borderRadius: '8px',
+            fontWeight: 600,
+            fontSize: '16px',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'inline-block',
+            marginBottom: '8px',
+            transition: 'background-color 0.2s ease',
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C94535'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E85D4A'}
         >
           See what IvyLink would recover for you →
         </button>
 
         {/* Micro-copy */}
         <p
-          className="text-xs"
-          style={{ color: '#64748B' }}
+          style={{
+            fontSize: '12px',
+            color: '#64748B',
+            margin: '0',
+          }}
         >
           No setup fee · 30-day results guarantee · Pay only on performance
         </p>
