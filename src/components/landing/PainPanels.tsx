@@ -12,12 +12,6 @@ const PainPanels = () => {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-20">
-          <p
-            className="text-xs font-semibold tracking-widest mb-4"
-            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
-          >
-            THE FOUR LEAKS
-          </p>
           <h2
             className="text-4xl lg:text-5xl font-bold tracking-tight"
             style={{

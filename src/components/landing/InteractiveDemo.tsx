@@ -22,11 +22,12 @@ const InteractiveDemo = () => {
               color: '#1A1A2E',
               letterSpacing: '-0.5px',
               maxWidth: '600px',
-              margin: '0 auto',
+              textAlign: 'left',
+              whiteSpace: 'nowrap',
+              fontSize: 'clamp(18px, 2.5vw, 32px)',
             }}
           >
-            Step through a real client conversation.
-            Then book the appointment yourself.
+            Step through a real client conversation. Then book the appointment yourself.
           </h2>
         </div>
 

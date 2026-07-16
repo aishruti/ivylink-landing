@@ -16,33 +16,58 @@ const CalculatorDark = () => {
 
   return (
     <section
-      className="w-full py-20"
-      style={{ backgroundColor: '#1A1A2E' }}
+      className="w-full"
+      style={{
+        backgroundColor: '#1A1A2E',
+        paddingTop: '48px',
+        paddingBottom: '48px',
+      }}
     >
       <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          style={{
+            marginBottom: '24px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+          }}
+        >
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
+            style={{
+              color: '#E85D4A',
+              letterSpacing: '0.1em',
+              textAlign: 'left',
+              marginLeft: '0',
+              marginRight: 'auto',
+              alignSelf: 'flex-start',
+              width: 'auto',
+            }}
           >
             FREE REVENUE AUDIT
           </p>
           <h2
-            className="text-5xl font-bold tracking-tight mb-4"
+            className="text-5xl font-bold tracking-tight"
             style={{
               color: '#FFFFFF',
               letterSpacing: '-0.8px',
               lineHeight: '1.2',
+              textAlign: 'left',
+              whiteSpace: 'nowrap',
+              fontSize: 'clamp(18px, 2.5vw, 36px)',
+              marginBottom: '12px',
             }}
           >
-            See exactly what IvyLink would recover for you.
-            <br />
-            Takes 30 seconds.
+            See exactly what IvyLink would recover for you. Takes 30 seconds.
           </h2>
           <p
             className="text-lg"
-            style={{ color: '#94A3B8' }}
+            style={{
+              color: '#94A3B8',
+              textAlign: 'left',
+              marginBottom: '24px',
+            }}
           >
             Drag the sliders to your real numbers.
           </p>
