@@ -9,10 +9,27 @@ const InteractiveDemo = () => {
     <section className="w-full py-20" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-5xl mx-auto px-6">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div
+          style={{
+            marginBottom: '64px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            width: '100%',
+          }}
+        >
           <p
             className="text-xs font-semibold tracking-widest mb-4"
-            style={{ color: '#E85D4A', letterSpacing: '0.1em' }}
+            style={{
+              color: '#E85D4A',
+              letterSpacing: '0.1em',
+              display: 'block',
+              textAlign: 'left',
+              width: '100%',
+              marginLeft: '0',
+              marginRight: '0',
+              alignSelf: 'flex-start',
+            }}
           >
             LIVE DEMO
           </p>
