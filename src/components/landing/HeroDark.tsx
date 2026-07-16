@@ -31,7 +31,7 @@ const HeroDark = () => {
             overflowWrap: 'break-word',
           }}
         >
-          Hundreds of your past clients haven't come back.<br />We go get them.
+          Your past clients didn't leave because they were unhappy.<br />They just got busy. We bring them back.
         </h1>
 
         {/* Subheadline */}
