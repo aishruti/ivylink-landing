@@ -18,10 +18,11 @@ const PainPanels = () => {
               color: '#1A1A2E',
               letterSpacing: '-0.5px',
               maxWidth: '600px',
-              margin: '0 auto',
-              fontSize: 'clamp(24px, 3vw, 40px)',
               whiteSpace: 'nowrap',
-              overflow: 'visible',
+              fontSize: 'clamp(20px, 2.5vw, 36px)',
+              textAlign: 'left',
+              margin: '0',
+              padding: '0',
             }}
           >
             Revenue you've already earned. Just not collected.

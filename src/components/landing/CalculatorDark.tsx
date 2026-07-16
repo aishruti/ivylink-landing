@@ -38,6 +38,11 @@ const CalculatorDark = () => {
               color: '#FFFFFF',
               letterSpacing: '-0.8px',
               lineHeight: '1.2',
+              whiteSpace: 'nowrap',
+              fontSize: 'clamp(16px, 2vw, 28px)',
+              textAlign: 'left',
+              margin: '0',
+              padding: '0',
             }}
           >
             See exactly what IvyLink would recover for you. Takes 30 seconds.

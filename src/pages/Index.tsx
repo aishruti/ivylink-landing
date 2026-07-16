@@ -2,6 +2,7 @@ import NavBar from "@/components/landing/NavBar";
 import HeroDark from "@/components/landing/HeroDark";
 import SocialProofBarDark from "@/components/landing/SocialProofBarDark";
 import PainPanels from "@/components/landing/PainPanels";
+import ReactivationResults from "@/components/landing/ReactivationResults";
 import InteractiveDemo from "@/components/landing/InteractiveDemo";
 import CalculatorDark from "@/components/landing/CalculatorDark";
 import HowItWorksDark from "@/components/landing/HowItWorksDark";
@@ -30,22 +31,25 @@ const Index = () => {
       {/* 4. Pain Panels */}
       <PainPanels />
 
-      {/* 5. Interactive Demo */}
+      {/* 5. Reactivation Results */}
+      <ReactivationResults />
+
+      {/* 6. Interactive Demo */}
       <InteractiveDemo />
 
-      {/* 6. Revenue Calculator */}
+      {/* 7. Revenue Calculator */}
       <CalculatorDark />
 
-      {/* 7. How It Works */}
+      {/* 8. How It Works */}
       <HowItWorksDark />
 
-      {/* 8. Comparison Table */}
+      {/* 9. Comparison Table */}
       <ComparisonTable />
 
-      {/* 9. Closing CTA */}
+      {/* 10. Closing CTA */}
       <ClosingCtaCoraal />
 
-      {/* 10. Footer */}
+      {/* 11. Footer */}
       <FooterDark />
     </div>
   );

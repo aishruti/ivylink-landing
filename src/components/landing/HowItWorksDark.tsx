@@ -12,8 +12,8 @@ const HowItWorksDark = () => {
     },
     {
       number: '02',
-      title: 'Your AI agent goes to work.',
-      body: "It texts lapsed clients, answers every DM, handles objections, and books appointments while you're in the treatment room.",
+      title: 'The booking agent gets to work.',
+      body: "It texts lapsed clients, answers every DM, handles questions, and books appointments while you're in the treatment room.",
     },
     {
       number: '03',
@@ -42,11 +42,14 @@ const HowItWorksDark = () => {
               color: '#FFFFFF',
               letterSpacing: '-0.8px',
               lineHeight: '1.2',
+              whiteSpace: 'nowrap',
+              fontSize: 'clamp(16px, 2vw, 28px)',
+              textAlign: 'left',
+              margin: '0',
+              padding: '0',
             }}
           >
-            3 minutes to set up.
-            <br />
-            First bookings within 24 hours.
+            3 minutes to set up. First bookings within 24 hours.
           </h2>
         </div>
 

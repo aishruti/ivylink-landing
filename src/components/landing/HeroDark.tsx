@@ -31,23 +31,23 @@ const HeroDark = () => {
             overflowWrap: 'break-word',
           }}
         >
-          Lapsed clients and missed calls<br />are revenue. We recover them.
+          Hundreds of your past clients haven't come back.<br />We go get them.
         </h1>
 
         {/* Subheadline */}
         <p
           style={{
-            fontSize: 'clamp(17px, 2.5vw, 20px)',
-            color: '#6B7280',
+            fontSize: '17px',
+            color: '#94A3B8',
             fontWeight: 400,
             lineHeight: '1.6',
-            maxWidth: '540px',
+            maxWidth: '580px',
             margin: '0 auto',
             marginTop: '16px',
             marginBottom: '24px',
           }}
         >
-          IvyLink finds lapsed clients, answers missed calls and DMs, and books the appointment. You find out when it's done.
+          IvyLink runs lapsed client reactivation for med spas, gyms, salons, and yoga studios. You see bookings appear. You pay only on results.
         </p>
 
         {/* CTA Button */}
