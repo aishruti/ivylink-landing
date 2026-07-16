@@ -64,6 +64,7 @@ const ComparisonTable = () => {
               letterSpacing: '-0.5px',
               maxWidth: '580px',
               margin: '0 auto',
+              whiteSpace: 'nowrap',
             }}
           >
             One agent. Replaces your entire revenue recovery stack.
