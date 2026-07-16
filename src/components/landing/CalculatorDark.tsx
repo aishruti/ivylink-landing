@@ -31,6 +31,7 @@ const CalculatorDark = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
+            width: '100%',
           }}
         >
           <p
@@ -38,11 +39,12 @@ const CalculatorDark = () => {
             style={{
               color: '#E85D4A',
               letterSpacing: '0.1em',
+              display: 'block',
               textAlign: 'left',
+              width: '100%',
               marginLeft: '0',
-              marginRight: 'auto',
+              marginRight: '0',
               alignSelf: 'flex-start',
-              width: 'auto',
             }}
           >
             FREE REVENUE AUDIT
