@@ -31,7 +31,18 @@ const HowItWorksDark = () => {
         paddingBottom: '64px',
       }}
     >
-      <div className="max-w-5xl mx-auto px-6">
+      <div
+        className="mx-auto"
+        style={{
+          maxWidth: '1000px',
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: 'max(24px, 5vw)',
+          paddingRight: 'max(24px, 5vw)',
+          boxSizing: 'border-box',
+        }}
+      >
         {/* Header */}
         <div
           style={{
@@ -110,10 +121,10 @@ const HowItWorksDark = () => {
               <p
                 className="text-sm"
                 style={{
-                  color: '#4A4A6A',
+                  color: '#94A3B8',
                   lineHeight: '1.7',
                   fontSize: '14px',
-                  fontWeight: '500',
+                  fontWeight: '400',
                 }}
               >
                 {step.body}

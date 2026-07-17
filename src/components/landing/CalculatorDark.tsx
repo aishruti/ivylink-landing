@@ -24,13 +24,16 @@ const CalculatorDark = () => {
       }}
     >
       <div
-        className="max-w-3xl mx-auto px-6"
+        className="mx-auto px-6"
         style={{
+          maxWidth: '760px',
+          width: '100%',
+          marginLeft: '0',
+          marginRight: '0',
           textAlign: 'left',
           alignItems: 'flex-start',
           alignSelf: 'flex-start',
-          marginLeft: '0',
-          marginRight: 'auto',
+          boxSizing: 'border-box',
         }}
       >
         {/* Header */}
@@ -95,6 +98,9 @@ const CalculatorDark = () => {
           style={{
             backgroundColor: '#FFFFFF',
             border: '1px solid #E8EAF0',
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {/* Slider 1: Lapsed clients */}
@@ -206,6 +212,9 @@ const CalculatorDark = () => {
           style={{
             backgroundColor: '#FFFFFF',
             border: '1px solid #E8EAF0',
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
           }}
         >
           <div className="space-y-4">

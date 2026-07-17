@@ -50,14 +50,16 @@ const ReactivationResults = () => {
       }}
     >
       <div
-        className="mx-auto px-6"
+        className="mx-auto"
         style={{
           maxWidth: '1000px',
-          textAlign: 'left',
-          alignItems: 'flex-start',
-          alignSelf: 'flex-start',
-          marginLeft: '0',
+          width: '100%',
+          marginLeft: 'auto',
           marginRight: 'auto',
+          paddingLeft: 'max(24px, 5vw)',
+          paddingRight: 'max(24px, 5vw)',
+          boxSizing: 'border-box',
+          textAlign: 'left',
         }}
       >
         {/* HEADER */}
@@ -212,6 +214,9 @@ const ReactivationResults = () => {
             borderRadius: '10px',
             padding: '24px 32px',
             textAlign: 'center',
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
           }}
         >
           <p
@@ -271,12 +276,12 @@ const ReactivationResults = () => {
                 key={idx}
                 style={{
                   fontSize: '15px',
-                  color: '#4A4A6A',
+                  color: '#94A3B8',
                   lineHeight: '1.8',
                   margin: '0',
                 }}
               >
-                ✓ {item}
+                <span style={{ color: '#E85D4A' }}>✓</span> {item}
               </p>
             ))}
           </div>

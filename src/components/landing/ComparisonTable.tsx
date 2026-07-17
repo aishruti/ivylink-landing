@@ -53,13 +53,16 @@ const ComparisonTable = () => {
       }}
     >
       <div
-        className="max-w-4xl mx-auto px-6"
+        className="mx-auto px-6"
         style={{
+          maxWidth: '1000px',
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
           textAlign: 'left',
           alignItems: 'flex-start',
           alignSelf: 'flex-start',
-          marginLeft: '0',
-          marginRight: 'auto',
+          boxSizing: 'border-box',
         }}
       >
         {/* Header */}
@@ -108,8 +111,8 @@ const ComparisonTable = () => {
         </div>
 
         {/* Table */}
-        <div className="rounded-lg overflow-hidden shadow-sm" style={{ border: '1px solid #E8EAF0' }}>
-          <table className="w-full">
+        <div className="rounded-lg overflow-hidden shadow-sm" style={{ border: '1px solid #E8EAF0', width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
+          <table className="w-full" style={{ tableLayout: 'fixed', width: '100%' }}>
             <thead>
               <tr style={{ backgroundColor: '#1A1A2E' }}>
                 <th
@@ -188,7 +191,7 @@ const ComparisonTable = () => {
         {/* Banner below table */}
         <div
           className="rounded-lg p-6 mt-8 text-center"
-          style={{ backgroundColor: '#1A1A2E' }}
+          style={{ backgroundColor: '#1A1A2E', width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}
         >
           <p
             className="text-base italic font-medium"

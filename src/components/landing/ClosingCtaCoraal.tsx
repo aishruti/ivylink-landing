@@ -11,11 +11,17 @@ const ClosingCtaCoraal = () => {
         backgroundColor: '#E85D4A',
         paddingTop: '64px',
         paddingBottom: '64px',
+        paddingLeft: '24px',
+        paddingRight: '24px',
+        boxSizing: 'border-box',
       }}
     >
       <div
-        className="max-w-2xl mx-auto px-6"
         style={{
+          maxWidth: '680px',
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
           textAlign: 'center',
         }}
       >

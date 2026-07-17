@@ -14,7 +14,16 @@ const InteractiveDemo = () => {
         paddingBottom: '64px',
       }}
     >
-      <div className="max-w-5xl mx-auto px-6">
+      <div
+        className="mx-auto px-6"
+        style={{
+          maxWidth: '1000px',
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          boxSizing: 'border-box',
+        }}
+      >
         {/* Section header */}
         <div
           style={{
@@ -70,6 +79,9 @@ const InteractiveDemo = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
           }}
         >
           <div className="text-center">

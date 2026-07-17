@@ -16,12 +16,13 @@ const HeroDark = () => {
     >
       <div
         style={{
-          textAlign: 'left',
-          maxWidth: '100%',
-          alignItems: 'flex-start',
-          alignSelf: 'flex-start',
-          marginLeft: '0',
+          maxWidth: '900px',
+          width: '100%',
+          marginLeft: 'auto',
           marginRight: 'auto',
+          paddingLeft: 'max(24px, 5vw)',
+          paddingRight: 'max(24px, 5vw)',
+          boxSizing: 'border-box',
         }}
       >
         {/* Headline */}

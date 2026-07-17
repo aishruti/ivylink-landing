@@ -30,7 +30,18 @@ const SocialProofBarDark = () => {
         paddingBottom: '64px',
       }}
     >
-      <div className="max-w-4xl mx-auto px-6">
+      <div
+        className="mx-auto"
+        style={{
+          maxWidth: '1000px',
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: 'max(24px, 5vw)',
+          paddingRight: 'max(24px, 5vw)',
+          boxSizing: 'border-box',
+        }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
           {stats.map((stat, idx) => (
             <div
