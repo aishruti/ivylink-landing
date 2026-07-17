@@ -709,14 +709,14 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '40px' }}>
-            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 0 10px 0' }}>
+          <div style={{ marginBottom: '40px', alignItems: 'center', textAlign: 'center' }}>
+            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               FREE REVENUE AUDIT
             </p>
-            <h2 style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', marginBottom: '8px', whiteSpace: 'normal', margin: '0 0 8px 0' }}>
+            <h2 style={{ fontSize: 'clamp(18px, 2.2vw, 28px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', marginBottom: '8px', margin: '0 auto 8px auto', whiteSpace: 'nowrap', maxWidth: 'none', textAlign: 'center' }}>
               See exactly what IvyLink would recover for you. Takes 30 seconds.
             </h2>
-            <p style={{ fontSize: '15px', color: 'var(--text-dark)', margin: '0' }}>
+            <p style={{ fontSize: '15px', color: 'var(--text-dark)', margin: '0 auto', textAlign: 'center' }}>
               Drag the sliders to your real numbers.
             </p>
           </div>
@@ -802,31 +802,6 @@ export default function Index() {
               </div>
             ))}
           </div>
-
-          <p style={{ fontSize: '13px', color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '20px', margin: '0 0 20px 0' }}>
-            IvyLink works on performance. You pay 20% of what we recover, nothing if we don't.
-          </p>
-
-          <button
-            style={{
-              backgroundColor: 'var(--coral)',
-              color: 'var(--white)',
-              padding: '14px 32px',
-              borderRadius: '8px',
-              fontSize: '15px',
-              fontWeight: 600,
-              border: 'none',
-              cursor: 'pointer',
-              display: 'block',
-              width: 'fit-content',
-              transition: 'background-color 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--coral-dark)')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'var(--coral)')}
-            aria-label="Get 30-day recovery plan"
-          >
-            Get my 30-day recovery plan
-          </button>
         </div>
       </section>
 
