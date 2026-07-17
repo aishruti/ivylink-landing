@@ -559,7 +559,7 @@ export default function Index() {
             <h2 style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: '12px', margin: '0 auto 12px auto', maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
               We recover revenue already sitting in your database.
             </h2>
-            <p style={{ fontSize: '15px', color: 'var(--text-mid)', lineHeight: 1.7, margin: '0 auto', maxWidth: '600px', textAlign: 'center' }}>
+            <p style={{ fontSize: '13px', color: 'var(--text-mid)', lineHeight: 1.7, margin: '0 auto', maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
               We pull your lapsed client list, size the gap, and run the recovery. You just see results appear.
             </p>
           </div>
