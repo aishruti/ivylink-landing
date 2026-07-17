@@ -133,7 +133,7 @@ export default function Index() {
       </nav>
 
       {/* SECTION 2: HERO */}
-      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '100px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '48px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
@@ -178,7 +178,7 @@ export default function Index() {
         style={{
           backgroundColor: 'var(--dark-mid)',
           borderTop: '1px solid rgba(255,255,255,0.07)',
-          paddingTop: '64px',
+          paddingTop: '32px',
           paddingBottom: '48px',
           width: '100%',
           display: 'flex',
