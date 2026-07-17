@@ -108,9 +108,8 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Right: Email + Button */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>nalin@ivylink.co</span>
+          {/* Right: Button */}
+          <div>
             <button
               style={{
                 backgroundColor: 'var(--coral)',
