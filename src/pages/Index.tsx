@@ -957,10 +957,14 @@ export default function Index() {
       {/* SECTION 10: CLOSING CTA */}
       <section style={{ backgroundColor: 'var(--coral)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '100%', maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
-          <h2 style={{ textAlign: 'center', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 auto 20px auto', maxWidth: '900px' }}>
-            Your past clients are your lowest-cost bookings.<br />
-            We go get them back for you.
-          </h2>
+          <div style={{ width: '100%', maxWidth: '900px', margin: '0 auto 20px auto', textAlign: 'center' }}>
+            <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', textAlign: 'center', whiteSpace: 'nowrap' }}>
+              Your past clients are your lowest-cost bookings.
+            </div>
+            <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', textAlign: 'center', marginTop: '4px' }}>
+              We go get them back for you.
+            </div>
+          </div>
           <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: '440px', marginBottom: '32px', margin: '0 0 32px 0' }}>
             No software to learn. No campaigns to manage. Pay only when we recover revenue.
           </p>
