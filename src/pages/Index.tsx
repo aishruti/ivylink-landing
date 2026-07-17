@@ -167,30 +167,8 @@ export default function Index() {
             <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Lapsed clients are revenue.</span>
             <span style={{ display: 'block', whiteSpace: 'nowrap' }}>We recover them for you.</span>
           </h1>
-          <p style={{ fontSize: '18px', color: 'var(--text-dark)', fontWeight: 400, lineHeight: 1.65, maxWidth: '560px', marginBottom: '36px' }}>
+          <p style={{ fontSize: '18px', color: 'var(--text-dark)', fontWeight: 400, lineHeight: 1.65, maxWidth: '560px' }}>
             IvyLink finds lapsed clients, answers missed calls and DMs, and books the appointment. You find out when it's done.
-          </p>
-          <button
-            style={{
-              backgroundColor: 'var(--coral)',
-              color: 'var(--white)',
-              padding: '14px 32px',
-              borderRadius: '8px',
-              fontSize: '15px',
-              fontWeight: 600,
-              border: 'none',
-              cursor: 'pointer',
-              marginBottom: '12px',
-              transition: 'background-color 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--coral-dark)')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'var(--coral)')}
-            aria-label="See what IvyLink would recover"
-          >
-            See what IvyLink would recover for you
-          </button>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-            No setup fee, 30-day results guarantee, Pay only on performance
           </p>
         </div>
       </section>
