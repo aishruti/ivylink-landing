@@ -955,7 +955,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 10: CLOSING CTA */}
-      <section style={{ width: '100%', backgroundColor: '#E85D4A', paddingTop: '48px', paddingBottom: '64px', boxSizing: 'border-box' }}>
+      <section style={{ width: '100%', backgroundColor: '#E85D4A', paddingTop: '48px', paddingBottom: '32px', boxSizing: 'border-box' }}>
         <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box', textAlign: 'center' }}>
           <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 20px 0', textAlign: 'center' }}>
             <span style={{ whiteSpace: 'nowrap', fontSize: 'clamp(20px, 2.5vw, 32px)', display: 'block' }}>
@@ -975,7 +975,7 @@ export default function Index() {
       <footer
         style={{
           backgroundColor: 'var(--dark)',
-          paddingTop: '48px',
+          paddingTop: '32px',
           paddingBottom: '32px',
           borderTop: '1px solid rgba(255,255,255,0.07)',
           width: '100%',
