@@ -540,7 +540,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 5: REACTIVATION TIMELINE */}
-      <section style={{ backgroundColor: 'var(--white)', paddingTop: '80px', paddingBottom: '80px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--white)', paddingTop: '80px', paddingBottom: '64px', width: '100%' }}>
         <div
           style={{
             maxWidth: '1000px',
@@ -657,7 +657,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 6: LIVE DEMO */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '80px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '64px', paddingBottom: '80px', width: '100%' }}>
         <div
           style={{
             maxWidth: '1000px',
