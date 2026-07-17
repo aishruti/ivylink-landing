@@ -956,10 +956,14 @@ export default function Index() {
 
       {/* SECTION 10: CLOSING CTA */}
       <section style={{ width: '100%', backgroundColor: '#E85D4A', padding: '80px 0', boxSizing: 'border-box' }}>
-        <div style={{ width: '100%', maxWidth: '640px', margin: '0 auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box', textAlign: 'center' }}>
+        <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box', textAlign: 'center' }}>
           <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 20px 0', textAlign: 'center' }}>
-            Your past clients are your lowest-cost bookings.<br />
-            We go get them back for you.
+            <span style={{ whiteSpace: 'nowrap', fontSize: 'clamp(20px, 2.5vw, 32px)', display: 'block' }}>
+              Your past clients are your lowest-cost bookings.
+            </span>
+            <span style={{ display: 'block' }}>
+              We go get them back for you.
+            </span>
           </h2>
           <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: '0 0 32px 0' }}>
             No software to learn. No campaigns to manage. Pay only when we recover revenue.
