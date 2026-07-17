@@ -152,12 +152,14 @@ export default function Index() {
           </p>
           <h1
             style={{
-              fontSize: 'clamp(36px, 5.5vw, 64px)',
+              fontSize: 'clamp(40px, 5.5vw, 72px)',
               fontWeight: 800,
               color: 'var(--white)',
               letterSpacing: '-2px',
               lineHeight: 1.05,
               marginBottom: '24px',
+              whiteSpace: 'normal',
+              maxWidth: '800px',
             }}
           >
             Lapsed clients and missed calls<br />are revenue. We recover them.
@@ -202,15 +204,16 @@ export default function Index() {
       >
         <div
           style={{
-            maxWidth: '800px',
+            maxWidth: '1000px',
             width: '100%',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
             paddingRight: 'clamp(24px, 5vw, 80px)',
             boxSizing: 'border-box',
-            display: 'grid',
-            gridTemplateColumns: '1fr 1px 1fr 1px 1fr',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
             alignItems: 'center',
             gap: '0',
           }}
@@ -220,18 +223,18 @@ export default function Index() {
             { number: '200-800', label: 'lapsed clients in the avg wellness database' },
             { number: '30 days', label: 'to your first recovered bookings' },
           ].map((stat, idx) => (
-            <div key={idx}>
+            <div key={idx} style={{ display: 'flex', alignItems: 'center' }}>
               {idx > 0 && (
                 <div
                   style={{
                     width: '1px',
                     height: '40px',
                     backgroundColor: 'rgba(255,255,255,0.1)',
-                    margin: 'auto',
+                    margin: '0 24px',
                   }}
                 />
               )}
-              <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', py: '0' }}>
+              <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', minWidth: '140px' }}>
                 <p style={{ fontSize: '38px', fontWeight: 700, color: 'var(--coral)', lineHeight: 1, margin: '0' }}>
                   {stat.number}
                 </p>
