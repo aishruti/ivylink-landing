@@ -669,17 +669,15 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '40px' }}>
-            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 0 10px 0' }}>
+          <div style={{ marginBottom: '0', alignItems: 'center', textAlign: 'center' }}>
+            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               LIVE DEMO
             </p>
-            <h2 style={{ fontSize: 'clamp(18px, 2.5vw, 26px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.3px', textAlign: 'left', whiteSpace: 'normal', lineHeight: 1.3, margin: '0' }}>
-              Step through a real client conversation. Then book the appointment yourself.
-            </h2>
           </div>
 
           <div
             style={{
+              marginTop: '32px',
               width: '100%',
               minHeight: '400px',
               backgroundColor: 'var(--white)',
