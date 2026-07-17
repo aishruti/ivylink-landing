@@ -279,7 +279,7 @@ export default function Index() {
             </p>
             <h2
               style={{
-                fontSize: 'clamp(22px, 2.8vw, 34px)',
+                fontSize: 'clamp(18px, 2.2vw, 28px)',
                 fontWeight: 700,
                 color: 'var(--text)',
                 letterSpacing: '-0.5px',
@@ -290,7 +290,7 @@ export default function Index() {
                 margin: '0 auto 64px auto',
               }}
             >
-              <span style={{ display: 'block' }}>Your past clients didn't leave because they were unhappy.</span>
+              <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Your past clients didn't leave because they were unhappy.</span>
               <span style={{ display: 'block' }}>They just got busy.</span>
             </h2>
           </div>
