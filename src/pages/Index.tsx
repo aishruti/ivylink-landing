@@ -152,18 +152,18 @@ export default function Index() {
           </p>
           <h1
             style={{
-              fontSize: 'clamp(32px, 4.5vw, 56px)',
+              fontSize: 'clamp(36px, 5vw, 60px)',
               fontWeight: 800,
               color: 'var(--white)',
               letterSpacing: '-1.5px',
               lineHeight: 1.1,
               marginBottom: '24px',
-              whiteSpace: 'normal',
-              maxWidth: '900px',
+              textAlign: 'center',
+              width: '100%',
             }}
           >
-            <span style={{ display: 'block' }}>Lapsed clients and missed calls</span>
-            <span style={{ display: 'block' }}>are revenue. We recover them.</span>
+            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Lapsed clients are revenue.</span>
+            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>We recover them for you.</span>
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--text-dark)', fontWeight: 400, lineHeight: 1.65, maxWidth: '560px', marginBottom: '36px' }}>
             IvyLink finds lapsed clients, answers missed calls and DMs, and books the appointment. You find out when it's done.
