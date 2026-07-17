@@ -149,7 +149,7 @@ export default function Index() {
             textAlign: 'center',
           }}
         >
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)', letterSpacing: '0.04em', marginBottom: '20px' }}>
+          <p style={{ fontSize: '13px', color: '#94A3B8', fontWeight: 500, letterSpacing: '0.05em', marginBottom: '20px' }}>
             For med spas, gyms, salons, and yoga studios
           </p>
           <h1
