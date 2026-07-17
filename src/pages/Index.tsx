@@ -1,6 +1,20 @@
 import { useEffect } from 'react';
+import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 export default function Index() {
+  // Mobile responsive styles for footer grid
+  const footerGridStyle = `
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+      .footer-bottom-bar {
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+    }
+  `;
   useEffect(() => {
     function updateCalc() {
       const lapsed = +(document.getElementById('calc-lapsed') as HTMLInputElement)?.value || 312;
@@ -36,6 +50,7 @@ export default function Index() {
 
   return (
     <div style={{ minHeight: '100vh', width: '100%', overflowX: 'hidden', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif' }}>
+      <style>{footerGridStyle}</style>
       {/* SECTION 1: NAV */}
       <nav
         style={{
@@ -935,12 +950,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* SECTION 10: MERGED FOOTER + CTA */}
+      {/* SECTION 10: 4-COLUMN FOOTER */}
       <footer
         style={{
           backgroundColor: 'var(--dark)',
-          paddingTop: '48px',
-          paddingBottom: '32px',
+          paddingTop: '64px',
+          paddingBottom: '24px',
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
@@ -949,53 +964,228 @@ export default function Index() {
         <div
           style={{
             width: '100%',
-            maxWidth: '800px',
+            maxWidth: '1200px',
             margin: '0 auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
             paddingRight: 'clamp(24px, 5vw, 80px)',
             boxSizing: 'border-box',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center',
           }}
         >
-          {/* CTA Headline */}
-          <p style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700, color: 'white', lineHeight: 1.3, letterSpacing: '-0.5px', whiteSpace: 'nowrap', textAlign: 'center', margin: '0 0 24px 0' }}>
-            Your past clients are your lowest-cost bookings. We go get them back for you.
-          </p>
+          {/* 4-Column Grid */}
+          <div
+            className="footer-grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1.5fr 1fr 1fr 1fr',
+              gap: '60px',
+              marginBottom: '48px',
+            }}
+          >
+            {/* COLUMN 1: Brand Block */}
+            <div>
+              {/* Logo Row */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+                <div
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    backgroundColor: 'var(--coral)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                  }}
+                >
+                  🔗
+                </div>
+                <span style={{ fontSize: '18px', fontWeight: 700, color: 'white' }}>IvyLink</span>
+              </div>
 
-          {/* CTA Subtext */}
-          <p style={{ fontSize: 'clamp(13px, 1.5vw, 17px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap', margin: '0 0 32px 0' }}>
-            No software to learn. No campaigns to manage. Pay only when we recover revenue.
-          </p>
+              {/* Tagline */}
+              <p style={{ fontSize: '14px', color: '#94A3B8', lineHeight: 1.6, maxWidth: '280px', marginBottom: '24px', margin: '0 0 24px 0' }}>
+                Done-for-you revenue recovery for wellness and med spa owners.
+              </p>
 
-          {/* Divider */}
-          <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', marginTop: '0', marginBottom: '20px' }}></div>
+              {/* Contact Info */}
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                  <Mail size={16} color="#64748B" />
+                  <span style={{ fontSize: '14px', color: '#94A3B8' }}>nalin@ivylink.co</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                  <Phone size={16} color="#64748B" />
+                  <span style={{ fontSize: '14px', color: '#94A3B8' }}>(650) 863-4556</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                  <MapPin size={16} color="#64748B" />
+                  <span style={{ fontSize: '14px', color: '#94A3B8' }}>New Jersey, NJ</span>
+                </div>
+              </div>
+            </div>
 
-          {/* Footer Row */}
-          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', width: '100%', justifyContent: 'flex-start' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div
+            {/* COLUMN 2: PRODUCT */}
+            <div>
+              <p style={{ fontSize: '12px', fontWeight: 700, color: 'white', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '20px', margin: '0 0 20px 0' }}>
+                Product
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Features
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  How It Works
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Pricing
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  FAQ
+                </a>
+              </div>
+            </div>
+
+            {/* COLUMN 3: COMPANY */}
+            <div>
+              <p style={{ fontSize: '12px', fontWeight: 700, color: 'white', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '20px', margin: '0 0 20px 0' }}>
+                Company
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  About Us
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Blog
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Careers
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Contact
+                </a>
+              </div>
+            </div>
+
+            {/* COLUMN 4: LEGAL */}
+            <div>
+              <p style={{ fontSize: '12px', fontWeight: 700, color: 'white', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '20px', margin: '0 0 20px 0' }}>
+                Legal
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Privacy
+                </a>
+                <a href="#" style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'none', lineHeight: 2, transition: 'color 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'white')} onMouseLeave={(e) => (e.currentTarget.style.color = '#94A3B8')}>
+                  Terms
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div
+            style={{
+              width: '100%',
+              height: '1px',
+              backgroundColor: 'rgba(255,255,255,0.08)',
+              marginBottom: '24px',
+            }}
+          ></div>
+
+          <div
+            className="footer-bottom-bar"
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: '100%',
+            }}
+          >
+            <p style={{ fontSize: '13px', color: '#64748B', margin: '0' }}>
+              © 2026 IvyLink. All rights reserved.
+            </p>
+
+            {/* Social Icons */}
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <a
+                href="#"
                 style={{
-                  width: '32px',
-                  height: '32px',
-                  backgroundColor: 'var(--coral)',
-                  borderRadius: '8px',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255,255,255,0.05)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: 'var(--white)',
-                  fontSize: '18px',
+                  color: '#94A3B8',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.3s, color 0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                  e.currentTarget.style.color = '#94A3B8';
                 }}
               >
-                🔗
-              </div>
-              <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
+                <Instagram size={16} />
+              </a>
+              <a
+                href="#"
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#94A3B8',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.3s, color 0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                  e.currentTarget.style.color = '#94A3B8';
+                }}
+              >
+                <Twitter size={16} />
+              </a>
+              <a
+                href="#"
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#94A3B8',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.3s, color 0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                  e.currentTarget.style.color = '#94A3B8';
+                }}
+              >
+                <Linkedin size={16} />
+              </a>
             </div>
-            <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0' }}>
-              © 2026 IvyLink · Made & Hosted in the US
-            </p>
           </div>
         </div>
       </footer>
