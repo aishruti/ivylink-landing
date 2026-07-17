@@ -259,8 +259,6 @@ export default function Index() {
             paddingLeft: 'clamp(24px, 5vw, 80px)',
             paddingRight: 'clamp(24px, 5vw, 80px)',
             boxSizing: 'border-box',
-            alignItems: 'flex-start',
-            textAlign: 'left',
           }}
         >
           <div style={{ marginBottom: '0' }}>
@@ -280,20 +278,19 @@ export default function Index() {
             </p>
             <h2
               style={{
-                fontSize: 'clamp(28px, 3.5vw, 44px)',
+                fontSize: 'clamp(24px, 3vw, 36px)',
                 fontWeight: 700,
                 color: 'var(--text)',
                 letterSpacing: '-0.5px',
                 lineHeight: 1.25,
-                maxWidth: '720px',
+                maxWidth: '900px',
                 textAlign: 'left',
                 marginBottom: '64px',
-                marginLeft: 0,
-                marginRight: 0,
                 margin: '0 0 64px 0',
               }}
             >
-              Your past clients didn't leave because they were unhappy. They just got busy.
+              <span style={{ display: 'block' }}>Your past clients didn't leave because they were unhappy.</span>
+              <span style={{ display: 'block' }}>They just got busy.</span>
             </h2>
           </div>
 
