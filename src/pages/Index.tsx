@@ -818,11 +818,11 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '56px' }}>
-            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 0 10px 0' }}>
+          <div style={{ marginBottom: '56px', alignItems: 'center', textAlign: 'center' }}>
+            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               HOW IT WORKS
             </p>
-            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', whiteSpace: 'normal', margin: '0' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', whiteSpace: 'normal', margin: '0 auto', textAlign: 'center' }}>
               3 minutes to set up. First bookings within 24 hours.
             </h2>
           </div>
@@ -871,11 +871,11 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '48px' }}>
-            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 0 10px 0' }}>
+          <div style={{ marginBottom: '48px', alignItems: 'center', textAlign: 'center' }}>
+            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               WHY IVYLINK
             </p>
-            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', maxWidth: '580px', whiteSpace: 'normal', margin: '0' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', maxWidth: 'none', whiteSpace: 'nowrap', margin: '0 auto', textAlign: 'center' }}>
               One service. Replaces your entire revenue recovery stack.
             </h2>
           </div>
