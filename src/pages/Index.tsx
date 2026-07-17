@@ -957,11 +957,8 @@ export default function Index() {
           }}
         >
           {/* CTA Headline */}
-          <p style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 4px 0', marginTop: 0, textAlign: 'center', whiteSpace: 'nowrap' }}>
-            Your past clients are your lowest-cost bookings.
-          </p>
-          <p style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 24px 0', textAlign: 'center' }}>
-            We go get them back for you.
+          <p style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700, color: 'white', lineHeight: 1.3, letterSpacing: '-0.5px', whiteSpace: 'nowrap', textAlign: 'center', margin: '0 0 24px 0' }}>
+            Your past clients are your lowest-cost bookings. We go get them back for you.
           </p>
 
           {/* CTA Subtext */}
