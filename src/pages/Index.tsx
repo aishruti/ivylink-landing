@@ -556,7 +556,7 @@ export default function Index() {
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               YOUR FIRST 30 DAYS
             </p>
-            <h2 style={{ fontSize: 'clamp(22px, 3vw, 34px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: '12px', margin: '0 auto 12px auto', maxWidth: '720px', textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: '12px', margin: '0 auto 12px auto', maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
               We recover revenue already sitting in your database.
             </h2>
             <p style={{ fontSize: '15px', color: 'var(--text-mid)', lineHeight: 1.7, margin: '0 auto', maxWidth: '600px', textAlign: 'center' }}>
