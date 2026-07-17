@@ -935,7 +935,7 @@ export default function Index() {
       <footer
         style={{
           backgroundColor: 'var(--dark)',
-          paddingTop: '80px',
+          paddingTop: '48px',
           paddingBottom: '32px',
           width: '100%',
           display: 'flex',
@@ -957,7 +957,7 @@ export default function Index() {
           }}
         >
           {/* CTA Headline */}
-          <p style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 4px 0', textAlign: 'center', whiteSpace: 'nowrap' }}>
+          <p style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 4px 0', marginTop: 0, textAlign: 'center', whiteSpace: 'nowrap' }}>
             Your past clients are your lowest-cost bookings.
           </p>
           <p style={{ fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 24px 0', textAlign: 'center' }}>
@@ -965,12 +965,12 @@ export default function Index() {
           </p>
 
           {/* CTA Subtext */}
-          <p style={{ fontSize: 'clamp(13px, 1.5vw, 17px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap', margin: '0 0 56px 0' }}>
+          <p style={{ fontSize: 'clamp(13px, 1.5vw, 17px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap', margin: '0 0 32px 0' }}>
             No software to learn. No campaigns to manage. Pay only when we recover revenue.
           </p>
 
           {/* Divider */}
-          <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', marginBottom: '24px' }}></div>
+          <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', marginTop: '0', marginBottom: '20px' }}></div>
 
           {/* Footer Row */}
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', width: '100%', justifyContent: 'flex-start' }}>
