@@ -717,7 +717,7 @@ export default function Index() {
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               FREE REVENUE AUDIT
             </p>
-            <h2 style={{ fontSize: 'clamp(18px, 2.2vw, 28px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', marginBottom: '8px', margin: '0 auto 8px auto', whiteSpace: 'nowrap', maxWidth: 'none', textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', margin: '0 auto 8px auto', whiteSpace: 'normal', maxWidth: '900px', textAlign: 'center' }}>
               See exactly what IvyLink would recover for you. Takes 30 seconds.
             </h2>
             <p style={{ fontSize: '15px', color: 'var(--text-dark)', margin: '0 auto', textAlign: 'center' }}>
