@@ -607,24 +607,6 @@ export default function Index() {
                   </p>
                 </div>
               ))}
-
-              {/* Dark banner */}
-              <div
-                style={{
-                  marginTop: '40px',
-                  backgroundColor: 'var(--dark)',
-                  borderRadius: '10px',
-                  padding: '24px 28px',
-                  width: '100%',
-                }}
-              >
-                <p style={{ fontSize: '18px', fontWeight: 700, color: 'var(--white)', textAlign: 'center', marginBottom: '8px', margin: '0 0 8px 0' }}>
-                  You never log in. You never approve a message. You just see results.
-                </p>
-                <p style={{ fontSize: '13px', color: 'var(--text-dark)', textAlign: 'center', margin: '0' }}>
-                  Zero risk. Results in 30 days or you pay nothing.
-                </p>
-              </div>
             </div>
 
             {/* IS THIS YOU */}
@@ -649,6 +631,27 @@ export default function Index() {
                 ))}
               </div>
             </div>
+          </div>
+
+          {/* Dark banner - spans full width */}
+          <div
+            style={{
+              marginTop: '40px',
+              backgroundColor: 'var(--dark)',
+              borderRadius: '10px',
+              padding: '24px 28px',
+              width: '100%',
+              maxWidth: '100%',
+              marginLeft: '0',
+              marginRight: '0',
+            }}
+          >
+            <p style={{ fontSize: 'clamp(15px, 1.6vw, 20px)', fontWeight: 700, color: 'var(--white)', textAlign: 'center', marginBottom: '8px', margin: '0 0 8px 0', whiteSpace: 'nowrap' }}>
+              You never log in. You never approve a message. You just see results.
+            </p>
+            <p style={{ fontSize: '13px', color: 'var(--text-dark)', textAlign: 'center', margin: '0' }}>
+              Zero risk. Results in 30 days or you pay nothing.
+            </p>
           </div>
         </div>
       </section>
