@@ -46,12 +46,15 @@ export default function Index() {
           height: '60px',
           borderBottom: 'none',
           boxShadow: 'none',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
         <div
           style={{
-            maxWidth: '1000px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -131,11 +134,11 @@ export default function Index() {
       </nav>
 
       {/* SECTION 2: HERO */}
-      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '100px', paddingBottom: '80px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '100px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
-            maxWidth: '860px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -201,12 +204,14 @@ export default function Index() {
           paddingTop: '64px',
           paddingBottom: '64px',
           width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
         <div
           style={{
-            maxWidth: '900px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -249,11 +254,11 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: PAIN PANELS */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '96px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '96px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
-            maxWidth: '1000px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -540,11 +545,11 @@ export default function Index() {
       </section>
 
       {/* SECTION 5: REACTIVATION TIMELINE */}
-      <section style={{ backgroundColor: 'var(--white)', paddingTop: '80px', paddingBottom: '64px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--white)', paddingTop: '80px', paddingBottom: '64px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
-            maxWidth: '1000px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -657,11 +662,11 @@ export default function Index() {
       </section>
 
       {/* SECTION 6: LIVE DEMO */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '64px', paddingBottom: '80px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '64px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
-            maxWidth: '1000px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -697,11 +702,11 @@ export default function Index() {
       </section>
 
       {/* SECTION 7: REVENUE CALCULATOR */}
-      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '80px', paddingBottom: '80px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '80px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
-            maxWidth: '720px',
             width: '100%',
+            maxWidth: '720px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
@@ -806,8 +811,8 @@ export default function Index() {
       </section>
 
       {/* SECTION 8: HOW IT WORKS */}
-      <section style={{ backgroundColor: 'var(--dark-deep)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box' }}>
-        <div style={{ width: '100%', maxWidth: '1100px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
+      <section style={{ backgroundColor: 'var(--dark-deep)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ width: '100%', maxWidth: '1120px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
           <div style={{ marginBottom: '56px', alignItems: 'center', textAlign: 'center' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               HOW IT WORKS
@@ -851,8 +856,8 @@ export default function Index() {
       </section>
 
       {/* SECTION 9: COMPARISON TABLE */}
-      <section style={{ backgroundColor: 'var(--surface)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box' }}>
-        <div style={{ width: '100%', maxWidth: '1100px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
+      <section style={{ backgroundColor: 'var(--surface)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ width: '100%', maxWidth: '1120px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
           <div style={{ marginBottom: '48px', alignItems: 'center', textAlign: 'center' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               WHY IVYLINK
@@ -950,8 +955,8 @@ export default function Index() {
       </section>
 
       {/* SECTION 10: CLOSING CTA */}
-      <section style={{ backgroundColor: 'var(--coral)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box' }}>
-        <div style={{ width: '100%', maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center', paddingLeft: '24px', paddingRight: '24px', boxSizing: 'border-box' }}>
+      <section style={{ backgroundColor: 'var(--coral)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ width: '100%', maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
           <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-1px', lineHeight: 1.2, marginBottom: '20px', margin: '0 0 20px 0' }}>
             <span style={{ display: 'block' }}>Your past clients are your lowest-cost bookings.</span>
             <span style={{ display: 'block' }}>We go get them back for you.</span>
@@ -992,12 +997,14 @@ export default function Index() {
           paddingBottom: '32px',
           borderTop: '1px solid rgba(255,255,255,0.07)',
           width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
         <div
           style={{
-            maxWidth: '1000px',
             width: '100%',
+            maxWidth: '1120px',
             marginLeft: 'auto',
             marginRight: 'auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
