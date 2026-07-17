@@ -670,12 +670,13 @@ export default function Index() {
           >
             <video
               src="/demo.mp4"
-              controls
               autoPlay
               muted
               loop
               playsInline
-              style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px', background: 'black' }}
+              disablePictureInPicture
+              controlsList="nodownload nofullscreen noremoteplayback"
+              style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px', background: 'black', pointerEvents: 'none' }}
             />
           </div>
         </div>
