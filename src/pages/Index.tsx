@@ -994,7 +994,7 @@ export default function Index() {
               <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
             </div>
             <p style={{ fontSize: '13px', color: 'var(--text-muted)', maxWidth: '260px', lineHeight: 1.6, margin: '0' }}>
-              © 2026 IvyLink · Built by Nalin & Shruti Ahuja
+              © 2026 IvyLink · Made & Hosted in the US
             </p>
           </div>
         </div>
