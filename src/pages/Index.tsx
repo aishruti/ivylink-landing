@@ -661,19 +661,22 @@ export default function Index() {
             style={{
               marginTop: '32px',
               width: '100%',
-              minHeight: '400px',
-              backgroundColor: 'var(--white)',
+              maxWidth: '1120px',
+              margin: '32px auto 0',
               borderRadius: '12px',
-              border: '1px solid var(--border)',
-              boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '14px',
-              color: 'var(--text-light)',
+              overflow: 'hidden',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
             }}
           >
-            Interactive booking demo will be embedded here.
+            <video
+              src="/demo.mp4"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px', background: 'black' }}
+            />
           </div>
         </div>
       </section>
