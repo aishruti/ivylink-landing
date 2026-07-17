@@ -552,14 +552,14 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '48px' }}>
-            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 0 10px 0' }}>
+          <div style={{ marginBottom: '48px', alignItems: 'center', textAlign: 'center' }}>
+            <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               YOUR FIRST 30 DAYS
             </p>
-            <h2 style={{ fontSize: 'clamp(22px, 3vw, 34px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: '12px', margin: '0 0 12px 0' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 34px)', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: '12px', margin: '0 auto 12px auto', maxWidth: '720px', textAlign: 'center' }}>
               We recover revenue already sitting in your database.
             </h2>
-            <p style={{ fontSize: '15px', color: 'var(--text-mid)', lineHeight: 1.7, margin: '0' }}>
+            <p style={{ fontSize: '15px', color: 'var(--text-mid)', lineHeight: 1.7, margin: '0 auto', maxWidth: '600px', textAlign: 'center' }}>
               We pull your lapsed client list, size the gap, and run the recovery. You just see results appear.
             </p>
           </div>
