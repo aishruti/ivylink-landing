@@ -254,7 +254,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: PAIN PANELS */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '96px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
@@ -545,7 +545,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 5: REACTIVATION TIMELINE */}
-      <section style={{ backgroundColor: 'var(--white)', paddingTop: '80px', paddingBottom: '64px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--white)', paddingTop: '48px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
@@ -662,7 +662,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 6: LIVE DEMO */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '64px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '48px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
