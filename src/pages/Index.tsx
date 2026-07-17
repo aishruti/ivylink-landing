@@ -931,30 +931,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* SECTION 10: CLOSING CTA */}
-      <section style={{ width: '100%', backgroundColor: '#E85D4A', paddingTop: '48px', paddingBottom: '32px', boxSizing: 'border-box' }}>
-        <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 20px 0', textAlign: 'center' }}>
-            <span style={{ whiteSpace: 'nowrap', fontSize: 'clamp(20px, 2.5vw, 32px)', display: 'block' }}>
-              Your past clients are your lowest-cost bookings.
-            </span>
-            <span style={{ display: 'block' }}>
-              We go get them back for you.
-            </span>
-          </h2>
-          <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: '0' }}>
-            No software to learn. No campaigns to manage. Pay only when we recover revenue.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 11: FOOTER */}
+      {/* SECTION 10: MERGED FOOTER + CTA */}
       <footer
         style={{
           backgroundColor: 'var(--dark)',
-          paddingTop: '32px',
+          paddingTop: '80px',
           paddingBottom: '32px',
-          borderTop: '1px solid rgba(255,255,255,0.07)',
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
@@ -963,39 +945,57 @@ export default function Index() {
         <div
           style={{
             width: '100%',
-            maxWidth: '1120px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            maxWidth: '800px',
+            margin: '0 auto',
             paddingLeft: 'clamp(24px, 5vw, 80px)',
             paddingRight: 'clamp(24px, 5vw, 80px)',
             boxSizing: 'border-box',
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: 'column',
             alignItems: 'center',
-            gap: '20px',
+            textAlign: 'center',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                backgroundColor: 'var(--coral)',
-                borderRadius: '8px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--white)',
-                fontSize: '18px',
-              }}
-            >
-              🔗
-            </div>
-            <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
-          </div>
-          <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0' }}>
-            © 2026 IvyLink · Made & Hosted in the US
+          {/* CTA Headline */}
+          <p style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 4px 0', textAlign: 'center' }}>
+            Your past clients are your lowest-cost bookings.
           </p>
+          <p style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 24px 0', textAlign: 'center' }}>
+            We go get them back for you.
+          </p>
+
+          {/* CTA Subtext */}
+          <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: '480px', textAlign: 'center', marginBottom: '56px', margin: '0 0 56px 0' }}>
+            No software to learn. No campaigns to manage. Pay only when we recover revenue.
+          </p>
+
+          {/* Divider */}
+          <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', marginBottom: '24px' }}></div>
+
+          {/* Footer Row */}
+          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', width: '100%', justifyContent: 'flex-start' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  backgroundColor: 'var(--coral)',
+                  borderRadius: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--white)',
+                  fontSize: '18px',
+                }}
+              >
+                🔗
+              </div>
+              <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
+            </div>
+            <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0' }}>
+              © 2026 IvyLink · Made & Hosted in the US
+            </p>
+          </div>
         </div>
       </footer>
     </div>
