@@ -249,7 +249,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: PAIN PANELS */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '96px', paddingBottom: '96px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '96px', width: '100%' }}>
         <div
           style={{
             maxWidth: '1000px',
@@ -264,19 +264,33 @@ export default function Index() {
           }}
         >
           <div style={{ marginBottom: '0' }}>
+            <p
+              style={{
+                fontSize: '11px',
+                color: 'var(--coral)',
+                fontWeight: 600,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                display: 'block',
+                marginBottom: '16px',
+                margin: '0 0 16px 0',
+              }}
+            >
+              THE PROBLEM
+            </p>
             <h2
               style={{
-                fontSize: 'clamp(24px, 3vw, 40px)',
+                fontSize: 'clamp(28px, 3.5vw, 44px)',
                 fontWeight: 700,
                 color: 'var(--text)',
                 letterSpacing: '-0.5px',
-                lineHeight: 1.2,
+                lineHeight: 1.25,
                 maxWidth: '720px',
                 textAlign: 'left',
-                marginBottom: '72px',
+                marginBottom: '64px',
                 marginLeft: 0,
                 marginRight: 0,
-                margin: '0 0 72px 0',
+                margin: '0 0 64px 0',
               }}
             >
               Your past clients didn't leave because they were unhappy. They just got busy.
