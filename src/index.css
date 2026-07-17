@@ -33,19 +33,23 @@
 
   :root {
     /* IvyLink brand tokens */
-    --coral: #E85D4A;
-    --coral-dark: #C94535;
-    --coral-bg: #FFF5F4;
+    --coral: #F26B4A;
+    --coral-dark: #E45A38;
+    --coral-bg: #FFEDE4;
+    --gradient-a: #F8E8E8;
+    --gradient-b: #EDE4F0;
+    --gradient-c: #F9EEEA;
     --dark: #1A1A2E;
     --dark-deep: #0F0F1A;
     --dark-mid: #151525;
     --white: #FFFFFF;
     --off: #FAFAFA;
-    --surface: #F4F6F8;
-    --border: #E8EAF0;
-    --text: #1A1A2E;
-    --text-mid: #4A4A6A;
-    --text-light: #8B8BA7;
+    --surface: #FFFFFF;
+    --surface-2: #FDF9F6;
+    --border: #F1E9E5;
+    --text: #0F172A;
+    --text-mid: #475569;
+    --text-light: #94A3B8;
     --text-muted: #64748B;
     --text-dark: #94A3B8;
     --green: #16a34a;
@@ -73,13 +77,13 @@
     --radius: 0.75rem;
 
     /* Gradient and shadow tokens */
-    --gradient-primary: linear-gradient(135deg, #E85D4A 0%, hsl(340 75% 55%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(270 50% 98%) 0%, hsl(16 30% 97%) 50%, hsl(340 30% 97%) 100%);
+    --gradient-primary: linear-gradient(135deg, #F26B4A 0%, #E45A38 100%);
+    --gradient-hero: linear-gradient(135deg, var(--gradient-a) 0%, var(--gradient-b) 50%, var(--gradient-c) 100%);
     --gradient-purple: linear-gradient(135deg, hsl(270 60% 60%) 0%, hsl(340 70% 60%) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
     --card-shadow: 0 4px 24px -4px hsl(240 10% 10% / 0.08);
     --card-shadow-hover: 0 20px 40px -8px hsl(240 10% 10% / 0.15);
-    --glow-primary: 0 0 60px #E85D4A / 0.25;
+    --glow-primary: 0 0 60px #F26B4A / 0.25;
     --glow-purple: 0 0 60px hsl(270 60% 60% / 0.2);
 
     /* Sidebar tokens */
@@ -204,21 +208,21 @@
      only kicks in at >= 768px where compositors have headroom. */
   .mesh-gradient {
     background:
-      radial-gradient(at 27% 37%, hsl(270 50% 95%) 0px, transparent 50%),
-      radial-gradient(at 97% 21%, hsl(16 50% 95%) 0px, transparent 50%),
-      radial-gradient(at 52% 99%, hsl(340 50% 95%) 0px, transparent 50%);
+      radial-gradient(at 27% 37%, #EDE4F0 0px, transparent 50%),
+      radial-gradient(at 97% 21%, #FFEDE4 0px, transparent 50%),
+      radial-gradient(at 52% 99%, #F9EEEA 0px, transparent 50%);
   }
 
   @media (min-width: 768px) {
     .mesh-gradient {
       background:
-        radial-gradient(at 27% 37%, hsl(270 50% 95%) 0px, transparent 50%),
-        radial-gradient(at 97% 21%, hsl(16 50% 95%) 0px, transparent 50%),
-        radial-gradient(at 52% 99%, hsl(340 50% 95%) 0px, transparent 50%),
-        radial-gradient(at 10% 29%, hsl(270 50% 98%) 0px, transparent 50%),
-        radial-gradient(at 97% 96%, hsl(16 40% 95%) 0px, transparent 50%),
-        radial-gradient(at 33% 50%, hsl(340 40% 98%) 0px, transparent 50%),
-        radial-gradient(at 79% 53%, hsl(270 40% 96%) 0px, transparent 50%);
+        radial-gradient(at 27% 37%, #EDE4F0 0px, transparent 50%),
+        radial-gradient(at 97% 21%, #FFEDE4 0px, transparent 50%),
+        radial-gradient(at 52% 99%, #F9EEEA 0px, transparent 50%),
+        radial-gradient(at 10% 29%, #F8E8E8 0px, transparent 50%),
+        radial-gradient(at 97% 96%, #FFEDE4 0px, transparent 50%),
+        radial-gradient(at 33% 50%, #F9EEEA 0px, transparent 50%),
+        radial-gradient(at 79% 53%, #EDE4F0 0px, transparent 50%);
     }
   }
 }
