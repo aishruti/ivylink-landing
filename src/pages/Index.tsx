@@ -713,11 +713,11 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '40px', alignItems: 'center', textAlign: 'center' }}>
+          <div style={{ marginBottom: '40px', textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', maxWidth: '1000px' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               FREE REVENUE AUDIT
             </p>
-            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', margin: '0 auto 8px auto', whiteSpace: 'normal', maxWidth: '900px', textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', margin: '0 auto 8px auto', whiteSpace: 'normal', textAlign: 'center' }}>
               See exactly what IvyLink would recover for you. Takes 30 seconds.
             </h2>
             <p style={{ fontSize: '15px', color: 'var(--text-dark)', margin: '0 auto', textAlign: 'center' }}>
@@ -812,7 +812,7 @@ export default function Index() {
       {/* SECTION 8: HOW IT WORKS */}
       <section style={{ backgroundColor: 'var(--dark-deep)', width: '100%', paddingTop: '48px', paddingBottom: '48px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '100%', maxWidth: '1120px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
-          <div style={{ marginBottom: '56px', alignItems: 'center', textAlign: 'center' }}>
+          <div style={{ marginBottom: '56px', textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', maxWidth: '1000px' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               HOW IT WORKS
             </p>
