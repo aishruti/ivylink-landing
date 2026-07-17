@@ -970,7 +970,7 @@ export default function Index() {
             paddingRight: 'clamp(24px, 5vw, 80px)',
             boxSizing: 'border-box',
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'flex-start',
             alignItems: 'flex-start',
           }}
         >
@@ -994,18 +994,7 @@ export default function Index() {
               <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
             </div>
             <p style={{ fontSize: '13px', color: 'var(--text-muted)', maxWidth: '260px', lineHeight: 1.6, margin: '0' }}>
-              IvyLink is performance-only. If we don't recover revenue, you pay nothing.
-            </p>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-            <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '4px', margin: '0 0 4px 0' }}>
-              nalin@ivylink.co
-            </p>
-            <p style={{ fontSize: '12px', color: '#475569', marginBottom: '4px', margin: '0 0 4px 0' }}>
-              Nalin Ahuja & Shruti Ahuja, Founders
-            </p>
-            <p style={{ fontSize: '12px', color: '#475569', margin: '0' }}>
-              2026 IvyLink
+              © 2026 IvyLink · Built by Nalin & Shruti Ahuja
             </p>
           </div>
         </div>
