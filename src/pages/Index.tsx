@@ -202,7 +202,7 @@ export default function Index() {
           backgroundColor: 'var(--dark-mid)',
           borderTop: '1px solid rgba(255,255,255,0.07)',
           paddingTop: '64px',
-          paddingBottom: '64px',
+          paddingBottom: '48px',
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
@@ -254,7 +254,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: PAIN PANELS */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '48px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
