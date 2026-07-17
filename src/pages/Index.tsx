@@ -717,11 +717,11 @@ export default function Index() {
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               FREE REVENUE AUDIT
             </p>
-            <h2 style={{ fontSize: '36px', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', lineHeight: 1.2, margin: '0 auto 8px auto', whiteSpace: 'normal', textAlign: 'center', maxWidth: '1200px' }}>
-              See exactly what IvyLink would recover for you. Takes 30 seconds.
+            <h2 style={{ fontSize: '36px', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.5px', lineHeight: 1.2, margin: '0 auto 8px auto', whiteSpace: 'nowrap', textAlign: 'center' }}>
+              See exactly what IvyLink would recover.
             </h2>
             <p style={{ fontSize: '15px', color: 'var(--text-dark)', margin: '0 auto', textAlign: 'center' }}>
-              Drag the sliders to your real numbers.
+              Takes 30 seconds. Drag the sliders to your real numbers.
             </p>
           </div>
 
