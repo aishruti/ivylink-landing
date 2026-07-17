@@ -261,7 +261,7 @@ export default function Index() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ marginBottom: '0' }}>
+          <div style={{ marginBottom: '0', alignItems: 'center', textAlign: 'center' }}>
             <p
               style={{
                 fontSize: '11px',
@@ -271,22 +271,23 @@ export default function Index() {
                 textTransform: 'uppercase',
                 display: 'block',
                 marginBottom: '16px',
-                margin: '0 0 16px 0',
+                margin: '0 auto 16px auto',
+                textAlign: 'center',
               }}
             >
               THE PROBLEM
             </p>
             <h2
               style={{
-                fontSize: 'clamp(24px, 3vw, 36px)',
+                fontSize: 'clamp(22px, 2.8vw, 34px)',
                 fontWeight: 700,
                 color: 'var(--text)',
                 letterSpacing: '-0.5px',
-                lineHeight: 1.25,
+                lineHeight: 1.3,
                 maxWidth: '900px',
-                textAlign: 'left',
+                textAlign: 'center',
                 marginBottom: '64px',
-                margin: '0 0 64px 0',
+                margin: '0 auto 64px auto',
               }}
             >
               <span style={{ display: 'block' }}>Your past clients didn't leave because they were unhappy.</span>
