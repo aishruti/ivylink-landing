@@ -970,33 +970,32 @@ export default function Index() {
             paddingRight: 'clamp(24px, 5vw, 80px)',
             boxSizing: 'border-box',
             display: 'flex',
-            justifyContent: 'flex-start',
-            alignItems: 'flex-start',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: '20px',
           }}
         >
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-              <div
-                style={{
-                  width: '32px',
-                  height: '32px',
-                  backgroundColor: 'var(--coral)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--white)',
-                  fontSize: '18px',
-                }}
-              >
-                🔗
-              </div>
-              <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                backgroundColor: 'var(--coral)',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--white)',
+                fontSize: '18px',
+              }}
+            >
+              🔗
             </div>
-            <p style={{ fontSize: '13px', color: 'var(--text-muted)', maxWidth: '260px', lineHeight: 1.6, margin: '0' }}>
-              © 2026 IvyLink · Made & Hosted in the US
-            </p>
+            <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--white)' }}>IvyLink</span>
           </div>
+          <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0' }}>
+            © 2026 IvyLink · Made & Hosted in the US
+          </p>
         </div>
       </footer>
     </div>
