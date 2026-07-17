@@ -662,7 +662,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 6: LIVE DEMO */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '64px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '64px', paddingBottom: '48px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
@@ -702,7 +702,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 7: REVENUE CALCULATOR */}
-      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '80px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--dark)', paddingTop: '48px', paddingBottom: '80px', width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div
           style={{
             width: '100%',
