@@ -965,30 +965,8 @@ export default function Index() {
               We go get them back for you.
             </span>
           </h2>
-          <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: '0 0 32px 0' }}>
+          <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: '0' }}>
             No software to learn. No campaigns to manage. Pay only when we recover revenue.
-          </p>
-          <button
-            style={{
-              backgroundColor: 'var(--white)',
-              color: '#E85D4A',
-              fontWeight: 700,
-              padding: '15px 36px',
-              borderRadius: '8px',
-              fontSize: '16px',
-              border: 'none',
-              cursor: 'pointer',
-              marginBottom: '12px',
-              transition: 'background-color 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#F8F8F8')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'var(--white)')}
-            aria-label="See what IvyLink would recover"
-          >
-            See what IvyLink would recover for you
-          </button>
-          <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.6)', margin: '0' }}>
-            No setup fee, 30-day results guarantee, Pay 20% only on results
           </p>
         </div>
       </section>
