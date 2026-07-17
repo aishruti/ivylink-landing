@@ -249,7 +249,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: PAIN PANELS */}
-      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '80px', paddingBottom: '80px', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--surface)', paddingTop: '96px', paddingBottom: '96px', width: '100%' }}>
         <div
           style={{
             maxWidth: '1000px',
@@ -263,19 +263,20 @@ export default function Index() {
             textAlign: 'left',
           }}
         >
-          <div style={{ marginBottom: '64px' }}>
+          <div style={{ marginBottom: '0' }}>
             <h2
               style={{
-                fontSize: 'clamp(22px, 3vw, 36px)',
+                fontSize: 'clamp(24px, 3vw, 40px)',
                 fontWeight: 700,
                 color: 'var(--text)',
                 letterSpacing: '-0.5px',
-                lineHeight: 1.3,
+                lineHeight: 1.2,
                 maxWidth: '720px',
                 textAlign: 'left',
+                marginBottom: '72px',
                 marginLeft: 0,
                 marginRight: 0,
-                margin: '0',
+                margin: '0 0 72px 0',
               }}
             >
               Your past clients didn't leave because they were unhappy. They just got busy.
@@ -283,7 +284,7 @@ export default function Index() {
           </div>
 
           {/* Panel 1: Lapsed clients */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', paddingBottom: '56px', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', marginTop: '0', paddingBottom: '56px', borderBottom: '1px solid var(--border)' }}>
             {/* Text */}
             <div>
               <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.08em', marginBottom: '16px', margin: '0 0 16px 0' }}>
