@@ -965,7 +965,7 @@ export default function Index() {
           </p>
 
           {/* CTA Subtext */}
-          <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: '480px', textAlign: 'center', marginBottom: '56px', margin: '0 0 56px 0' }}>
+          <p style={{ fontSize: 'clamp(13px, 1.5vw, 17px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: 'none', textAlign: 'center', whiteSpace: 'nowrap', margin: '0 0 56px 0' }}>
             No software to learn. No campaigns to manage. Pay only when we recover revenue.
           </p>
 
