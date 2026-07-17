@@ -198,14 +198,14 @@ export default function Index() {
         style={{
           backgroundColor: 'var(--dark-mid)',
           borderTop: '1px solid rgba(255,255,255,0.07)',
-          paddingTop: '40px',
-          paddingBottom: '40px',
+          paddingTop: '64px',
+          paddingBottom: '64px',
           width: '100%',
         }}
       >
         <div
           style={{
-            maxWidth: '1000px',
+            maxWidth: '900px',
             width: '100%',
             marginLeft: 'auto',
             marginRight: 'auto',
@@ -229,17 +229,17 @@ export default function Index() {
                 <div
                   style={{
                     width: '1px',
-                    height: '40px',
+                    height: '56px',
                     backgroundColor: 'rgba(255,255,255,0.1)',
                     margin: '0 24px',
                   }}
                 />
               )}
-              <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', minWidth: '140px' }}>
+              <div style={{ padding: '8px 32px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
                 <p style={{ fontSize: '38px', fontWeight: 700, color: 'var(--coral)', lineHeight: 1, margin: '0' }}>
                   {stat.number}
                 </p>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4, maxWidth: '160px', textAlign: 'center', margin: '0' }}>
+                <p style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4, maxWidth: '180px', textAlign: 'center', marginTop: '12px', margin: '12px 0 0 0' }}>
                   {stat.label}
                 </p>
               </div>
