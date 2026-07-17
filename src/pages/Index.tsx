@@ -807,7 +807,7 @@ export default function Index() {
 
       {/* SECTION 8: HOW IT WORKS */}
       <section style={{ backgroundColor: 'var(--dark-deep)', width: '100vw', maxWidth: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', paddingLeft: '0', paddingRight: '0' }}>
-        <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', padding: '80px clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
+        <div style={{ width: '100% !important', maxWidth: '1100px !important', marginLeft: 'auto !important', marginRight: 'auto !important', paddingLeft: 'clamp(24px, 5vw, 80px) !important', paddingRight: 'clamp(24px, 5vw, 80px) !important', boxSizing: 'border-box !important' }}>
           <div style={{ marginBottom: '56px', alignItems: 'center', textAlign: 'center' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               HOW IT WORKS
@@ -817,7 +817,7 @@ export default function Index() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', width: '100%' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '24px', width: '100%' }}>
             {[
               { num: '01', title: 'We pull your lapsed client list.', body: 'You give us access to your booking platform once. We export every client who hasn\'t booked in 90+ days and put a real dollar figure on what they\'re worth.' },
               { num: '02', title: 'We run the win-back campaign.', body: 'Personal messages go out to every lapsed client. We offer a complimentary add-on, not a discount, to bring them back. You never write a single message.' },
@@ -850,7 +850,7 @@ export default function Index() {
 
       {/* SECTION 9: COMPARISON TABLE */}
       <section style={{ backgroundColor: 'var(--surface)', width: '100vw', maxWidth: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', paddingLeft: '0', paddingRight: '0' }}>
-        <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', padding: '80px clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
+        <div style={{ width: '100% !important', maxWidth: '1100px !important', marginLeft: 'auto !important', marginRight: 'auto !important', paddingLeft: 'clamp(24px, 5vw, 80px) !important', paddingRight: 'clamp(24px, 5vw, 80px) !important', boxSizing: 'border-box !important' }}>
           <div style={{ marginBottom: '48px', alignItems: 'center', textAlign: 'center' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
               WHY IVYLINK
@@ -863,6 +863,8 @@ export default function Index() {
           <table
             style={{
               width: '100%',
+              maxWidth: '900px',
+              margin: '0 auto',
               tableLayout: 'fixed',
               borderCollapse: 'collapse',
               marginBottom: '20px',
@@ -936,6 +938,8 @@ export default function Index() {
               fontStyle: 'italic',
               textAlign: 'center',
               width: '100%',
+              maxWidth: '900px',
+              margin: '24px auto 0',
             }}
           >
             We recover revenue you've already earned, without you touching any software. Results in 30 days or you pay nothing.
@@ -945,7 +949,7 @@ export default function Index() {
 
       {/* SECTION 10: CLOSING CTA */}
       <section style={{ backgroundColor: 'var(--coral)', width: '100vw', maxWidth: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', paddingLeft: '0', paddingRight: '0' }}>
-        <div style={{ width: '100%', maxWidth: '640px', margin: '0 auto', padding: '80px clamp(24px, 5vw, 80px)', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+        <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center', width: '100%', padding: '80px clamp(24px, 5vw, 80px)', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 700, color: 'var(--white)', letterSpacing: '-1px', lineHeight: 1.2, marginBottom: '20px', maxWidth: '560px', margin: '0 0 20px 0' }}>
             Your past clients are your lowest-cost bookings. We go get them back for you.
           </h2>
