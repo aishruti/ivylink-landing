@@ -25,58 +25,54 @@
 
 @layer base {
   :root {
-    /* Clean white background */
+    /* IvyLink brand tokens */
+    --coral: #E85D4A;
+    --coral-dark: #C94535;
+    --coral-bg: #FFF5F4;
+    --dark: #1A1A2E;
+    --dark-deep: #0F0F1A;
+    --dark-mid: #151525;
+    --white: #FFFFFF;
+    --off: #FAFAFA;
+    --surface: #F4F6F8;
+    --border: #E8EAF0;
+    --text: #1A1A2E;
+    --text-mid: #4A4A6A;
+    --text-light: #8B8BA7;
+    --text-muted: #64748B;
+    --text-dark: #94A3B8;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+
+    /* Keep old tokens for compatibility */
     --background: 0 0% 100%;
     --foreground: 240 10% 10%;
-
-    /* Cards with subtle depth */
     --card: 0 0% 100%;
     --card-foreground: 240 10% 10%;
-
-    /* Popover matches card */
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 10%;
-
-    /* Primary: Vibrant coral-orange - energetic, action-oriented */
     --primary: 16 85% 60%;
     --primary-foreground: 0 0% 100%;
-
-    /* Secondary: Deep purple accent */
     --secondary: 270 50% 96%;
     --secondary-foreground: 270 60% 35%;
-
-    /* Muted tones */
     --muted: 240 5% 96%;
-    /* A11Y: was `240 5% 45%` which gave ~3.4:1 contrast against `bg-muted/50`
-       (fails WCAG AA for normal text). Darkened to 35%, pushing the ratio
-       above 5:1 against muted backgrounds. */
     --muted-foreground: 240 6% 35%;
-
-    /* Accent: Soft lavender */
     --accent: 270 50% 95%;
     --accent-foreground: 270 60% 30%;
-
-    /* Destructive stays red */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-
-    /* Borders and inputs */
-    --border: 240 6% 90%;
     --input: 240 6% 90%;
     --ring: 16 85% 60%;
-
     --radius: 0.75rem;
 
-    /* Gradient tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(16 85% 60%) 0%, hsl(340 75% 55%) 100%);
+    /* Gradient and shadow tokens */
+    --gradient-primary: linear-gradient(135deg, #E85D4A 0%, hsl(340 75% 55%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(270 50% 98%) 0%, hsl(16 30% 97%) 50%, hsl(340 30% 97%) 100%);
     --gradient-purple: linear-gradient(135deg, hsl(270 60% 60%) 0%, hsl(340 70% 60%) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-
-    /* Shadow tokens */
     --card-shadow: 0 4px 24px -4px hsl(240 10% 10% / 0.08);
     --card-shadow-hover: 0 20px 40px -8px hsl(240 10% 10% / 0.15);
-    --glow-primary: 0 0 60px hsl(16 85% 60% / 0.25);
+    --glow-primary: 0 0 60px #E85D4A / 0.25;
     --glow-purple: 0 0 60px hsl(270 60% 60% / 0.2);
 
     /* Sidebar tokens */
