@@ -856,7 +856,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 9: COMPARISON TABLE */}
-      <section style={{ backgroundColor: 'var(--surface)', width: '100%', paddingTop: '80px', paddingBottom: '80px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--surface)', width: '100%', paddingTop: '80px', paddingBottom: '48px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '100%', maxWidth: '1120px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box' }}>
           <div style={{ marginBottom: '48px', alignItems: 'center', textAlign: 'center' }}>
             <p style={{ fontSize: '11px', color: 'var(--coral)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px', margin: '0 auto 10px auto', textAlign: 'center' }}>
@@ -955,7 +955,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 10: CLOSING CTA */}
-      <section style={{ width: '100%', backgroundColor: '#E85D4A', padding: '80px 0', boxSizing: 'border-box' }}>
+      <section style={{ width: '100%', backgroundColor: '#E85D4A', paddingTop: '48px', paddingBottom: '64px', boxSizing: 'border-box' }}>
         <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', paddingLeft: 'clamp(24px, 5vw, 80px)', paddingRight: 'clamp(24px, 5vw, 80px)', boxSizing: 'border-box', textAlign: 'center' }}>
           <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: '0 0 20px 0', textAlign: 'center' }}>
             <span style={{ whiteSpace: 'nowrap', fontSize: 'clamp(20px, 2.5vw, 32px)', display: 'block' }}>
